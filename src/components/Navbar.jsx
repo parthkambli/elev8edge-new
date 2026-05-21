@@ -155,7 +155,7 @@
 // updated by aadi
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-
+import logo from "../assets/logo/logo.png";
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -164,9 +164,13 @@ const Navbar = () => {
       <nav className="relative z-20 flex h-20 items-center justify-between px-5 md:h-24 md:px-12">
 
         {/* LOGO */}
-        <h2 className="text-xl font-bold text-white md:text-2xl">
-          Nomore ©
-        </h2>
+       <Link to="/" className="flex items-center">
+  <img
+    src={logo}
+    alt="Nomore Logo"
+    className="h-8 w-auto object-contain md:h-10"
+  />
+</Link>
 
         {/* DESKTOP NAV LINKS */}
         <div className="hidden gap-10 text-sm font-bold text-white md:flex">

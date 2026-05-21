@@ -281,53 +281,49 @@ function Achievement() {
         {/* TOP LABEL */}
         <div className="mb-6 flex items-center gap-3">
           <span className="h-3 w-3 rounded-full bg-[#d9fbff] shadow-[0_0_0_6px_rgba(217,251,255,0.25)] md:h-4 md:w-4" />
-          <p className="text-base font-bold uppercase md:text-xl">Achievement</p>
+          {/* <p className="text-base font-bold uppercase md:text-xl">Achievement</p> */}
         </div>
 
         {/* MAIN TITLE */}
         <div className="achievement-title">
           <h2 className="text-[13vw] font-black uppercase leading-[0.82] tracking-[-0.07em] md:text-[9vw]">
-            BEYOND INFLUENCE
+            BEYOND IMAGINATION
           </h2>
           <p className="mt-4 max-w-xl text-base font-semibold leading-tight md:mt-6 md:text-[1.35rem]">
-            Influence goes beyond aesthetics; it shifts perception, inspires
-            conversation, and sets new standards. We help brands express clarity
-            and emotion.
+            Marketing isn’t just about visuals — it’s about attention, conversion, and growth. We help brands cut through the noise, connect with the right audience, and drive real results.
           </p>
         </div>
 
         {/* SECOND TITLE */}
         <div className="impact-title mt-16 md:mt-40">
           <h3 className="text-right text-[11vw] font-black uppercase leading-[0.82] tracking-[-0.07em] md:text-[8vw]">
-            AND IMPACT
+            AND GROWTH
           </h3>
           <p className="ml-auto mt-4 max-w-2xl text-right text-base font-semibold leading-tight md:mt-6 md:text-[1.35rem]">
-            Where creativity meets consequence, effectively transforming ideas
-            into actionable plans and strategy into sustainable growth
-            opportunities.
+            Where creativity meets performance — turning ideas into action and strategy into scalable growth.
           </p>
         </div>
 
         {/* STATS */}
         <div className="mt-20 grid gap-12 md:mt-52 md:grid-cols-3 md:gap-32">
           <div className="stats-box">
-            <h4 className="text-[18vw] font-black leading-none md:text-[7vw]">200+</h4>
+            <h4 className="text-[18vw] font-black leading-none md:text-[7vw]">150+</h4>
             <p className="mt-4 max-w-xs text-base font-semibold leading-tight md:mt-8 md:text-[1.35rem]">
-              projects redefining visual experiences
+              Projects built to drive impact and performance
             </p>
           </div>
 
           <div className="stats-box md:mt-36">
-            <h4 className="text-[18vw] font-black leading-none md:text-[7vw]">30+</h4>
+            <h4 className="text-[18vw] font-black leading-none md:text-[7vw]">28+</h4>
             <p className="mt-4 max-w-xs text-base font-semibold leading-tight md:mt-8 md:text-[1.35rem]">
-              Industries impacted through innovative design
+              Industries scaled through data-driven growth
             </p>
           </div>
 
           <div className="stats-box md:mt-72">
-            <h4 className="text-[18vw] font-black leading-none md:text-[7vw]">12</h4>
+            <h4 className="text-[18vw] font-black leading-none md:text-[7vw]">7+</h4>
             <p className="mt-4 max-w-xs text-base font-semibold leading-tight md:mt-8 md:text-[1.35rem]">
-              Years of design expertise shaping visual language
+              Years of expertise turning strategy into growth
             </p>
           </div>
         </div>

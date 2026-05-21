@@ -302,28 +302,28 @@ gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
   {
-    title: "Colletre - Collage Dashboard",
+    title: "SAI REALTOR",
     image: project1,
     tags: ["Branding", "Website"],
-    desc: "A modern agency site crafted to highlight luxury, innovation, and award-winning marketing expertise.",
+    desc: "Delivered 95% high-quality real estate leads, resulting in the successful sale of 4 major projects in Navi Mumbai using performance-driven strategies.",
   },
   {
-    title: "Indoma Furniture - Website",
+    title: "MAA KALI VASTU JYOTI",
     image: project2,
     tags: ["Branding", "Website"],
-    desc: "A premium visual website experience with strong identity and smooth storytelling.",
+    desc: "From website to social media — we turned their entire digital presence into a system that drives real leads across India.",
   },
   {
-    title: "Nova Studio - Mobile App",
+    title: "THE MASTER ACADEMY",
     image: project3,
     tags: ["Apps", "UI/UX"],
-    desc: "A clean app interface designed for smooth interaction and strong digital presence.",
+    desc: "From a high-performing website to multi-platform marketing — we built a digital ecosystem that drives engagement and brand growth.",
   },
   {
-    title: "Motion Lab - Creative System",
+    title: "GIFTCOIN",
     image: project4,
     tags: ["3D", "Design"],
-    desc: "A bold creative system with immersive visuals and high-impact brand motion.",
+    desc: "Built a customized, high-engagement website and executed multi-platform marketing strategies across social media, YouTube, and Telegram to drive brand growth and engagement.",
   },
 ];
 
@@ -370,9 +370,9 @@ function Projects() {
         </div>
 
         <h2 className="text-[9vw] font-black uppercase leading-[0.82] tracking-[-0.06em]">
-          2025 - <span className="text-[#d9fbff]">FEATURED</span>
+          <span className="text-[#d9fbff]">Growth</span>
           <br />
-          PROJECT
+          spotlight
         </h2>
       </div>
 
@@ -390,37 +390,32 @@ function Projects() {
             }}
           >
             <div className="h-[82vh] w-full overflow-hidden rounded-[32px] bg-[#f2f2f2] p-8 text-black md:p-10">
-              <div className="grid h-full gap-10 md:grid-cols-[38%_62%]">
+              <div className="grid h-full gap-10 md:grid-cols-[34%_66%]">
                 <div className="flex h-full flex-col justify-between">
                   <div>
                     <div className="mb-5 flex flex-wrap gap-3">
-                      {project.tags.map((tag) => (
+                      {/* {project.tags.map((tag) => (
                         <span
                           key={tag}
                           className="rounded-full border border-black px-5 py-2 text-lg"
                         >
                           {tag}
                         </span>
-                      ))}
+                      ))} */}
                     </div>
 
-                    <h3 className="text-[4vw] font-black leading-[0.9] tracking-[-0.05em]">
+                    <h3 className="text-[3.2vw] font-black leading-[0.9] tracking-[-0.06em]">
                       {project.title}
                     </h3>
                   </div>
 
-                  <div>
-                    <p className="max-w-md text-[26px] leading-tight">
-                      {project.desc}
-                    </p>
+                  <div className="mt-auto">
 
-                    <button className="mt-8 flex items-center gap-4 rounded-full bg-black py-2 pl-5 pr-2 text-lg font-bold text-white">
-                      VIEW PROJECT
-                      <span className="grid h-10 w-10 place-items-center rounded-full bg-white text-black">
-                        →
-                      </span>
-                    </button>
-                  </div>
+  <p className="max-w-[380px] text-[18px] leading-[1.4] tracking-[-0.03em] text-black md:text-[24px]">
+    {project.desc}
+  </p>
+
+</div>
                 </div>
 
                 <img
