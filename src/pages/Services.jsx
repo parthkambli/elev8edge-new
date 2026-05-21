@@ -169,10 +169,11 @@ import serviceVideo from "../../public/videos/service.mp4";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import service6 from "../assets/images/service-6.png";
-import service7 from "../assets/images/service-7.png";
-import service8 from "../assets/images/service-8.png";
-import service9 from "../assets/images/service-9.png";
+import service1 from "../assets/Our Services/Content Creation.jpg";
+import service2 from "../assets/Our Services/Social Media.jpg";
+import service3 from "../assets/Our Services/Website Development.jpg";
+import service4 from "../assets/Our Services/Brand Building.jpg";
+import service5 from "../assets/Our Services/Performance Marketing.jpg";
 import Footer from "../components/Footer";
 import AboutTestimonial from "../components/AboutTestimonial";
 
@@ -180,46 +181,70 @@ gsap.registerPlugin(ScrollTrigger);
 
 const services = [
   {
-    title: "BRANDING",
-    image: service7,
+    title: "Content Creation",
+    image: service1,
+    tags: [
+      "Creative Designing",
+      "Content Strategy",
+      "Brand Storytelling ",
+      "Ad Creatives Product Shoots",
+    ],
+    desc: `We create & shoot engaging, platform-driven content that captures attention and builds brand presence.
+From reels and creatives to strategic storytelling, our content is designed to increase engagement, visibility, and conversions.
+`,
+  },
+  {
+    title: "Social Media Growth",
+    image: service2,
+    tags: [
+      "Organic Growth",
+      "Audience Engagement",
+      "Content Planning",
+      "Community Building",
+      "Trend-Based Content",
+      "Performance Analytics",
+      "Brand Awareness",
+    ],
+    desc: `We help brands grow their online presence through strategic content, audience engagement, and performance-driven campaigns.
+From increasing reach to generating quality leads, we build social media strategies designed for consistent growth and real impact.
+`,
+  },
+  {
+    title: "Website Development ",
+    image: service3,
+    tags: ["Custom Website Development", "Landing Pages", "UI/UX Design", "Conversion-Focused Layouts", "Maintenance & Support"],
+    desc: `We build high-performing, user-friendly websites designed to elevate brand presence and drive conversions.
+From landing pages to full-scale business websites, we create fast, responsive, and growth-focused digital experiences.
+`,
+  },
+  {
+    title: "Brand Building",
+    image: service4,
     tags: [
       "Brand Strategy",
-      "Visual Identity",
-      "Guidelines",
-      "Packaging",
-      "Storytelling",
+      "Brand Positioning",
+      "Creative Direction",
+      "Content Identity",
+      "Market Research",
+      "Brand Consistency",
     ],
-    desc: "We craft unique brand identities that tell a story, define personality, and create meaningful connections with audiences across every touchpoint.",
+    desc: `We help brands create a strong digital identity that stands out, connects with the right audience, and builds long-term trust.
+From positioning and messaging to creative direction, we craft brands designed for recognition, impact, and growth.
+`,
   },
   {
-    title: "UI / UX DESIGN",
-    image: service8,
+    title: "Performance Marketing ",
+    image: service5,
     tags: [
-      "User Research",
-      "Wireframing",
-      "Prototyping",
-      "Interface Design",
-      "Usability Testing",
+      "Meta Ads Google Ads",
+      "Retention Marketing",
+      "Lead Generation Campaigns",
+      "Audience Targeting",
+      "ROI-Focused Scaling",
     ],
-    desc: "We design intuitive and engaging interfaces, focusing on user-centered experiences that are both visually appealing and highly functional.",
-  },
-  {
-    title: "DEVELOPMENT",
-    image: service9,
-    tags: ["Frontend", "Backend", "Web Apps", "CMS", "Optimization"],
-    desc: "We build fast, responsive, and scalable digital products with clean code and smooth performance.",
-  },
-  {
-    title: "ILLUSTRATION",
-    image: service6,
-    tags: [
-      "2D Art",
-      "3D Visuals",
-      "Motion",
-      "Characters",
-      "Creative Assets",
-    ],
-    desc: "We create bold illustrations and visuals that make brands feel alive across digital platforms.",
+    desc: `We create data-driven marketing campaigns focused on generating leads, increasing conversions, and maximizing ROI.
+From Meta and Google Ads to funnel optimization, we help brands scale through performance-focused strategies.
+`,
   },
 ];
 
@@ -407,12 +432,11 @@ useEffect(() => {
 
         <div>
           <h2 className="text-2xl font-black md:text-6xl">
-            Call with Us
+            STRATEGY CALL WITH US
           </h2>
 
           <p className="mt-6 max-w-[300px] text-[22px] leading-[1.35] md:mt-4 md:max-w-[500px] md:text-[2rem] md:leading-[1.4]">
-            Let’s discuss your vision, goals, and challenges to understand what
-            success looks like for you.
+            Let’s build the next stage of your brand’s growth — together.
           </p>
         </div>
 
@@ -444,12 +468,11 @@ useEffect(() => {
 
         <div>
           <h2 className="text-2xl font-black md:text-6xl">
-            Strategy & Concept
+            PERSONALISED GROWTH PLAN
           </h2>
 
-          <p className="mt-6 max-w-[300px] text-[22px] leading-[1.35] md:mt-8 md:max-w-[520px] md:text-[2rem] md:leading-[1.4]">
-            We shape big ideas into bold concepts that align with your goals and
-            audience.
+          <p className="mt-6 max-w-[340px] text-[22px] leading-[1.35] md:mt-8 md:max-w-[580px] md:text-[2rem] md:leading-[1.4]">
+            We create data-driven strategies that align with your goals, engage your audience, and drive measurable results.
           </p>
         </div>
 
@@ -478,12 +501,11 @@ useEffect(() => {
 
         <div>
           <h2 className="text-2xl font-black md:text-6xl">
-            Design & Development
+            Design & Execution
           </h2>
 
           <p className="mt-6 max-w-[300px] text-[22px] leading-[1.35] md:mt-8 md:max-w-[520px] md:text-[2rem] md:leading-[1.4]">
-            Our team transforms ideas into reality through thoughtful design and
-            seamless execution.
+            We turn ideas into scalable digital experiences through clean design and seamless development.
           </p>
         </div>
 
@@ -515,12 +537,11 @@ useEffect(() => {
 
         <div>
           <h2 className="text-2xl font-black md:text-6xl">
-            Launch & Support
+            Launch & Scale
           </h2>
 
           <p className="mt-6 max-w-[300px] text-[22px] leading-[1.35] md:mt-8 md:max-w-[520px] md:text-[2rem] md:leading-[1.4]">
-            We ensure a smooth rollout and stay by your side for ongoing
-            improvements and growth.
+            From deployment to ongoing optimization, we help your brand grow, perform, and stay ahead digitally.
           </p>
         </div>
 
