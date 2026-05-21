@@ -393,11 +393,11 @@ function Journey() {
   });
 
   const stats = [
-    { number: "2013", text: "The year we founded the company" },
-    { number: "6", text: "Years of design expertise" },
-    { number: "23", text: "Industries impacted through innovative design" },
-    { number: "200", text: "Global collaborations bringing ideas to life" },
-    { number: "23", text: "Digital experiences launched across platforms" },
+    { number: "2022", text: "The year we founded the company" },
+    { number: "7", text: "Years of marketing expertise" },
+    { number: "28", text: "Industries impacted through innovative ideas" },
+    { number: "120", text: "Strategic collaborations driving brands to growth" },
+    { number: "37", text: "Digital experiences designed for growth" },
   ];
 
   return (

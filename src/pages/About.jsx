@@ -114,6 +114,8 @@ import AboutCarousel from "../components/AboutCarousel";
 import Journey from "../components/Journey";
 import Footer from "../components/Footer";
 import AboutTestimonial from "../components/AboutTestimonial";
+import TeamSection from "../components/TeamSection";
+import LocationSection from "../components/LocationSection";
 
 const AboutUs = () => {
   const titleRef = useRef(null);
@@ -183,9 +185,7 @@ const AboutUs = () => {
               ref={textRef}
               className="max-w-[640px] translate-y-full text-right text-[18px] font-medium leading-[1.7] text-white/90 md:text-[20px]"
             >
-              Discover who we are — a creative studio passionate about
-              crafting bold brands, immersive experiences, and innovative
-              design expert solutions.
+              Discover Elev8Edge — a growth-driven digital agency passionate about building powerful brands, high-performing campaigns, and impactful digital experiences.
             </p>
 
           </div>
@@ -202,7 +202,7 @@ const AboutUs = () => {
               >
                 ABOUT
                 <br />
-                NOMORE STD
+                ELEV8EDGE
               </h1>
 
             </div>
@@ -231,10 +231,14 @@ const AboutUs = () => {
       {/* JOURNEY */}
       <Journey />
 
+      <TeamSection/>
+
       {/* TESTIMONIAL */}
-      <div className="relative z-20 -mt-32">
+      {/* <div className="relative z-20 -mt-32">
         <AboutTestimonial />
-      </div>
+      </div> */}
+
+      <LocationSection/>
 
       <Footer />
     </>
