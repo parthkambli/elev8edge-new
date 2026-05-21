@@ -13,7 +13,7 @@ gsap.registerPlugin(ScrollTrigger);
 function Work() {
   const workSectionRef = useRef(null);
   const workImagesRef = useRef(null);
-  const [workWord, setWorkWord] = useState("BRANDS");
+  const [workWord, setWorkWord] = useState("content");
 
   useEffect(() => {
     gsap.to(workImagesRef.current, {
@@ -27,11 +27,11 @@ function Work() {
         pin: true,
         onUpdate: (self) => {
           if (self.progress < 0.33) {
-            setWorkWord("BRANDS");
+            setWorkWord("content");
           } else if (self.progress < 0.66) {
             setWorkWord("WEBSITE");
           } else {
-            setWorkWord("APPS");
+            setWorkWord("Performance");
           }
         },
       },
@@ -62,8 +62,8 @@ function Work() {
           </p>
         </div>
 
-        <h2 className="text-[13vw] font-black uppercase leading-[0.85] tracking-[-0.07em] text-white md:text-[8.8vw]">
-          <span className="text-white">BUILDING</span>{" "}
+        <h2 className="text-[13vw] font-black uppercase leading-[0.85] tracking-[-0.07em] text-white md:text-[6.8vw]">
+          <span className="text-white">We deliver impactful</span>{" "}
 
           <span
             key={workWord}
@@ -73,9 +73,9 @@ function Work() {
           </span>
 
           <br />
-          WITH 100 PASSION &
+          driven by passion 
           <br />
-          BOLD DESIGN.
+          and experience.
         </h2>
       </div>
 

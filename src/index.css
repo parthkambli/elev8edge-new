@@ -1,6 +1,7 @@
 
 
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
 @theme {
   --animate-float: float 4.5s ease-in-out infinite;
