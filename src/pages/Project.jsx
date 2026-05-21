@@ -158,30 +158,42 @@
 import React from "react";
 import serviceVideo from "../../public/videos/Dimond.mp4";
 
-import project1 from "../assets/images/service-5.png";
-import project2 from "../assets/images/service-6.png";
-import project3 from "../assets/images/service-7.png";
-import project4 from "../assets/images/service-8.png";
+import project1 from "../assets/Our Projects/1.jpg";
+import project2 from "../assets/Our Projects/2.jpg";
+import project3 from "../assets/Our Projects/3.jpg";
+import project4 from "../assets/Our Projects/4.jpg";
+import project5 from "../assets/Our Projects/5.jpg";
+import project6 from "../assets/Our Projects/6.jpg";
 import Footer from "../components/Footer";
 
 const projects = [
   {
-    title: "Colletre - Collage Dashboard",
+    title: "THE MASTER ACADEMY",
     category: "Branding",
     image: project1,
   },
   {
-    title: "Indoma Furniture - Website",
+    title: "MAA KALI VASTU JYOTISH",
     category: "Branding",
     image: project2,
   },
   {
-    title: "Nova Studio - Mobile App",
+    title: "SAI REALTOR",
     category: "UI/UX",
     image: project3,
   },
   {
-    title: "Creative Landing Page",
+    title: "GIFTCOIN",
+    category: "Website",
+    image: project4,
+  },
+  {
+    title: "FEVERISH FASHION",
+    category: "Website",
+    image: project4,
+  },
+  {
+    title: "ULWE’S KITCHEN",
     category: "Website",
     image: project4,
   },
@@ -209,9 +221,7 @@ const ProjectsHero = () => {
           {/* TOP TEXT */}
           <div className="flex justify-end">
             <p className="mt-40 max-w-[430px] text-right text-[20px] font-medium leading-[1.5]">
-              Highlighting our recent projects and partnerships that emphasize
-              creativity, innovation, and meaningful design across various
-              industries
+              Showcasing our recent projects and collaborations focused on growth, creativity, and impactful digital experiences across industries.
             </p>
           </div>
 
@@ -222,9 +232,9 @@ const ProjectsHero = () => {
               className="text-[9vw] uppercase leading-[0.82] tracking-[-0.08em] text-white"
               style={{ fontFamily: "Anton" }}
             >
-              2025 - Featured
+              Impactful   
               <br />
-              Project
+              Collaborations
             </h1>
 
             {/* RIGHT SCROLL */}

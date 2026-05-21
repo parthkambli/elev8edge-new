@@ -406,8 +406,19 @@ function Journey() {
       className="relative overflow-hidden bg-black text-white"
     >
       {/* BG */}
-      <img src="/images/girl.jpg" alt="" className="absolute inset-0 h-full w-full object-cover grayscale" />
-      <div className="absolute inset-0 bg-black/50" />
+      {/* BG VIDEO */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 h-full w-full object-cover"
+      >
+        <source src="/videos/journeybg.mp4" type="video/mp4" />
+      </video>
+
+      {/* OVERLAY */}
+      <div className="absolute inset-0 bg-black/60 backdrop-blur-[1px]" />
 
       {/* CONTENT */}
       <div className="relative z-10 px-5 py-20 md:grid md:min-h-[320vh] md:grid-cols-[0.9fr_1.1fr] md:gap-20 md:px-14 md:py-24">
