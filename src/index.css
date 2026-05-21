@@ -1,0 +1,117 @@
+
+
+@import "tailwindcss";
+
+@theme {
+  --animate-float: float 4.5s ease-in-out infinite;
+
+  @keyframes float {
+    0% {
+      transform: translate(-50%, -50%) translateY(0px) rotate(0deg);
+    }
+    50% {
+      transform: translate(-50%, -50%) translateY(-28px) rotate(4deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) translateY(0px) rotate(0deg);
+    }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: black;
+}
+
+@keyframes float {
+  0% {
+    transform: translate(-50%, -50%) translateY(0px);
+  }
+
+  50% {
+    transform: translate(-50%, -50%) translateY(18px);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) translateY(0px);
+  }
+}
+
+
+
+@keyframes wordAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(80px) scale(0.8);
+    filter: blur(8px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+    filter: blur(0px);
+  }
+}
+
+.animate-word {
+  animation: wordAnimation 0.7s ease;
+}
+
+
+
+@import "tailwindcss";
+
+@keyframes wordAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(80px) scale(0.8);
+    filter: blur(8px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+    filter: blur(0px);
+  }
+}
+
+.animate-word {
+  animation: wordAnimation 0.7s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: black;
+}
+
+/* ABOUT MARQUEE */
+.marquee {
+  width: max-content;
+  animation: marquee 22s linear infinite;
+  will-change: transform;
+}
+
+.marquee:hover {
+  /* animation-play-state: paused; */
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+
+
+
+
