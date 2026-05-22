@@ -6,12 +6,12 @@ const team = [
   {
     name: "SOMANSHU VERMA",
     role: "DIRECTOR & CO FOUNDER",
-    image: "/images/team1.jpg",
+    image: "/images/team2.jpg",
   },
   {
     name: "PRAVIN ZINJURDE",
     role: "DIRECTOR & CO FOUNDER",
-    image: "/images/team2.jpg",
+    image: "/images/team1.jpg",
   },
   {
     name: "EVA PROMISE NAIGAGA",

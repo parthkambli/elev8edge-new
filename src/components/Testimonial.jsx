@@ -326,132 +326,272 @@
 
 
 
-import { useState } from "react";
+// import { useState } from "react";
 
-import sisyphus from "../assets/logos/sisyphus.svg";
-import layers from "../assets/logos/layers.svg";
-import capsule from "../assets/logos/capsule.svg";
-import lightbox from "../assets/logos/lightbox.svg";
-import boltshift from "../assets/logos/boltshift.svg";
+// import sisyphus from "../assets/logos/sisyphus.svg";
+// import layers from "../assets/logos/layers.svg";
+// import capsule from "../assets/logos/capsule.svg";
+// import lightbox from "../assets/logos/lightbox.svg";
+// import boltshift from "../assets/logos/boltshift.svg";
 
-const testimonials = [
-  {
-    logo: sisyphus,
-    text: "Collaborating with Nomore Studio was inspiring. They didn’t just follow our brief — they expanded it, offering new ideas for illustration, branding, and digital storytelling.",
-    name: "Casey Lee",
-    role: "Chief Operations Officer",
-    image: "/images/person1.jpg",
-  },
-  {
-    logo: layers,
-    text: "Working with Nomore Studio was an absolute game-changer for our brand. Their creativity, attention to detail, and passionate approach transformed our vision into reality.",
-    name: "Nakata Nicole",
-    role: "Marketing Director",
-    image: "/images/person2.jpg",
-  },
-  {
-    logo: capsule,
-    text: "Nomore Studio made our website redesign effortless. From detailed wireframes to polished UI/UX, they elevated our digital presence beyond expectations.",
-    name: "Taylor Reed",
-    role: "Creative Director",
-    image: "/images/person3.jpg",
-  },
-  {
-    logo: lightbox,
-    text: "The team at Nomore Studio turned our concept into something tangible and exciting. Their 3D renderings, branding elements, and campaign visuals were not only eye-catching but...",
-    name: "Jamie Parker",
-    role: "Executive Chairman",
-    image: "/images/person4.jpg",
-  },
-  {
-    logo: boltshift,
-    text: "Their blend of creativity and technical execution is unmatched. The final product captured our brand perfectly and exceeded expectations.",
-    name: "Sophia Chen",
-    role: "Product Lead",
-    image: "/images/person5.jpg",
-  },
-];
+// const testimonials = [
+//   {
+//     logo: sisyphus,
+//     text: "Collaborating with Nomore Studio was inspiring. They didn’t just follow our brief — they expanded it, offering new ideas for illustration, branding, and digital storytelling.",
+//     name: "Casey Lee",
+//     role: "Chief Operations Officer",
+//     image: "/images/person1.jpg",
+//   },
+//   {
+//     logo: layers,
+//     text: "Working with Nomore Studio was an absolute game-changer for our brand. Their creativity, attention to detail, and passionate approach transformed our vision into reality.",
+//     name: "Nakata Nicole",
+//     role: "Marketing Director",
+//     image: "/images/person2.jpg",
+//   },
+//   {
+//     logo: capsule,
+//     text: "Nomore Studio made our website redesign effortless. From detailed wireframes to polished UI/UX, they elevated our digital presence beyond expectations.",
+//     name: "Taylor Reed",
+//     role: "Creative Director",
+//     image: "/images/person3.jpg",
+//   },
+//   {
+//     logo: lightbox,
+//     text: "The team at Nomore Studio turned our concept into something tangible and exciting. Their 3D renderings, branding elements, and campaign visuals were not only eye-catching but...",
+//     name: "Jamie Parker",
+//     role: "Executive Chairman",
+//     image: "/images/person4.jpg",
+//   },
+//   {
+//     logo: boltshift,
+//     text: "Their blend of creativity and technical execution is unmatched. The final product captured our brand perfectly and exceeded expectations.",
+//     name: "Sophia Chen",
+//     role: "Product Lead",
+//     image: "/images/person5.jpg",
+//   },
+// ];
+
+// function Testimonial() {
+//   const [active, setActive] = useState(3);
+
+//   return (
+//   <section className="relative bg-black px-4 py-16 text-white md:px-10 md:py-24">
+  
+//   {/* TOP TITLE */}
+//   <div className="mb-8 flex items-center gap-3">
+//     <span className="h-4 w-4 rounded-full bg-[#d9fbff] shadow-[0_0_0_6px_rgba(217,251,255,0.2)]" />
+
+//     <p className="text-lg font-medium uppercase md:text-2xl">
+//       TESTIMONIAL
+//     </p>
+//   </div>
+
+//   {/* MAIN TESTIMONIAL */}
+//   <div className="relative overflow-hidden rounded-[12px] md:h-[540px]">
+
+//     {/* IMAGE SIDE */}
+//     <div className="relative h-[340px] w-full overflow-hidden md:absolute md:right-0 md:top-0 md:h-full md:w-[52%]">
+      
+//       <img
+//         src={testimonials[active].image}
+//         alt=""
+//         className="absolute inset-0 h-full w-full scale-[1.02] object-cover object-center"
+//       />
+
+//       {/* IMAGE OVERLAY */}
+//       <div className="absolute inset-0 bg-gradient-to-r from-black via-black/65 to-transparent" />
+//     </div>
+
+//     {/* CONTENT */}
+//     {/* <div className="relative z-10 flex h-full flex-col justify-between pt-8 md:max-w-[50%] md:py-10"> */}
+//     <div className="relative z-10 flex h-full flex-col pt-8 md:max-w-[50%] md:py-10">
+      
+//       {/* <p className="max-w-[760px] text-[18px] font-medium leading-[1.15] tracking-[-0.04em] md:text-[48px] lg:text-[52px] xl:text-[56px]"> */}
+//      <p className="mb-12 max-w-[760px] text-[18px] font-medium leading-[1.15] tracking-[-0.04em] md:text-[38px] lg:text-[42px] xl:text-[46px]">
+//         {testimonials[active].text}
+//       </p>
+
+//       <div className="mt-auto">
+        
+//         <h4 className="text-[22px] font-bold leading-none md:text-[34px]">
+//           {testimonials[active].name}
+//         </h4>
+
+//         <p className="mt-2 text-[14px] font-medium text-white/45 md:text-[18px]">
+//           {testimonials[active].role}
+//         </p>
+
+//       </div>
+//     </div>
+//   </div>
+
+//   {/* LOGOS */}
+//   <div className="mt-10 overflow-x-auto pb-4 scrollbar-hide md:mt-14">
+    
+//     <div className="flex gap-5 md:grid md:grid-cols-5">
+      
+//       {testimonials.map((item, index) => (
+//         <button
+//           key={index}
+//           onClick={() => setActive(index)}
+//           className={`flex h-[72px] min-w-[150px] items-center justify-center rounded-[6px] border border-white/10 transition-all duration-300 md:h-36 md:min-w-0 ${
+//             active === index
+//               ? "bg-white/20"
+//               : "bg-white/[0.08] hover:bg-white/[0.12]"
+//           }`}
+//         >
+//           <img
+//             src={item.logo}
+//             alt=""
+//             className="h-8 w-auto object-contain opacity-90 md:h-10"
+//           />
+//         </button>
+//       ))}
+
+//     </div>
+//   </div>
+// </section>
+//   );
+// }
+
+// export default Testimonial;
+
+
+
+
+
+
+import React from "react";
 
 function Testimonial() {
-  const [active, setActive] = useState(3);
-
   return (
-  <section className="relative bg-black px-4 py-16 text-white md:px-10 md:py-24">
-  
-  {/* TOP TITLE */}
-  <div className="mb-8 flex items-center gap-3">
-    <span className="h-4 w-4 rounded-full bg-[#d9fbff] shadow-[0_0_0_6px_rgba(217,251,255,0.2)]" />
+    <section className="bg-black px-4 py-16 text-white md:px-10 md:py-24">
 
-    <p className="text-lg font-medium uppercase md:text-2xl">
-      TESTIMONIAL
-    </p>
-  </div>
+      {/* TITLE */}
+      <div className="mb-12 flex items-center gap-3">
+        <span className="h-4 w-4 rounded-full bg-[#d9fbff] shadow-[0_0_0_6px_rgba(217,251,255,0.2)]" />
 
-  {/* MAIN TESTIMONIAL */}
-  <div className="relative overflow-hidden rounded-[12px] md:h-[540px]">
-
-    {/* IMAGE SIDE */}
-    <div className="relative h-[340px] w-full overflow-hidden md:absolute md:right-0 md:top-0 md:h-full md:w-[52%]">
-      
-      <img
-        src={testimonials[active].image}
-        alt=""
-        className="absolute inset-0 h-full w-full scale-[1.02] object-cover object-center"
-      />
-
-      {/* IMAGE OVERLAY */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black via-black/65 to-transparent" />
-    </div>
-
-    {/* CONTENT */}
-    {/* <div className="relative z-10 flex h-full flex-col justify-between pt-8 md:max-w-[50%] md:py-10"> */}
-    <div className="relative z-10 flex h-full flex-col pt-8 md:max-w-[50%] md:py-10">
-      
-      {/* <p className="max-w-[760px] text-[18px] font-medium leading-[1.15] tracking-[-0.04em] md:text-[48px] lg:text-[52px] xl:text-[56px]"> */}
-     <p className="mb-12 max-w-[760px] text-[18px] font-medium leading-[1.15] tracking-[-0.04em] md:text-[38px] lg:text-[42px] xl:text-[46px]">
-        {testimonials[active].text}
-      </p>
-
-      <div className="mt-auto">
-        
-        <h4 className="text-[22px] font-bold leading-none md:text-[34px]">
-          {testimonials[active].name}
-        </h4>
-
-        <p className="mt-2 text-[14px] font-medium text-white/45 md:text-[18px]">
-          {testimonials[active].role}
+        <p className="text-lg font-medium uppercase md:text-2xl">
+          OUR FOUNDERS
         </p>
+      </div>
+
+      {/* FIRST CARD */}
+      <div className="relative mb-14 overflow-hidden rounded-[16px]">
+
+        {/* IMAGE */}
+        <img
+          src="/images/person1.jpg"
+          alt=""
+          className="h-[620px] w-full scale-[1.02] object-cover object-center md:h-[780px]"
+        />
+
+        {/* OVERLAY */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/88 to-transparent" />
+
+        {/* CONTENT */}
+        <div className="absolute inset-0 z-10 flex flex-col justify-between p-6 md:w-[62%] md:p-14">
+
+          <div>
+
+            <p className="max-w-[900px] text-[16px] font-medium leading-[1.45] tracking-[-0.02em] md:text-[24px] lg:text-[28px]">
+
+              With over 8+ years of experience in the digital space, Pravin has built and scaled brands from the ground up.
+
+              <br />
+              <br />
+
+              His journey spans across digital marketing operations to leading client success as a project manager, consistently driving brands to achieve ₹1Cr+ monthly revenue.
+
+              <br />
+              <br />
+
+              His expertise lies in managing multiple clients, crafting growth-focused strategies, and delivering measurable results through strong team leadership and execution.
+
+              <br />
+              <br />
+
+              Pravin founded Elev8Edge with a clear vision — to help brands establish a powerful digital presence and scale through result-driven marketing.
+
+            </p>
+
+          </div>
+
+          <div className="mt-10">
+
+            <h4 className="text-[28px] font-bold md:text-[42px]">
+              Pravin Zinjurde
+            </h4>
+
+            <p className="mt-2 text-[15px] text-white/45 md:text-[20px]">
+              Founder & Director
+            </p>
+
+          </div>
+
+        </div>
 
       </div>
-    </div>
-  </div>
 
-  {/* LOGOS */}
-  <div className="mt-10 overflow-x-auto pb-4 scrollbar-hide md:mt-14">
-    
-    <div className="flex gap-5 md:grid md:grid-cols-5">
-      
-      {testimonials.map((item, index) => (
-        <button
-          key={index}
-          onClick={() => setActive(index)}
-          className={`flex h-[72px] min-w-[150px] items-center justify-center rounded-[6px] border border-white/10 transition-all duration-300 md:h-36 md:min-w-0 ${
-            active === index
-              ? "bg-white/20"
-              : "bg-white/[0.08] hover:bg-white/[0.12]"
-          }`}
-        >
-          <img
-            src={item.logo}
-            alt=""
-            className="h-8 w-auto object-contain opacity-90 md:h-10"
-          />
-        </button>
-      ))}
+      {/* SECOND CARD */}
+      <div className="relative overflow-hidden rounded-[16px]">
 
-    </div>
-  </div>
-</section>
+        {/* IMAGE */}
+        <img
+          src="/images/person2.jpg"
+          alt=""
+          className="h-[620px] w-full scale-[1.02] object-cover object-center md:h-[780px]"
+        />
+
+        {/* OVERLAY */}
+        <div className="absolute inset-0 bg-gradient-to-l from-black via-black/88 to-transparent" />
+
+        {/* CONTENT */}
+        <div className="absolute right-0 top-0 z-10 flex h-full flex-col justify-between p-6 text-right md:w-[62%] md:p-14">
+
+          <div>
+
+            <p className="ml-auto max-w-[900px] text-[16px] font-medium leading-[1.45] tracking-[-0.02em] md:text-[24px] lg:text-[28px]">
+
+              With 7+ years of experience in international sales and marketing, Somanshu has driven brand growth across global markets.
+
+              <br />
+              <br />
+
+              He has worked with clients across Africa, Oman, Dubai, and India, delivering consistent business expansion.
+
+              <br />
+              <br />
+
+              His expertise lies in understanding client needs, building strong accountability, and turning strategies into profitable outcomes.
+
+              <br />
+              <br />
+
+              He co-founded Elev8Edge with a vision to help brands scale internationally through result-driven marketing.
+
+            </p>
+
+          </div>
+
+          <div className="mt-10">
+
+            <h4 className="text-[28px] font-bold md:text-[42px]">
+              Somanshu Verma
+            </h4>
+
+            <p className="mt-2 text-[15px] text-white/45 md:text-[20px]">
+              Founder & Director
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
   );
 }
 
