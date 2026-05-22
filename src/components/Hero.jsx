@@ -154,28 +154,29 @@ function Hero() {
           </h1>
         </div>
 
-        {/* DESCRIPTION */}
-        <div className="flex justify-end">
-          <p className="max-w-[320px] text-right text-sm font-bold leading-[1.3] text-white sm:text-base md:max-w-[380px] md:text-lg">
-            We transform ideas into fully-realized design experiences — from
-            UI/UX and illustration to development — creating work that elevates
-            brands.
-          </p>
-                    {/* <Link
-                      to="/contact"
-                      className="group flex items-center gap-2 rounded-full bg-white py-2 pl-4 pr-1.5 text-xs font-bold text-black transition-all duration-300 hover:scale-[1.02] md:gap-3 md:pl-5 md:pr-2 md:text-sm ml-8"
-                    >
-                      GET STARTED
-                      <span className="grid h-7 w-7 place-items-center rounded-full bg-black text-white transition-transform duration-300 group-hover:translate-x-1 md:h-9 md:w-9">
-                        ➜
-                      </span>
-                    </Link> */}
-        </div>
+      {/* DESCRIPTION */}
+      <div className="relative z-40 flex flex-col items-end">
+        <p className="max-w-[320px] text-right text-sm font-bold leading-[1.3] text-white sm:text-base md:max-w-[380px] md:text-lg pb-4">
+          We transform ideas into fully-realized design experiences — from
+          UI/UX and illustration to development — creating work that elevates
+          brands.
+        </p>
+
+        <Link
+          to="/contact"
+          className="group flex items-center gap-2 rounded-full bg-white w-42 py-2 pl-4 pr-1.5 text-xs font-bold text-black transition-all duration-300 hover:scale-[1.02] md:gap-3 md:pl-5 md:pr-2 md:text-sm ml-8"
+        >
+          GET STARTED
+          <span className="grid h-7 w-7 place-items-center rounded-full bg-black text-white transition-transform duration-300 group-hover:translate-x-1 md:h-9 md:w-9">
+            ➜
+          </span>
+        </Link>
+      </div>
         
       </div>
 
       {/* BOTTOM FADE */}
-      <div className="absolute bottom-0 left-0 z-10 h-40 w-full bg-gradient-to-b from-transparent to-black" />
+      <div className="absolute bottom-0 left-0 z-0 h-40 w-full bg-gradient-to-b from-transparent to-black" />
     </section>
   );
 }
