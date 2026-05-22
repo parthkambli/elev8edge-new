@@ -254,7 +254,7 @@ function Contact() {
 
       {/* TESTIMONIAL */}
      <div className="relative z-20 -mt-24">
-  <AboutTestimonial />
+  {/* <AboutTestimonial /> */}
 </div>
       {/* FOOTER */}
       <Footer />
