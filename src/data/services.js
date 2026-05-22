@@ -15,7 +15,7 @@ export const services = [
     number: "02",
     title: "Social Media Growth",
     image: service7,
-    desc: "We help brands grow their online presence through strategic content, audience engagement, and performance-driven campaigns. From increasing reach to generating quality leads, we build social media strategies designed for consistent growth and real impact.",
+    desc: "We help brands grow their online presence through strategic content, audience engagement, and performance-driven campaigns.     From increasing reach to generating quality leads, we build social media strategies designed for consistent growth and real impact.",
   },
   {
     number: "03",

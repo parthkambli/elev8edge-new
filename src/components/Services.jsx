@@ -80,43 +80,40 @@ function Services() {
           <div
             key={index}
             className="
-              service-card
-              sticky
-              top-[90px]
-              mb-10
-              flex
-              flex-col
-              gap-10
-              rounded-[34px]
-              border
-              border-black/5
-              bg-[#ececec]
-              px-6
-              py-8
-              text-black
-              shadow-[0_20px_80px_rgba(0,0,0,0.45)]
+  service-card
+  sticky
+  top-[90px]
+  mb-4
+  grid
+  rounded-[34px]
+  border
+  border-black/5
+  bg-[#ececec]
+  px-6
+  py-7
+  text-black
+  shadow-[0_20px_80px_rgba(0,0,0,0.45)]
 
-              md:min-h-[320px]
-              md:flex-row
-              md:items-center
-              md:justify-between
-              md:gap-14
-              md:px-10
-              md:py-10
-            "
+  md:min-h-[100px]
+  md:grid-cols-[1.2fr_280px_0.9fr]
+  md:items-center
+  md:gap-10
+  md:px-8
+  md:py-2
+"
             style={{
               zIndex: services.length - index,
             }}
           >
 
             {/* LEFT */}
-            <div className="flex items-start gap-5 md:min-w-[420px] md:gap-10">
+            <div className="flex items-start gap-5 md:gap-8">
 
-              <span className="pt-3 text-[32px] font-black text-[#ff5c39] md:text-[52px]">
+              <span className="pt-2 text-[26px] font-black text-[#ff5c39] md:text-[38px]">
                 {service.number}
               </span>
 
-              <h3 className="text-[12vw] font-[900] leading-[0.88] tracking-[-0.07em] md:text-[4.5vw]">
+              <h3 className="text-[13vw] font-[900] leading-[0.88] tracking-[-0.07em] md:text-[3.6vw]">
                 {service.title}
               </h3>
 
@@ -126,34 +123,34 @@ function Services() {
             <div className="flex justify-center">
 
               <div
-  className="
-    w-full
-    overflow-hidden
+                className="
+                  w-full
+                  overflow-hidden
 
-    md:w-[300px]
-md:min-w-[300px]
-  "
->
+                  md:w-[250px]
+                  md:min-w-[250px]
+                "
+              >
 
-  <img
-    src={service.image}
-    alt={service.title}
-    className="
-      aspect-[1.15/1]
-      w-full
-      object-cover
-      object-center
-    "
-  />
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  className="
+                    aspect-square
+                    w-full
+                    object-cover
+                    object-center
+                  "
+                />
 
-</div>
+              </div>
 
             </div>
 
             {/* RIGHT TEXT */}
-            <div className="max-w-[420px]">
+            <div className="max-w-[330px]">
 
-              <p className="text-[18px] leading-[1.3] tracking-[-0.03em] text-black/85 md:text-[30px]">
+              <p className="text-[17px] leading-[1.35] tracking-[-0.02em] text-black/85 md:text-[18px]">
                 {service.desc}
               </p>
 
