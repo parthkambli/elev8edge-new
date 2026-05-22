@@ -168,7 +168,7 @@ const Navbar = () => {
   <img
     src={logo}
     alt="Nomore Logo"
-    className="h-8 w-auto object-contain md:h-10"
+    className="h-16 w-auto object-contain md:h-20"
   />
 </Link>
 

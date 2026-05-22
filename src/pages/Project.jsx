@@ -169,33 +169,33 @@ import Footer from "../components/Footer";
 const projects = [
   {
     title: "THE MASTER ACADEMY",
-    category: "Branding",
+    // category: "Branding",
     image: project1,
   },
   {
     title: "MAA KALI VASTU JYOTISH",
-    category: "Branding",
+    // category: "Branding",
     image: project2,
   },
   {
     title: "SAI REALTOR",
-    category: "UI/UX",
+    // category: "UI/UX",
     image: project3,
   },
   {
     title: "GIFTCOIN",
-    category: "Website",
+    // category: "Website",
     image: project4,
   },
   {
     title: "FEVERISH FASHION",
-    category: "Website",
-    image: project4,
+    // category: "Website",
+    image: project5,
   },
   {
     title: "ULWE’S KITCHEN",
-    category: "Website",
-    image: project4,
+    // category: "Website",
+    image: project6,
   },
 ];
 
