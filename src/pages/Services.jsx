@@ -559,7 +559,7 @@ useEffect(() => {
 
 
 
-<AboutTestimonial/>
+{/* <AboutTestimonial/> */}
 <Footer/>
      
     </main>

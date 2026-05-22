@@ -165,6 +165,7 @@ import project4 from "../assets/Our Projects/4.jpg";
 import project5 from "../assets/Our Projects/5.jpg";
 import project6 from "../assets/Our Projects/6.jpg";
 import Footer from "../components/Footer";
+import ClientVdo from "../components/ClientVdo"
 
 const projects = [
   {
@@ -175,17 +176,17 @@ const projects = [
   {
     title: "MAA KALI VASTU JYOTISH",
     // category: "Branding",
-    image: project2,
+    image: project4,
   },
   {
     title: "SAI REALTOR",
     // category: "UI/UX",
-    image: project3,
+    image: project2,
   },
   {
     title: "GIFTCOIN",
     // category: "Website",
-    image: project4,
+    image: project3,
   },
   {
     title: "FEVERISH FASHION",
@@ -266,6 +267,7 @@ const ProjectsHero = () => {
           ))}
         </div>
       </section>
+      <ClientVdo/>
       <Footer/>
     </main>
   );
