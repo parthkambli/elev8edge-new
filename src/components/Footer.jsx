@@ -1,7 +1,10 @@
 import xIcon from "../assets/logos/x.svg";
 import instaIcon from "../assets/logos/instagram.svg";
-import linkedinIcon from "../assets/logos/linkedin.svg";
-import threadIcon from "../assets/logos/thread.svg";
+import facebookIcon from "../assets/logos/facebook.svg";
+import youtubeIcon from "../assets/logos/youtube.svg";
+import { Link } from "react-router-dom";
+
+// import threadIcon from "../assets/logos/thread.svg";
 
 function Footer() {
   return (
@@ -10,7 +13,7 @@ function Footer() {
 
 
         {/* TOP */}
-        <div className="grid grid-cols-1 gap-10 border-b border-black/10 pb-8 md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-10 border-b border-black/10 pb-8 md:grid-cols-2">
 
           {/* PHONE */}
           <div>
@@ -23,13 +26,13 @@ function Footer() {
               href="tel:+625237351221"
               className="mt-2 inline-block text-[20px] font-semibold"
             >
-              +62 523 735 1221
+               +91 7738788775
             </a>
 
           </div>
 
           {/* EMAIL */}
-          <div className="md:text-center">
+          {/* <div className="md:text-center">
 
             <p className="text-[20px] font-semibold text-black/45">
               Email :
@@ -42,20 +45,20 @@ function Footer() {
               hello.nomore@gmail.com
             </a>
 
-          </div>
+          </div> */}
 
-          {/* ADMIN */}
+          {/* Email */}
           <div className="md:text-right">
 
             <p className="text-[20px] font-semibold text-black/45">
-              Admin :
+              Email :
             </p>
 
             <a
               href="mailto:support-nomore@gmail.com"
               className="mt-2 inline-block text-[20px] font-semibold"
             >
-              support-nomore@gmail.com
+               info@elev8edge.com
             </a>
 
           </div>
@@ -65,12 +68,12 @@ function Footer() {
         {/* CENTER */}
        <div className="flex flex-1 top-40px items-center justify-center border-b border-black/10">
 
-          <a
-            href="/contact"
-            className="text-center text-[14vw] font-black uppercase leading-none tracking-[-0.08em] transition-transform duration-500 hover:scale-[1.02]"
-          >
-            LET’S-TALK
-          </a>
+        <a
+          href="/contact"
+          className="text-center text-[14vw] font-semibold uppercase leading-[0.9] tracking-[-0.07em] transition-transform duration-500 hover:scale-[1.02]"
+        >
+          LET’S-TALK
+        </a>
 
         </div>
 
@@ -81,11 +84,11 @@ function Footer() {
           <div className="flex flex-wrap items-center gap-6 text-[18px] font-medium">
 
             <p>
-              Designed by <span className="text-black/45">Vektora</span>
+              Designed by <span className="text-black/45">Elev8edge</span>
             </p>
 
             <p>
-              Powered by <span className="text-black/45">Webflow</span>
+              Powered by <span className="text-black/45">Elev8edge</span>
             </p>
 
           </div>
@@ -93,58 +96,58 @@ function Footer() {
           {/* SOCIALS */}
           <div className="flex items-center gap-5">
 
-            {/* X */}
+            {/* X / TWITTER */}
             <a
-              href="/"
+              href="https://x.com/ElevatedgeM"
               target="_blank"
               rel="noreferrer"
               className="transition-opacity duration-300 hover:opacity-60"
             >
               <img
                 src={xIcon}
-                alt=""
+                alt="X"
                 className="h-7 w-7 object-contain"
               />
             </a>
 
             {/* INSTAGRAM */}
             <a
-              href="/"
+              href="https://www.instagram.com/elev8edge.official?igsh=MTAwbGI2bDh3MDVtOA=="
               target="_blank"
               rel="noreferrer"
               className="transition-opacity duration-300 hover:opacity-60"
             >
               <img
                 src={instaIcon}
-                alt=""
+                alt="Instagram"
                 className="h-7 w-7 object-contain"
               />
             </a>
 
-            {/* LINKEDIN */}
+            {/* FACEBOOK */}
             <a
-              href="/"
+              href="https://www.facebook.com/profile.php?id=61582908012391"
               target="_blank"
               rel="noreferrer"
               className="transition-opacity duration-300 hover:opacity-60"
             >
               <img
-                src={linkedinIcon}
-                alt=""
+                src={facebookIcon}
+                alt="Facebook"
                 className="h-7 w-7 object-contain"
               />
             </a>
 
-            {/* THREAD */}
+            {/* YOUTUBE */}
             <a
-              href="/"
+              href="https://youtube.com/@elev8edgeofficial?si=0PFQpDz53ewE-Nq1"
               target="_blank"
               rel="noreferrer"
               className="transition-opacity duration-300 hover:opacity-60"
             >
               <img
-                src={threadIcon}
-                alt=""
+                src={youtubeIcon}
+                alt="YouTube"
                 className="h-7 w-7 object-contain"
               />
             </a>
@@ -154,21 +157,13 @@ function Footer() {
           {/* RIGHT */}
           <div className="flex flex-wrap items-center gap-6 text-[18px] text-black/55">
 
-            <a href="/">
-              Style guide
-            </a>
+            <Link to="/terms-conditions">
+              Terms & Conditions
+            </Link>
 
-            <a href="/">
-              Licenses
-            </a>
-
-            <a href="/">
-              Changelog
-            </a>
-
-            <a href="/">
-              404
-            </a>
+            <Link to="/privacy-policy">
+              Privacy policy
+            </Link>
 
           </div>
 
