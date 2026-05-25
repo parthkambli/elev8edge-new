@@ -157,7 +157,7 @@
 
 import React from "react";
 import serviceVideo from "../../public/videos/projectHero.mp4";
-import LazyImage from "./ui/LazyImage";
+import LazyImage from "../components/ui/LazyImage";
 
 import project1 from "../assets/Our Projects/1.jpg";
 import project2 from "../assets/Our Projects/2.jpg";
@@ -249,11 +249,22 @@ const ProjectsHero = () => {
         <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
           {projects.map((item, index) => (
             <div key={index} className="group cursor-pointer">
-              <div className="h-[520px] w-full overflow-hidden bg-black">
+              <div
+  className="
+    h-[260px]
+    w-full
+    overflow-hidden
+    bg-black
+
+    sm:h-[340px]
+
+    md:h-[520px]
+  "
+>
                 <LazyImage
                   src={item.image}
                   alt={item.title}
-                  className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-130"
+                  className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.08]"
                 />
               </div>
 

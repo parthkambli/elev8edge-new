@@ -64,12 +64,7 @@
 
 
 
-
-
-
 import LazyImage from "./ui/LazyImage";
-
-
 
 function AboutCarousel() {
   const images = [
@@ -79,39 +74,133 @@ function AboutCarousel() {
   ];
 
   return (
-    <section className="relative overflow-hidden bg-black py-16 md:py-28">
+    <section className="relative overflow-hidden bg-black py-10 md:py-28">
 
       {/* LEFT FADE */}
-      <div className="pointer-events-none absolute left-0 top-0 z-20 h-full w-16 bg-gradient-to-r from-black via-black/80 to-transparent md:w-32" />
+      <div
+        className="
+          pointer-events-none
+          absolute
+          left-0
+          top-0
+          z-20
+          h-full
+
+          w-10
+
+          bg-gradient-to-r
+          from-black
+          via-black/80
+          to-transparent
+
+          md:w-32
+        "
+      />
 
       {/* RIGHT FADE */}
-      <div className="pointer-events-none absolute right-0 top-0 z-20 h-full w-16 bg-gradient-to-l from-black via-black/80 to-transparent md:w-32" />
+      <div
+        className="
+          pointer-events-none
+          absolute
+          right-0
+          top-0
+          z-20
+          h-full
+
+          w-10
+
+          bg-gradient-to-l
+          from-black
+          via-black/80
+          to-transparent
+
+          md:w-32
+        "
+      />
 
       {/* MARQUEE */}
-      <div className="marquee-wrapper flex w-max gap-5 md:gap-10">
+      <div className="marquee-wrapper flex w-max gap-3 md:gap-10">
+
         {[...images, ...images, ...images].map((img, index) => (
+
           <div
             key={index}
-            className="group relative min-w-[80vw] overflow-hidden rounded-[14px] sm:min-w-[60vw] md:min-w-[42vw] lg:min-w-[34vw]"
+            className="
+              group
+              relative
+              overflow-hidden
+
+              rounded-[10px]
+              min-w-[84vw]
+
+              sm:min-w-[68vw]
+
+              md:min-w-[42vw]
+              md:rounded-[14px]
+
+              lg:min-w-[34vw]
+            "
           >
+
             <LazyImage
               src={img}
               alt=""
-              className="h-[50vh] w-full object-cover grayscale transition-all duration-700 group-hover:scale-[1.04] group-hover:grayscale-0 md:h-[72vh]"
+              className="
+                h-[34vh]
+                w-full
+                object-cover
+                object-center
+                grayscale
+                transition-all
+                duration-700
+
+                group-hover:scale-[1.04]
+                group-hover:grayscale-0
+
+                sm:h-[42vh]
+
+                md:h-[72vh]
+              "
             />
+
           </div>
+
         ))}
+
       </div>
 
       <style jsx>{`
         .marquee-wrapper {
           animation: marquee 28s linear infinite;
         }
+
         @keyframes marquee {
-          0% { transform: translateX(0%); }
-          100% { transform: translateX(-33.333%); }
+          0% {
+            transform: translateX(0%);
+          }
+
+          100% {
+            transform: translateX(-33.333%);
+          }
+        }
+
+        @media (max-width: 768px) {
+          .marquee-wrapper {
+            animation: marqueeMobile 40s linear infinite;
+          }
+
+          @keyframes marqueeMobile {
+            0% {
+              transform: translateX(0%);
+            }
+
+            100% {
+              transform: translateX(-50%);
+            }
+          }
         }
       `}</style>
+
     </section>
   );
 }

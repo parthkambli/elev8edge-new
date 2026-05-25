@@ -522,7 +522,7 @@ function Projects() {
           </p>
         </div>
 
-        <h2 className="text-[9vw] font-black uppercase leading-[0.82] tracking-[-0.06em]">
+        <h2 className="text-[12vw] font-black uppercase leading-[0.82] tracking-[-0.06em]">
           <span className="text-[#d9fbff]">
             Growth
           </span>
@@ -561,18 +561,34 @@ function Projects() {
 
                     <div className="mb-4 flex flex-wrap gap-3">
 
-                      {project.tags.map((tag) => (
+                      {/* {project.tags.map((tag) => (
                         <span
                           key={tag}
                           className="rounded-full border border-black px-4 py-1 text-[15px]"
                         >
                           {tag}
                         </span>
-                      ))}
+                      ))} */}
 
                     </div>
 
-                    <h3 className="max-w-[520px] text-[4.2vw] font-black leading-[0.88] tracking-[-0.08em] text-black">
+                    <h3
+  className="
+    max-w-full
+
+    text-[13vw]
+    font-black
+    uppercase
+    leading-[0.9]
+    tracking-[-0.08em]
+    text-black
+
+    sm:text-[10vw]
+
+    md:max-w-[520px]
+    md:text-[4.2vw]
+  "
+>
                       {project.title}
                     </h3>
 

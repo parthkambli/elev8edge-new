@@ -329,7 +329,7 @@ function Contact() {
     <textarea
       rows="5"
       required
-      placeholder="Tell us about your project..."
+      placeholder="Tell us about your project, goals and timeline..."
       className="
         mt-5
         w-full

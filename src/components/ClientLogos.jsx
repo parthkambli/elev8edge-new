@@ -26,8 +26,6 @@
 // export default ClientLogos;
 
 
-
-
 import { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -55,7 +53,7 @@ function ClientLogos() {
         y: 0,
         opacity: 1,
         duration: 1,
-        stagger: 0.1,
+        stagger: 0.08,
         ease: "power3.out",
         scrollTrigger: {
           trigger: ".client-logo-section",
@@ -63,6 +61,7 @@ function ClientLogos() {
         },
       }
     );
+    
 
     return () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
@@ -70,66 +69,121 @@ function ClientLogos() {
   }, []);
 
   return (
-    <section className="client-logo-section bg-black px-5 py-24 md:px-10">
+   <section className="client-logo-section overflow-hidden bg-black px-4 pt-12 pb-2 md:px-10 md:py-24">
 
       {/* HEADING */}
-      <div className="mb-14">
+      <div className="mb-10 md:mb-14">
 
-        <div className="mb-5 flex items-center gap-3">
-          <span className="h-4 w-4 rounded-full bg-[#d9fbff] shadow-[0_0_0_6px_rgba(217,251,255,0.2)]" />
+        <div className="mb-4 flex items-center gap-3 md:mb-5">
 
-          <p className="text-lg font-medium uppercase text-white md:text-2xl">
+          <span className="h-3 w-3 rounded-full bg-[#d9fbff] shadow-[0_0_0_5px_rgba(217,251,255,0.2)] md:h-4 md:w-4" />
+
+          <p className="text-sm font-medium uppercase tracking-[0.14em] text-white md:text-2xl">
             Trusted By
           </p>
+
         </div>
 
-        <h2 className="text-[13vw] font-black uppercase leading-[0.85] tracking-[-0.08em] text-white md:text-[6vw]">
+        <h2 className="text-[14vw] font-black uppercase leading-[0.86] tracking-[-0.08em] text-white md:text-[6vw]">
+
           Brands We
           <br />
 
           <span className="text-[#d9fbff]">
             Worked With
           </span>
+
         </h2>
 
       </div>
 
-      {/* LOGOS */}
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-5">
+      {/* MOBILE AUTO SCROLL / DESKTOP GRID */}
+      <div className="relative overflow-hidden">
 
-        {logos.map((item, index) => (
-          <div
-            key={index}
-            className="client-logo-card flex h-[130px] min-w-[340px] items-center justify-center rounded-[18px] border border-white/10 bg-black transition-all duration-500 hover:border-white/30 md:min-w-0"
-          >
+        <div
+          className="
+            client-marquee
+            flex
+            w-max
+            gap-4
 
-            {/* INNER CARD */}
-            <div className="
-              flex
-              h-full
-              w-full
-              items-center
-              justify-center
-              rounded-[18px]
-              bg-[#ffffff]
-              transition-all
-              duration-500
-              group-hover:scale-[1.03]
-            ">
+            md:grid
+            md:w-full
+            md:grid-cols-5
+            md:gap-6
+          "
+        >
 
-              <LazyImage
-                src={item}
-                alt=""
-                className="h-[120px] w-auto object-contain opacity-95"
-                
-              />
+          {(window.innerWidth < 768
+  ? [...logos, ...logos]
+  : logos
+).map((item, index) => (
+
+            <div
+              key={index}
+              className="
+                client-logo-card
+                flex
+                h-[110px]
+                min-w-[220px]
+                items-center
+                justify-center
+                rounded-[16px]
+                border
+                border-white/10
+                bg-black
+                p-[1px]
+                transition-all
+                duration-500
+                hover:border-white/30
+
+                md:h-[130px]
+                md:min-w-0
+                md:rounded-[18px]
+              "
+            >
+
+              {/* INNER CARD */}
+              <div
+                className="
+                  flex
+                  h-full
+                  w-full
+                  items-center
+                  justify-center
+                  rounded-[15px]
+                  bg-white
+                  px-4
+
+                  md:rounded-[17px]
+                "
+              >
+
+                <LazyImage
+                  src={item}
+                  alt=""
+                  className="
+                    h-[62px]
+                    w-auto
+                    object-contain
+                    opacity-95
+
+                    sm:h-[72px]
+
+                    md:h-[110px]
+                  "
+                />
+
+              </div>
 
             </div>
 
-          </div>
-        ))}
+          ))}
+
+        </div>
 
       </div>
+
     </section>
   );
 }
