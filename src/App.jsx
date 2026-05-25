@@ -39,8 +39,10 @@ import About from "./pages/About";
 import Services from "./pages/Services";
 import Navbar from "./components/Navbar";
 import Contact from "./pages/Contact";
-
 import Project from "./pages/Project";
+
+import TermsConditions from "./pages/TermsConditions";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 function App() {
   return (
@@ -53,6 +55,16 @@ function App() {
 
         <Route path="/projects" element={<Project />} />
         <Route path="/contact" element={<Contact />} />
+
+        <Route
+          path="/terms-conditions"
+          element={<TermsConditions />}
+        />
+
+        <Route
+          path="/privacy-policy"
+          element={<PrivacyPolicy />}
+        />
         
       </Routes>
     </BrowserRouter>
