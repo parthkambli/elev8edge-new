@@ -459,8 +459,9 @@
 
 
 
-
 import React from "react";
+import LazyImage from "./ui/LazyImage";        
+
 
 function Testimonial() {
   return (
@@ -477,69 +478,146 @@ function Testimonial() {
 
       </div>
 
-      {/* FIRST CARD */}
-      <div className="relative mb-8 overflow-hidden rounded-[18px] md:mb-14 md:rounded-[20px]">
+      {/* ================= FIRST CARD ================= */}
+
+      <div className="relative mb-10 overflow-hidden rounded-[20px] md:mb-14">
 
         {/* IMAGE */}
-        <img
-          src="/images/person1.jpg"
-          alt=""
-          className="
-            h-[760px]
-            w-full
-            scale-[1.02]
-            object-cover
-            object-center
+        <picture>
 
-            sm:h-[820px]
-            md:h-[780px]
-          "
-        />
+          {/* MOBILE IMAGE */}
+          <source
+            media="(max-width: 767px)"
+            srcSet="/images/team1.jpg"
+          />
+
+          {/* DESKTOP IMAGE */}
+          <LazyImage
+            src="/images/person1.jpg"
+            alt=""
+            className="
+              h-[760px]
+              w-full
+              object-cover
+              object-center
+
+              md:h-[620px]
+            "
+          />
+
+        </picture>
+        {/* MOBILE CONTENT */}
+<div className="bg-black px-5 py-7 md:hidden">
+
+  <div className="mb-6 text-center">
+
+    <h4 className="text-[30px] font-bold leading-none">
+      Pravin Zinjurde
+    </h4>
+
+    <p className="mt-3 text-[12px] uppercase tracking-[0.24em] text-white/50">
+      Founder & Director
+    </p>
+
+  </div>
+
+  <p className="text-[14px] leading-[1.8] text-white/92">
+
+    With over 8+ years of experience in the digital space, Pravin has built and scaled brands from the ground up.
+
+    <br />
+    <br />
+
+    His journey spans across digital marketing operations to leading client success as a project manager, consistently driving brands to achieve ₹1Cr+ monthly revenue.
+
+    <br />
+    <br />
+
+    His expertise lies in managing multiple clients, crafting growth-focused strategies, and delivering measurable results through strong team leadership and execution.
+
+    <br />
+    <br />
+
+    Pravin founded Elev8Edge with a clear vision — to help brands establish a powerful digital presence and scale through result-driven marketing.
+
+  </p>
+
+</div>
 
         {/* OVERLAY */}
-        <div className="
-          absolute
-          inset-0
-          bg-gradient-to-t
-          from-black
-          via-black/88
-          to-black/20
+       <div
+  className="
+    absolute
+    inset-0
+    hidden
 
-          md:bg-gradient-to-r
-          md:from-black
-          md:via-black/88
-          md:to-transparent
-        " />
+    md:block
+    md:bg-gradient-to-r
+    md:from-black
+    md:via-black/88
+    md:to-transparent
+  "
+/>
 
         {/* CONTENT */}
-        <div className="
-          absolute
-          inset-0
-          z-10
-          flex
-          flex-col
-          justify-end
-          p-5
+        <div
+          className="absolute inset-0 z-10 hidden md:flex md:flex-col md:justify-end md:w-[62%] md:p-14
 
-          sm:p-7
-          md:w-[62%]
-          md:justify-between
-          md:p-14
-        ">
+            flex
+            flex-col
+            justify-end
 
+            p-5
+
+            md:w-[62%]
+            md:justify-between
+            md:p-14
+          "
+        >
+
+          {/* MOBILE NAME */}
+          <div className="mb-8 flex flex-col items-center text-center md:hidden">
+
+            <h4 className="text-[32px] font-bold leading-none">
+              Pravin Zinjurde
+            </h4>
+
+            <p className="mt-3 text-[12px] uppercase tracking-[0.25em] text-white/55">
+              Founder & Director
+            </p>
+
+          </div>
+
+          {/* DESKTOP NAME */}
+          <div className="hidden md:block">
+
+            <h4 className="text-[42px] font-bold">
+              Pravin Zinjurde
+            </h4>
+
+            <p className="mt-2 text-[20px] uppercase tracking-[0.12em] text-white/45">
+              Founder & Director
+            </p>
+
+          </div>
+
+          {/* DESCRIPTION */}
           <div>
 
-            <p className="
-              max-w-[900px]
-              text-[13px]
-              font-medium
-              leading-[1.6]
-              tracking-[-0.01em]
+            <p
+              className="
+                max-w-[900px]
 
-              sm:text-[14px]
-              md:text-[22px]
-              lg:text-[28px]
-            ">
+                text-[14px]
+                leading-[1.75]
+                tracking-[-0.01em]
+
+                sm:text-[15px]
+
+                md:text-[22px]
+                md:leading-[1.55]
+              "
+            >
 
               With over 8+ years of experience in the digital space, Pravin has built and scaled brands from the ground up.
 
@@ -562,89 +640,154 @@ function Testimonial() {
 
           </div>
 
-          <div className="mt-8 md:mt-10">
+        </div>
 
-            <h4 className="text-[22px] font-bold md:text-[42px]">
-              Pravin Zinjurde
+      </div>
+
+      {/* ================= SECOND CARD ================= */}
+
+      <div className="relative overflow-hidden rounded-[20px]">
+
+        {/* IMAGE */}
+        <picture>
+
+          {/* MOBILE IMAGE */}
+          <source
+            media="(max-width: 767px)"
+            srcSet="/images/team2.jpg"
+          />
+
+          {/* DESKTOP IMAGE */}
+          <LazyImage
+            src="/images/person2.jpg"
+            alt=""
+            className="
+              h-[760px]
+              w-full
+              object-cover
+              object-center
+
+              md:h-[620px]
+            "
+          />
+
+        </picture>
+        {/* MOBILE CONTENT */}
+<div className="bg-black px-5 py-7 text-center md:hidden">
+
+  <div className="mb-6">
+
+    <h4 className="text-[30px] font-bold leading-none">
+      Somanshu Verma
+    </h4>
+
+    <p className="mt-3 text-[12px] uppercase tracking-[0.24em] text-white/50">
+      Founder & Director
+    </p>
+
+  </div>
+
+  <p className="text-[14px] leading-[1.8] text-white/92">
+
+    With 7+ years of experience in international sales and marketing, Somanshu has driven brand growth across global markets.
+
+    <br />
+    <br />
+
+    He has worked with clients across Africa, Oman, Dubai, and India, delivering consistent business expansion.
+
+    <br />
+    <br />
+
+    His expertise lies in understanding client needs, building strong accountability, and turning strategies into profitable outcomes.
+
+    <br />
+    <br />
+
+    He co-founded Elev8Edge with a vision to help brands scale internationally through result-driven marketing.
+
+  </p>
+
+</div>
+
+        {/* OVERLAY */}
+        <div
+  className="
+    absolute
+    inset-0
+    hidden
+
+    md:block
+    md:bg-gradient-to-l
+    md:from-black
+    md:via-black/88
+    md:to-transparent
+  "
+/>
+
+        {/* CONTENT */}
+        <div
+          className="absolute inset-0 z-10 hidden md:flex md:flex-col md:justify-end md:w-[62%] md:p-14
+
+            flex
+            flex-col
+            justify-end
+
+            p-5
+
+            md:left-auto
+            md:right-0
+            md:w-[62%]
+            md:justify-between
+            md:p-14
+            md:text-right
+          "
+        >
+
+          {/* MOBILE NAME */}
+          <div className="mb-8 flex flex-col items-center text-center md:hidden">
+
+            <h4 className="text-[32px] font-bold leading-none">
+              Somanshu Verma
             </h4>
 
-            <p className="mt-2 text-[13px] uppercase tracking-[0.12em] text-white/45 md:text-[20px]">
+            <p className="mt-3 text-[12px] uppercase tracking-[0.25em] text-white/55">
               Founder & Director
             </p>
 
           </div>
 
-        </div>
+          {/* DESKTOP NAME */}
+          <div className="hidden md:block">
 
-      </div>
+            <h4 className="text-[42px] font-bold">
+              Somanshu Verma
+            </h4>
 
-      {/* SECOND CARD */}
-      <div className="relative overflow-hidden rounded-[18px] md:rounded-[20px]">
+            <p className="mt-2 text-[20px] uppercase tracking-[0.12em] text-white/45">
+              Founder & Director
+            </p>
 
-        {/* IMAGE */}
-        <img
-          src="/images/person2.jpg"
-          alt=""
-          className="
-            h-[760px]
-            w-full
-            scale-[1.02]
-            object-cover
-            object-center
+          </div>
 
-            sm:h-[820px]
-            md:h-[780px]
-          "
-        />
-
-        {/* OVERLAY */}
-        <div className="
-          absolute
-          inset-0
-          bg-gradient-to-t
-          from-black
-          via-black/88
-          to-black/20
-
-          md:bg-gradient-to-l
-          md:from-black
-          md:via-black/88
-          md:to-transparent
-        " />
-
-        {/* CONTENT */}
-        <div className="
-          absolute
-          inset-0
-          z-10
-          flex
-          flex-col
-          justify-end
-          p-5
-
-          sm:p-7
-          md:right-0
-          md:left-auto
-          md:w-[62%]
-          md:justify-between
-          md:p-14
-          md:text-right
-        ">
-
+          {/* DESCRIPTION */}
           <div>
 
-            <p className="
-              md:ml-auto
-              max-w-[900px]
-              text-[13px]
-              font-medium
-              leading-[1.6]
-              tracking-[-0.01em]
+            <p
+              className="
+                md:ml-auto
+                max-w-[900px]
 
-              sm:text-[14px]
-              md:text-[22px]
-              lg:text-[28px]
-            ">
+                text-[14px]
+                leading-[1.75]
+                tracking-[-0.01em]
+
+                sm:text-[15px]
+
+                md:text-[22px]
+                md:leading-[1.55]
+              "
+            >
 
               With 7+ years of experience in international sales and marketing, Somanshu has driven brand growth across global markets.
 
@@ -663,18 +806,6 @@ function Testimonial() {
 
               He co-founded Elev8Edge with a vision to help brands scale internationally through result-driven marketing.
 
-            </p>
-
-          </div>
-
-          <div className="mt-8 md:mt-10 md:text-right">
-
-            <h4 className="text-[22px] font-bold md:text-[42px]">
-              Somanshu Verma
-            </h4>
-
-            <p className="mt-2 text-[13px] uppercase tracking-[0.12em] text-white/45 md:text-[20px]">
-              Founder & Director
             </p>
 
           </div>

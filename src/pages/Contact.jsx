@@ -93,7 +93,7 @@ function Contact() {
       </p>
 
       <p className="mt-2 text-[22px] font-semibold tracking-[-0.02em]">
-        +62 523 735 1221
+        +91 7738788775
       </p>
 
     </div>
@@ -106,13 +106,13 @@ function Contact() {
       </p>
 
       <p className="mt-2 text-[22px] font-semibold tracking-[-0.02em]">
-        hello.nomore@gmail.com
+        info@elev8edge.com
       </p>
 
     </div>
 
     {/* ADMIN */}
-    <div>
+    {/* <div>
 
       <p className="text-[20px] font-semibold text-white/45">
         Admin :
@@ -122,7 +122,7 @@ function Contact() {
         support-nomore@gmail.com
       </p>
 
-    </div>
+    </div> */}
 
   </div>
 
@@ -134,117 +134,249 @@ function Contact() {
             className="flex justify-end pt-8 md:pt-10"
           >
 
-            <form className="w-full max-w-[580px] space-y-10">
+            <form className="w-full max-w-[580px] space-y-7 md:space-y-10">
 
-              {/* NAME */}
-              <div>
+  {/* FULL NAME */}
+  <div>
 
-                <label className="text-[20px] font-semibold tracking-[-0.02em]">
-                  Name<span className="text-red-500">*</span>
-                </label>
+    <label className="text-[17px] font-semibold tracking-[-0.02em] md:text-[20px]">
+      Full Name<span className="text-red-500">*</span>
+    </label>
 
-                <input
-                  type="text"
-                  className="mt-8 w-full border-b border-white/25 bg-transparent pb-5 text-[18px] outline-none placeholder:text-white/30"
-                />
+    <input
+      type="text"
+      required
+      placeholder="Enter your full name"
+      className="
+        mt-5
+        w-full
+        border-b
+        border-white/25
+        bg-transparent
+        pb-4
+        text-[16px]
+        outline-none
+        placeholder:text-white/30
 
-              </div>
+        md:mt-8
+        md:pb-5
+        md:text-[18px]
+      "
+    />
 
-              {/* EMAIL */}
-              <div>
+  </div>
 
-                <label className="text-[20px] font-semibold tracking-[-0.02em]">
-                  E-mail<span className="text-red-500">*</span>
-                </label>
+  {/* COMPANY NAME */}
+  <div>
 
-                <input
-                  type="email"
-                  className="mt-8 w-full border-b border-white/25 bg-transparent pb-5 text-[18px] outline-none placeholder:text-white/30"
-                />
+    <label className="text-[17px] font-semibold tracking-[-0.02em] md:text-[20px]">
+      Company Name<span className="text-red-500">*</span>
+    </label>
 
-              </div>
+    <input
+      type="text"
+      required
+      placeholder="Enter company name"
+      className="
+        mt-5
+        w-full
+        border-b
+        border-white/25
+        bg-transparent
+        pb-4
+        text-[16px]
+        outline-none
+        placeholder:text-white/30
 
-              {/* PROJECT */}
-              <div>
+        md:mt-8
+        md:pb-5
+        md:text-[18px]
+      "
+    />
 
-                <label className="text-[20px] font-semibold tracking-[-0.02em]">
-                  Tell us about your project
-                </label>
+  </div>
 
-                <textarea
-                  rows="6"
-                  className="mt-8 w-full resize-none border-b border-white/25 bg-transparent text-[18px] outline-none"
-                />
+  {/* EMAIL */}
+  <div>
 
-              </div>
+    <label className="text-[17px] font-semibold tracking-[-0.02em] md:text-[20px]">
+      E-mail<span className="text-red-500">*</span>
+    </label>
 
-              {/* SERVICE */}
-              <div>
+    <input
+      type="email"
+      required
+      placeholder="Enter your email"
+      className="
+        mt-5
+        w-full
+        border-b
+        border-white/25
+        bg-transparent
+        pb-4
+        text-[16px]
+        outline-none
+        placeholder:text-white/30
 
-                <label className="text-[20px] font-semibold tracking-[-0.02em]">
-                  Service:
-                </label>
+        md:mt-8
+        md:pb-5
+        md:text-[18px]
+      "
+    />
 
-                <select className="mt-8 w-full border-b border-white/25 bg-transparent pb-5 text-[18px] text-white outline-none">
+  </div>
 
-                  <option className="bg-black">
-                    Select one...
-                  </option>
+  {/* PHONE NUMBER */}
+  <div>
 
-                  <option className="bg-black">
-                    Branding
-                  </option>
+    <label className="text-[17px] font-semibold tracking-[-0.02em] md:text-[20px]">
+      Phone Number<span className="text-red-500">*</span>
+    </label>
 
-                  <option className="bg-black">
-                    UI/UX Design
-                  </option>
+    <input
+      type="tel"
+      required
+      placeholder="Enter your phone number"
+      className="
+        mt-5
+        w-full
+        border-b
+        border-white/25
+        bg-transparent
+        pb-4
+        text-[16px]
+        outline-none
+        placeholder:text-white/30
 
-                  <option className="bg-black">
-                    Development
-                  </option>
+        md:mt-8
+        md:pb-5
+        md:text-[18px]
+      "
+    />
 
-                </select>
+  </div>
 
-              </div>
+  {/* SERVICE */}
+  <div>
 
-              {/* BUDGET */}
-              <div>
+    <label className="text-[17px] font-semibold tracking-[-0.02em] md:text-[20px]">
+      Select Services<span className="text-red-500">*</span>
+    </label>
 
-                <label className="text-[20px] font-semibold tracking-[-0.02em]">
-                  Budget
-                </label>
+    <select
+      required
+      defaultValue=""
+      className="
+        mt-5
+        w-full
+        border-b
+        border-white/25
+        bg-transparent
+        pb-4
+        text-[16px]
+        text-white
+        outline-none
 
-                <select className="mt-8 w-full border-b border-white/25 bg-transparent pb-5 text-[18px] text-white outline-none">
+        md:mt-8
+        md:pb-5
+        md:text-[18px]
+      "
+    >
 
-                  <option className="bg-black">
-                    Select one...
-                  </option>
+      <option value="" disabled className="bg-black">
+        Select a service
+      </option>
 
-                  <option className="bg-black">
-                    $1k - $5k
-                  </option>
+      <option className="bg-black">
+        SEO (Search Engine Optimization)
+      </option>
 
-                  <option className="bg-black">
-                    $5k - $10k
-                  </option>
+      <option className="bg-black">
+        PPC (Google & Meta Ads)
+      </option>
 
-                  <option className="bg-black">
-                    $10k+
-                  </option>
+      <option className="bg-black">
+        Social Media Marketing
+      </option>
 
-                </select>
+      <option className="bg-black">
+        Website Design & Development
+      </option>
 
-              </div>
+      <option className="bg-black">
+        Brand Building & Strategy
+      </option>
 
-              {/* BUTTON */}
-              <button
-                type="submit"
-                className="mt-8 h-[50px] w-full rounded-full bg-white text-[15px] font-semibold uppercase tracking-wide text-black transition-all duration-300 hover:scale-[1.01]"
-              >
-                Submit
-              </button>
+      <option className="bg-black">
+        Digital Strategy & Consulting
+      </option>
 
-            </form>
+      <option className="bg-black">
+        All Services
+      </option>
+
+    </select>
+
+  </div>
+
+  {/* MESSAGE */}
+  <div>
+
+    <label className="text-[17px] font-semibold tracking-[-0.02em] md:text-[20px]">
+      Message / Project Details<span className="text-red-500">*</span>
+    </label>
+
+    <textarea
+      rows="5"
+      required
+      placeholder="Tell us about your project..."
+      className="
+        mt-5
+        w-full
+        resize-none
+        border-b
+        border-white/25
+        bg-transparent
+        pb-4
+        text-[16px]
+        outline-none
+        placeholder:text-white/30
+
+        md:mt-8
+        md:pb-5
+        md:text-[18px]
+      "
+    />
+
+  </div>
+
+  {/* BUTTON */}
+  <button
+    type="submit"
+    className="
+      mt-4
+      h-[52px]
+      w-full
+      rounded-full
+      bg-white
+      text-[14px]
+      font-semibold
+      uppercase
+      tracking-wide
+      text-black
+      transition-all
+      duration-300
+      hover:scale-[1.01]
+
+      md:mt-8
+      md:h-[58px]
+      md:text-[15px]
+    "
+  >
+    Submit
+  </button>
+
+</form>
 
           </div>
 
