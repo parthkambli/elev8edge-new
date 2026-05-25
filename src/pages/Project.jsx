@@ -156,7 +156,8 @@
 
 
 import React from "react";
-import serviceVideo from "../../public/videos/Dimond.mp4";
+import serviceVideo from "../../public/videos/projectHero.mp4";
+import LazyImage from "./ui/LazyImage";
 
 import project1 from "../assets/Our Projects/1.jpg";
 import project2 from "../assets/Our Projects/2.jpg";
@@ -249,14 +250,14 @@ const ProjectsHero = () => {
           {projects.map((item, index) => (
             <div key={index} className="group cursor-pointer">
               <div className="h-[520px] w-full overflow-hidden bg-black">
-                <img
+                <LazyImage
                   src={item.image}
                   alt={item.title}
                   className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-130"
                 />
               </div>
 
-              <h2 className="mt-6 text-2xl font-bold">
+              <h2 className="mt-6 text-2xl font-bold text-center">
                 {item.title}
               </h2>
 
