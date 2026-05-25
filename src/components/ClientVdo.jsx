@@ -2,11 +2,16 @@ import { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+import masterCover from "../assets/Vdo_cover/master.jpg";
+import saiCover from "../assets/Vdo_cover/sai.jpg";
+import feverishCover from "../assets/Vdo_cover/feverish.jpg";
+
 gsap.registerPlugin(ScrollTrigger);
 
 const clients = [
   {
     video: "/videos/mastervdo.mp4",
+    cover: masterCover,
     project: "THE MASTER ACADEMY",
     name: "MRS ASHWINI",
   },
@@ -19,12 +24,14 @@ const clients = [
 
   {
     video: "/videos/saivdo.mp4",
+    cover: saiCover,
     project: "SAI REALTOR",
     name: "MR ATUL MISHRA",
   },
 
   {
     video: "/videos/feverishvdo.mp4",
+    cover: feverishCover,
     project: "FEVERISH FASHION",
     name: "MR AVINASH",
   },
@@ -98,32 +105,33 @@ function TrustedClients() {
             <div className="overflow-hidden rounded-[24px] bg-[#111]">
 
               <video
-  src={item.video}
-  playsInline
-  preload="metadata"
-  className="
-  h-[240px]
-  w-full
-  object-contain
-  bg-black
-  transition-transform
-  duration-700
-  group-hover:scale-[1.03]
+              src={item.video}
+              poster={item.cover}
+              playsInline
+              preload="metadata"
+              className="
+              h-[240px]
+              w-full
+              object-contain
+              bg-black
+              transition-transform
+              duration-700
+              group-hover:scale-[1.03]
 
-  sm:h-[320px]
-  md:h-[420px]
-  md:object-cover
-"
-  onMouseEnter={(e) => {
-    e.target.currentTime = 0;
-    e.target.muted = false;
-    e.target.play();
-  }}
-  onMouseLeave={(e) => {
-    e.target.pause();
-    e.target.currentTime = 0;
-  }}
-/>
+              sm:h-[320px]
+              md:h-[420px]
+              md:object-cover
+            "
+              onMouseEnter={(e) => {
+                e.target.currentTime = 0;
+                e.target.muted = false;
+                e.target.play();
+              }}
+              onMouseLeave={(e) => {
+                e.target.pause();
+                e.target.currentTime = 0;
+              }}
+            />
 
             </div>
 

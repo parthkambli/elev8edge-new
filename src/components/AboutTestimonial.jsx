@@ -170,6 +170,7 @@
 
 // updates by aadi 
 import { useState, useRef } from "react";
+import LazyImage from "./ui/LazyImage";
 
 import sisyphus from "../assets/logos/sisyphus.svg";
 import layers from "../assets/logos/layers.svg";
@@ -268,7 +269,7 @@ function AboutTestimonial() {
 
           {/* PERSON */}
           <div className="mt-10 flex items-center gap-4 md:mt-16 md:gap-5">
-            <img
+            <LazyImage
               src={testimonials[active].image}
               alt=""
               className="h-14 w-14 rounded-[10px] object-cover md:h-24 md:w-24 md:rounded-[14px]"
@@ -310,7 +311,7 @@ function AboutTestimonial() {
                 : "bg-white/[0.06] hover:bg-white/[0.12]"
             }`}
           >
-            <img
+            <LazyImage
               src={item.logo}
               alt={item.label}
               className="h-5 w-auto object-contain opacity-90 transition-all duration-300"
@@ -334,7 +335,7 @@ function AboutTestimonial() {
                 : "bg-white/[0.06] hover:bg-white/[0.12]"
             }`}
           >
-            <img
+            <LazyImage
               src={item.logo}
               alt={item.label}
               className="h-10 w-auto object-contain opacity-90 transition-all duration-300 group-hover:opacity-100"

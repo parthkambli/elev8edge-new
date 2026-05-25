@@ -1,6 +1,7 @@
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
+import LazyImage from "./ui/LazyImage";
 
 const team = [
   {
@@ -88,7 +89,7 @@ function TeamSection() {
             {/* IMAGE */}
             <div className="overflow-hidden rounded-[22px] bg-[#111]">
 
-              <img
+              <LazyImage
                 src={member.image}
                 alt={member.name}
                 className="h-[620px] w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
@@ -97,13 +98,25 @@ function TeamSection() {
             </div>
 
             {/* INFO */}
-            <div className="mt-5 flex items-center justify-between">
+            {/* <div className="mt-5 flex items-center justify-between">
 
               <h3 className="text-[24px] font-semibold">
                 {member.name}
               </h3>
 
               <p className="text-[20px] text-white/40">
+                {member.role}
+              </p>
+
+            </div> */}
+            {/* INFO */}
+            <div className="mt-5 text-center">
+
+              <h3 className="text-[24px] font-semibold uppercase leading-tight">
+                {member.name}
+              </h3>
+
+              <p className="mt-2 text-[15px] uppercase tracking-[0.12em] text-white/40 md:text-[16px]">
                 {member.role}
               </p>
 

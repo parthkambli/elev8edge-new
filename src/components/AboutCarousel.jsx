@@ -67,7 +67,7 @@
 
 
 
-
+import LazyImage from "./ui/LazyImage";
 
 
 
@@ -94,7 +94,7 @@ function AboutCarousel() {
             key={index}
             className="group relative min-w-[80vw] overflow-hidden rounded-[14px] sm:min-w-[60vw] md:min-w-[42vw] lg:min-w-[34vw]"
           >
-            <img
+            <LazyImage
               src={img}
               alt=""
               className="h-[50vh] w-full object-cover grayscale transition-all duration-700 group-hover:scale-[1.04] group-hover:grayscale-0 md:h-[72vh]"

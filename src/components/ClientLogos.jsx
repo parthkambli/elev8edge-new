@@ -31,6 +31,7 @@
 import { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import LazyImage from "./ui/LazyImage";
 
 import logo from "../assets/logos/sai.png";
 import logo1 from "../assets/logos/gajikaa.png";
@@ -116,7 +117,7 @@ function ClientLogos() {
               group-hover:scale-[1.03]
             ">
 
-              <img
+              <LazyImage
                 src={item}
                 alt=""
                 className="h-[120px] w-auto object-contain opacity-95"

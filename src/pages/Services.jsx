@@ -168,6 +168,7 @@ import serviceVideo from "../../public/videos/service.mp4";
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import LazyImage from "../components/ui/LazyImage";
 
 import service1 from "../assets/Our Services/Content Creation.jpg";
 import service2 from "../assets/Our Services/Social Media.jpg";
@@ -312,9 +313,8 @@ useEffect(() => {
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/20 to-black/60" />
 
         <div className="relative z-10 min-h-screen px-6 pt-36 md:px-12">
-          <p className="absolute right-8 top-[52%] max-w-[410px] text-center text-xl font-medium leading-snug md:right-16">
-            From branding and UI/UX to 2D/3D illustration and development, we
-            turn ideas into engaging, memorable experiences across every medium
+          <p className="absolute right-8 top-[52%] max-w-[410px] text-end text-xl font-medium leading-snug md:right-16">
+            From strategy to execution — we create websites, content, and marketing systems designed to attract attention, generate leads, and scale brands.
           </p>
 
           <h1 className="absolute bottom-10 left-6 text-[13vw] font-black uppercase leading-[0.82] tracking-[-0.07em] md:left-12 md:text-[8vw]">
@@ -369,7 +369,7 @@ useEffect(() => {
         {item.desc}
       </p>
 
-      <img
+      <LazyImage
         src={item.image}
         alt={item.title}
         className="mt-8 h-[210px] w-full rounded-[6px] object-cover md:hidden"
@@ -378,7 +378,7 @@ useEffect(() => {
   ))}
 
   {activeImage && (
-    <img
+    <LazyImage
       src={activeImage}
       alt=""
       className="pointer-events-none fixed z-[999] hidden h-[330px] w-[330px] object-cover md:block"

@@ -438,6 +438,7 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import LazyImage from "./ui/LazyImage";
 
 import project1 from "../assets/images/service-6.png";
 import project2 from "../assets/images/service-7.png";
@@ -591,7 +592,7 @@ function Projects() {
                 {/* IMAGE */}
                 <div className="h-full overflow-hidden rounded-[18px]">
 
-                  <img
+                  <LazyImage
                     src={project.image}
                     alt={project.title}
                     className="h-full w-full object-cover"

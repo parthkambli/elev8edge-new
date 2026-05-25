@@ -190,6 +190,7 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import service2 from "../assets/images/service-2.png";
+import LazyImage from "./ui/LazyImage";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -271,7 +272,7 @@ function Achievement() {
     >
       {/* BACKGROUND IMAGE */}
       <div className="absolute inset-0 overflow-hidden">
-        <img src={service2} alt="" className="achievement-image h-full w-full object-cover" />
+        <LazyImage src={service2} alt="" className="achievement-image h-full w-full object-cover" />
         <div className="absolute inset-0 bg-black/35" />
       </div>
 

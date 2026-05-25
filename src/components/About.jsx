@@ -1,5 +1,6 @@
 import chrome from "../assets/images/chrome.png";
 import cri from "../assets/images/cri.png";
+import LazyImage from "./ui/LazyImage";
 
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
@@ -57,7 +58,7 @@ function About() {
       id="about"
       className="relative flex min-h-screen flex-col items-center overflow-hidden px-4 py-16 text-center sm:px-6 md:px-10 md:py-24"
     >
-      <img
+      <LazyImage
         src={cri}
         alt=""
         className="absolute inset-0 h-full w-full object-cover"
@@ -92,7 +93,7 @@ function About() {
           - `lg:left-[60%]` has been removed — it was the root cause of off-center drift.
           - `lg:top-[100%]` has been removed — it pushed the image off-screen on large screens.
       */}
-      <img
+      <LazyImage
         ref={imageRef}
         src={chrome}
         alt=""

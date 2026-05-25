@@ -4,6 +4,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import { services } from "../data/services";
 
+import LazyImage from "./ui/LazyImage";
+
 gsap.registerPlugin(ScrollTrigger);
 
 function Services() {
@@ -132,7 +134,7 @@ function Services() {
                 "
               >
 
-                <img
+                <LazyImage
                   src={service.image}
                   alt={service.title}
                   className="

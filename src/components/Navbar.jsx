@@ -156,6 +156,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo/logo.png";
+import LazyImage from "./ui/LazyImage";
+
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -165,7 +167,7 @@ const Navbar = () => {
 
         {/* LOGO */}
        <Link to="/" className="flex items-center">
-  <img
+  <LazyImage
     src={logo}
     alt="Nomore Logo"
     className="h-16 w-auto object-contain md:h-20"
