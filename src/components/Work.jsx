@@ -71,7 +71,7 @@ function Work() {
         </div>
 
         <h2 className="text-[13vw] font-black uppercase leading-[0.85] tracking-[-0.07em] text-white md:text-[6.8vw]">
-          <span className="text-white">We deliver impactful</span>{" "}
+          <span className="text-white">DELIVERING</span>{" "}
 
           <span
             key={workWord}
@@ -81,9 +81,9 @@ function Work() {
           </span>
 
           <br />
-          driven by passion 
+          WITH PASSIONATE IDEAS & 
           <br />
-          and experience.
+          HIGH PERFORMANCE.
         </h2>
       </div>
 

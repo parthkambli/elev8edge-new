@@ -16,11 +16,11 @@ const clients = [
     name: "MRS ASHWINI",
   },
 
-  // {
-  //   video: "/videos/client2.mp4",
-  //   project: "MAA KALI VASTU JYOTISH",
-  //   name: "MR AMULYA CHANDRA PANDYA",
-  // },
+  {
+    video: "/videos/client2.mp4",
+    project: "MAA KALI VASTU JYOTISH",
+    name: "MR AMULYA CHANDRA PANDYA",
+  },
 
   {
     video: "/videos/saivdo.mp4",
