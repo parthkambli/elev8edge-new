@@ -102,13 +102,18 @@ function TrustedClients() {
   playsInline
   preload="metadata"
   className="
-    h-[420px]
-    w-full
-    object-cover
-    transition-transform
-    duration-700
-    group-hover:scale-[1.03]
-  "
+  h-[240px]
+  w-full
+  object-contain
+  bg-black
+  transition-transform
+  duration-700
+  group-hover:scale-[1.03]
+
+  sm:h-[320px]
+  md:h-[420px]
+  md:object-cover
+"
   onMouseEnter={(e) => {
     e.target.currentTime = 0;
     e.target.muted = false;

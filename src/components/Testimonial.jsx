@@ -460,42 +460,86 @@
 
 
 
-
-
 import React from "react";
 
 function Testimonial() {
   return (
-    <section className="bg-black px-4 py-16 text-white md:px-10 md:py-24">
+    <section className="bg-black px-4 py-14 text-white md:px-10 md:py-24">
 
       {/* TITLE */}
-      <div className="mb-12 flex items-center gap-3">
-        <span className="h-4 w-4 rounded-full bg-[#d9fbff] shadow-[0_0_0_6px_rgba(217,251,255,0.2)]" />
+      <div className="mb-10 flex items-center gap-3 md:mb-12">
 
-        <p className="text-lg font-medium uppercase md:text-2xl">
+        <span className="h-3 w-3 rounded-full bg-[#d9fbff] shadow-[0_0_0_5px_rgba(217,251,255,0.2)] md:h-4 md:w-4" />
+
+        <p className="text-sm font-medium uppercase tracking-[0.12em] md:text-2xl">
           OUR FOUNDERS
         </p>
+
       </div>
 
       {/* FIRST CARD */}
-      <div className="relative mb-14 overflow-hidden rounded-[16px]">
+      <div className="relative mb-8 overflow-hidden rounded-[18px] md:mb-14 md:rounded-[20px]">
 
         {/* IMAGE */}
         <img
           src="/images/person1.jpg"
           alt=""
-          className="h-[620px] w-full scale-[1.02] object-cover object-center md:h-[780px]"
+          className="
+            h-[760px]
+            w-full
+            scale-[1.02]
+            object-cover
+            object-center
+
+            sm:h-[820px]
+            md:h-[780px]
+          "
         />
 
         {/* OVERLAY */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/88 to-transparent" />
+        <div className="
+          absolute
+          inset-0
+          bg-gradient-to-t
+          from-black
+          via-black/88
+          to-black/20
+
+          md:bg-gradient-to-r
+          md:from-black
+          md:via-black/88
+          md:to-transparent
+        " />
 
         {/* CONTENT */}
-        <div className="absolute inset-0 z-10 flex flex-col justify-between p-6 md:w-[62%] md:p-14">
+        <div className="
+          absolute
+          inset-0
+          z-10
+          flex
+          flex-col
+          justify-end
+          p-5
+
+          sm:p-7
+          md:w-[62%]
+          md:justify-between
+          md:p-14
+        ">
 
           <div>
 
-            <p className="max-w-[900px] text-[16px] font-medium leading-[1.45] tracking-[-0.02em] md:text-[24px] lg:text-[28px]">
+            <p className="
+              max-w-[900px]
+              text-[13px]
+              font-medium
+              leading-[1.6]
+              tracking-[-0.01em]
+
+              sm:text-[14px]
+              md:text-[22px]
+              lg:text-[28px]
+            ">
 
               With over 8+ years of experience in the digital space, Pravin has built and scaled brands from the ground up.
 
@@ -518,13 +562,13 @@ function Testimonial() {
 
           </div>
 
-          <div className="mt-10">
+          <div className="mt-8 md:mt-10">
 
-            <h4 className="text-[28px] font-bold md:text-[42px]">
+            <h4 className="text-[22px] font-bold md:text-[42px]">
               Pravin Zinjurde
             </h4>
 
-            <p className="mt-2 text-[15px] text-white/45 md:text-[20px]">
+            <p className="mt-2 text-[13px] uppercase tracking-[0.12em] text-white/45 md:text-[20px]">
               Founder & Director
             </p>
 
@@ -535,24 +579,72 @@ function Testimonial() {
       </div>
 
       {/* SECOND CARD */}
-      <div className="relative overflow-hidden rounded-[16px]">
+      <div className="relative overflow-hidden rounded-[18px] md:rounded-[20px]">
 
         {/* IMAGE */}
         <img
           src="/images/person2.jpg"
           alt=""
-          className="h-[620px] w-full scale-[1.02] object-cover object-center md:h-[780px]"
+          className="
+            h-[760px]
+            w-full
+            scale-[1.02]
+            object-cover
+            object-center
+
+            sm:h-[820px]
+            md:h-[780px]
+          "
         />
 
         {/* OVERLAY */}
-        <div className="absolute inset-0 bg-gradient-to-l from-black via-black/88 to-transparent" />
+        <div className="
+          absolute
+          inset-0
+          bg-gradient-to-t
+          from-black
+          via-black/88
+          to-black/20
+
+          md:bg-gradient-to-l
+          md:from-black
+          md:via-black/88
+          md:to-transparent
+        " />
 
         {/* CONTENT */}
-        <div className="absolute right-0 top-0 z-10 flex h-full flex-col justify-between p-6 text-right md:w-[62%] md:p-14">
+        <div className="
+          absolute
+          inset-0
+          z-10
+          flex
+          flex-col
+          justify-end
+          p-5
+
+          sm:p-7
+          md:right-0
+          md:left-auto
+          md:w-[62%]
+          md:justify-between
+          md:p-14
+          md:text-right
+        ">
 
           <div>
 
-            <p className="ml-auto max-w-[900px] text-[16px] font-medium leading-[1.45] tracking-[-0.02em] md:text-[24px] lg:text-[28px]">
+            <p className="
+              md:ml-auto
+              max-w-[900px]
+              text-[13px]
+              font-medium
+              leading-[1.6]
+              tracking-[-0.01em]
+
+              sm:text-[14px]
+              md:text-[22px]
+              lg:text-[28px]
+            ">
 
               With 7+ years of experience in international sales and marketing, Somanshu has driven brand growth across global markets.
 
@@ -575,13 +667,13 @@ function Testimonial() {
 
           </div>
 
-          <div className="mt-10">
+          <div className="mt-8 md:mt-10 md:text-right">
 
-            <h4 className="text-[28px] font-bold md:text-[42px]">
+            <h4 className="text-[22px] font-bold md:text-[42px]">
               Somanshu Verma
             </h4>
 
-            <p className="mt-2 text-[15px] text-white/45 md:text-[20px]">
+            <p className="mt-2 text-[13px] uppercase tracking-[0.12em] text-white/45 md:text-[20px]">
               Founder & Director
             </p>
 
