@@ -198,7 +198,7 @@ const AboutUs = () => {
 
               <h1
                 ref={titleRef}
-                className="translate-y-full text-[18vw] font-black uppercase leading-[0.82] tracking-[-0.09em] md:text-[8vw]"
+                className="translate-y-full text-[16vw] font-black uppercase leading-[0.82] tracking-[-0.09em] md:text-[8vw]"
               >
                 ABOUT
                 <br />

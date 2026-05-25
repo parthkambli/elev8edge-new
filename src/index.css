@@ -118,7 +118,25 @@ body {
   }
 }
 
+.client-marquee {
+  animation: logoScroll 18s linear infinite;
+}
 
+@keyframes logoScroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-50% - 8px));
+  }
+}
+
+@media (min-width: 768px) {
+  .client-marquee {
+    animation: none;
+  }
+}
 
 
 

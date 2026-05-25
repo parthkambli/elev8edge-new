@@ -92,7 +92,19 @@ function TeamSection() {
               <LazyImage
                 src={member.image}
                 alt={member.name}
-                className="h-[620px] w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+                className="
+  h-[420px]
+  w-full
+  object-cover
+  object-center
+  transition-transform
+  duration-700
+  group-hover:scale-[1.04]
+
+  sm:h-[520px]
+
+  md:h-[620px]
+"
               />
 
             </div>
