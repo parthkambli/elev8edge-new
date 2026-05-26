@@ -20,19 +20,31 @@ function Hero() {
   return (
     <section className="relative min-h-screen w-full overflow-hidden rounded-[18px] md:rounded-none">
 
-      {/* VIDEO */}
-      <video
-        ref={videoRef}
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="metadata"
-        poster="/images/hero-poster.webp"
-        className="absolute inset-0 h-full w-full object-cover"
-      >
-        <source src="/videos/hero.mp4" type="video/mp4" />
-      </video>
+    {/* VIDEO */}
+    <video
+      ref={videoRef}
+      autoPlay
+      muted
+      loop
+      playsInline
+      preload="metadata"
+      poster="/images/hero-poster.webp"
+      className="absolute inset-0 h-full w-full object-cover"
+    >
+      {/* Mobile Video */}
+      <source
+        src="/videos/heroMob.mp4"
+        type="video/mp4"
+        media="(max-width: 767px)"
+      />
+
+      {/* Desktop Video */}
+      <source
+        src="/videos/hero.mp4"
+        type="video/mp4"
+        media="(min-width: 768px)"
+      />
+    </video>
 
       {/* OVERLAY */}
       <div className="absolute inset-0 bg-black/40 md:bg-gradient-to-r md:from-black/80 md:via-black/30 md:to-black/70" />

@@ -1,3 +1,14 @@
+
+
+
+
+
+
+
+
+
+
+
 import xIcon from "../assets/logos/x.svg";
 import instaIcon from "../assets/logos/instagram.svg";
 import facebookIcon from "../assets/logos/facebook.svg";
@@ -13,7 +24,7 @@ function Footer() {
 
 
         {/* TOP */}
-        <div className="grid grid-cols-1 gap-10 border-b border-black/10 pb-8 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-8 border-b border-black/10 pb-8 text-center md:grid-cols-2 md:text-left">
 
           {/* PHONE */}
           <div>
@@ -48,7 +59,7 @@ function Footer() {
           </div> */}
 
           {/* Email */}
-          <div className="md:text-right">
+          <div className="text-center md:text-right">
 
             <p className="text-[20px] font-semibold text-black/45">
               Email :
@@ -66,22 +77,40 @@ function Footer() {
         </div>
 
         {/* CENTER */}
-       <div className="flex flex-1 top-40px items-center justify-center border-b border-black/10">
+        <div className="flex flex-1 items-center justify-center border-b border-black/10">
 
-        <a
-          href="/contact"
-          className="text-center text-[14vw] font-semibold uppercase leading-[0.9] tracking-[-0.07em] transition-transform duration-500 hover:scale-[1.02]"
-        >
-          LET’S-TALK
-        </a>
+          <a
+            href="/contact"
+            className="
+              text-center
+              uppercase
+              font-semibold
+              leading-[0.82]
+              tracking-[-0.08em]
+              text-[20vw]
+              sm:text-[18vw]
+              md:text-[120px]
+              lg:text-[220px]
+              break-words
+              font-['Inter']
+              transition-transform
+              duration-500
+              hover:scale-[1.01]
+            "
+            style={{
+              fontVariationSettings: '"slnt" 0',
+            }}
+          >
+            LET’S-TALK
+          </a>
 
         </div>
 
         {/* BOTTOM */}
-        <div className="flex flex-col items-center justify-between gap-8 pt-8 md:flex-row">
+        <div className="flex flex-col items-center justify-between gap-10 pt-8 text-center md:flex-row md:text-left">
 
           {/* LEFT */}
-          <div className="flex flex-wrap items-center gap-6 text-[18px] font-medium">
+          <div className="flex flex-col items-center gap-3 text-center text-[16px] font-medium md:flex-row md:gap-6 md:text-left md:text-[18px]">
 
             <p>
               Designed by <span className="text-black/45">Elev8edge</span>
@@ -94,7 +123,7 @@ function Footer() {
           </div>
 
           {/* SOCIALS */}
-          <div className="flex items-center gap-5">
+          <div className="flex items-center justify-center gap-5">
 
             {/* X / TWITTER */}
             <a
@@ -155,7 +184,7 @@ function Footer() {
           </div>
 
           {/* RIGHT */}
-          <div className="flex flex-wrap items-center gap-6 text-[18px] text-black/55">
+          <div className="flex flex-col items-center justify-center gap-3 text-center text-[16px] text-black/55 md:flex-row md:gap-6 md:text-left md:text-[18px]">
 
             <Link to="/terms-conditions">
               Terms & Conditions
