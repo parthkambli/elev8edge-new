@@ -218,35 +218,118 @@ const ProjectsHero = () => {
         {/* OVERLAY */}
         <div className="absolute inset-0 bg-black/25" />
 
-        {/* CONTENT */}
-        <div className="relative z-10 flex min-h-screen flex-col justify-between px-6 py-8 md:px-12">
-          {/* TOP TEXT */}
-          <div className="flex justify-end">
-            <p className="mt-40 max-w-[430px] text-right text-[20px] font-medium leading-[1.5]">
-              Showcasing our recent projects and collaborations focused on growth, creativity, and impactful digital experiences across industries.
-            </p>
-          </div>
 
-          {/* BOTTOM */}
-          <div className="flex items-end justify-between">
-            {/* LEFT HEADING */}
-            <h1
-              className="absolute bottom-10 left-6 text-[13vw] font-black uppercase leading-[0.82] tracking-[-0.07em] md:left-12 md:text-[8vw]"
-              // style={{ fontFamily: "Anton" }}
-            >
-              Impactful   
-              <br />
-              Collaborations
-            </h1>
+{/* CONTENT */}
+{/* CONTENT */}
+<div className="relative z-10 min-h-screen px-6 py-8 md:px-12">
 
-            {/* RIGHT SCROLL */}
-            {/* <p className="mb-3 text-xl font-medium">(Scroll down)</p> */}
-          </div>
-        </div>
+  {/* ================= MOBILE ================= */}
+  <div className="flex min-h-screen flex-col md:hidden">
+
+    {/* TOP HEADING */}
+    <div className="pt-44">
+
+      <h1
+        className="
+          text-[11vw]
+          font-black
+          uppercase
+          leading-[0.82]
+          tracking-[-0.07em]
+        "
+      >
+        Impactful
+        <br />
+        Collaborations
+      </h1>
+
+    </div>
+
+    {/* BOTTOM TEXT */}
+    <div className="mt-auto pb-50">
+
+      <p
+        className="
+          ml-auto
+          max-w-[300px]
+          text-right
+          text-[15px]
+          font-medium
+          leading-[1.45]
+          text-white/90
+        "
+      >
+        Showcasing our recent projects and collaborations focused on growth,
+        creativity, and impactful digital experiences across industries.
+      </p>
+
+    </div>
+
+  </div>
+
+  {/* ================= DESKTOP ================= */}
+  <div className="hidden md:block">
+
+    {/* RIGHT PARA */}
+    <div className="absolute right-12 top-[38%]">
+
+      <p
+        className="
+          max-w-[430px]
+          text-right
+          text-[20px]
+          font-medium
+          leading-[1.5]
+          text-white/90
+        "
+      >
+        Showcasing our recent projects and collaborations focused on growth,
+        creativity, and impactful digital experiences across industries.
+      </p>
+
+    </div>
+
+    {/* BOTTOM LEFT HEADING */}
+    <h1
+      className="
+        absolute
+        bottom-10
+        left-12
+
+        max-w-[1000px]
+
+        text-[7.2vw]
+        font-black
+        uppercase
+        leading-[0.82]
+        tracking-[-0.07em]
+      "
+    >
+      IMPACTFUL
+      <br />
+      COLLABORATIONS
+    </h1>
+
+    {/* SCROLL */}
+    <p
+      className="
+        absolute
+        bottom-12
+        right-12
+        text-[18px]
+        text-white/70
+      "
+    >
+      (Scroll down)
+    </p>
+
+  </div>
+
+</div>
       </section>
 
       <section className="bg-black px-6 py-20 text-white md:px-10">
-        <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-15 md:grid-cols-2">
           {projects.map((item, index) => (
             <div key={index} className="group cursor-pointer">
               <div
@@ -264,11 +347,11 @@ const ProjectsHero = () => {
                 <LazyImage
                   src={item.image}
                   alt={item.title}
-                  className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.08]"
+                  className="h-full w-full object-auto transition-transform duration-700 ease-out group-hover:scale-[1.08]"
                 />
               </div>
 
-              <h2 className="mt-6 text-2xl font-bold text-center">
+              <h2 className="mt-3 text-xl font-bold text-center">
                 {item.title}
               </h2>
 

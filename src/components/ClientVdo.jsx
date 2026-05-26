@@ -16,11 +16,11 @@ const clients = [
     name: "MRS ASHWINI",
   },
 
-  {
-    video: "/videos/client2.mp4",
-    project: "MAA KALI VASTU JYOTISH",
-    name: "MR AMULYA CHANDRA PANDYA",
-  },
+  // {
+  //   video: "/videos/client2.mp4",
+  //   project: "MAA KALI VASTU JYOTISH",
+  //   name: "MR AMULYA CHANDRA PANDYA",
+  // },
 
   {
     video: "/videos/saivdo.mp4",
@@ -92,8 +92,7 @@ function TrustedClients() {
       </div>
 
       {/* CARDS */}
-      <div className="grid gap-8 md:grid-cols-2">
-
+<div className="grid gap-14 md:gap-8 md:grid-cols-2">
         {clients.map((item, index) => (
 
           <div
@@ -142,9 +141,19 @@ function TrustedClients() {
             </div>
 
             {/* CONTENT */}
-            <div className="mt-5 flex flex-col gap-2">
+            <div className="flex flex-col gap-1 md:mt-5 md:gap-2 text-center">
 
-              <h3 className="text-[28px] font-black uppercase leading-[1] tracking-[-0.05em] md:text-[2vw]">
+              <h3 className="
+  text-[22px]
+  font-black
+  uppercase
+  leading-[0.95]
+  tracking-[-0.05em]
+
+  sm:text-[26px]
+
+  md:text-[2vw]
+">
                 {item.project}
               </h3>
 

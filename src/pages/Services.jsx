@@ -50,7 +50,8 @@ const services = [
       "Ad Creatives Product Shoots",
     ],
     desc: `We create & shoot engaging, platform-driven content that captures attention and builds brand presence.
-From reels and creatives to strategic storytelling, our content is designed to increase engagement, visibility, and conversions.
+
+           From reels and creatives to strategic storytelling, our content is designed to increase engagement, visibility, and conversions.
 `,
   },
   {
@@ -66,7 +67,8 @@ From reels and creatives to strategic storytelling, our content is designed to i
       "Brand Awareness",
     ],
     desc: `We help brands grow their online presence through strategic content, audience engagement, and performance-driven campaigns.
-From increasing reach to generating quality leads, we build social media strategies designed for consistent growth and real impact.
+           
+    From increasing reach to generating quality leads, we build social media strategies designed for consistent growth and real impact.
 `,
   },
   {
@@ -74,7 +76,8 @@ From increasing reach to generating quality leads, we build social media strateg
     image: service3,
     tags: ["Custom Website Development", "Landing Pages", "UI/UX Design", "Conversion-Focused Layouts", "Maintenance & Support"],
     desc: `We build high-performing, user-friendly websites designed to elevate brand presence and drive conversions.
-From landing pages to full-scale business websites, we create fast, responsive, and growth-focused digital experiences.
+          
+    From landing pages to full-scale business websites, we create fast, responsive, and growth-focused digital experiences.
 `,
   },
   {
@@ -89,7 +92,8 @@ From landing pages to full-scale business websites, we create fast, responsive, 
       "Brand Consistency",
     ],
     desc: `We help brands create a strong digital identity that stands out, connects with the right audience, and builds long-term trust.
-From positioning and messaging to creative direction, we craft brands designed for recognition, impact, and growth.
+           
+    From positioning and messaging to creative direction, we craft brands designed for recognition, impact, and growth.
 `,
   },
   {
@@ -103,7 +107,8 @@ From positioning and messaging to creative direction, we craft brands designed f
       "ROI-Focused Scaling",
     ],
     desc: `We create data-driven marketing campaigns focused on generating leads, increasing conversions, and maximizing ROI.
-From Meta and Google Ads to funnel optimization, we help brands scale through performance-focused strategies.
+           
+    From Meta and Google Ads to funnel optimization, we help brands scale through performance-focused strategies.
 `,
   },
 ];
@@ -171,21 +176,114 @@ useEffect(() => {
 
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/20 to-black/60" />
 
-        <div className="relative z-10 min-h-screen px-6 pt-36 md:px-12">
-          <p className="absolute right-8 top-[52%] max-w-[410px] text-end text-xl font-medium leading-snug md:right-16">
-            From strategy to execution — we create websites, content, and marketing systems designed to attract attention, generate leads, and scale brands.
-          </p>
+        {/* CONTENT */}
+<div className="relative z-10 min-h-screen px-6 py-8 md:px-12">
 
-          <h1 className="absolute bottom-10 left-6 text-[13vw] font-black uppercase leading-[0.82] tracking-[-0.07em] md:left-12 md:text-[8vw]">
-            SERVICE &
-            <br />
-            CAPABILITIES
-          </h1>
+  {/* ================= MOBILE ================= */}
+  <div className="flex min-h-screen flex-col md:hidden">
 
-          {/* <p className="absolute bottom-8 right-8 text-base font-semibold md:right-16">
-            (Scroll down)
-          </p> */}
-        </div>
+    {/* TOP HEADING */}
+    <div className="pt-44">
+
+      <h1
+        className="
+          text-[11vw]
+          font-black
+          uppercase
+          leading-[0.82]
+          tracking-[-0.07em]
+        "
+      >
+        SERVICE &
+        <br />
+        CAPABILITIES
+      </h1>
+
+    </div>
+
+    {/* BOTTOM TEXT */}
+    <div className="mt-auto pb-50">
+
+      <p
+        className="
+          ml-auto
+          max-w-[300px]
+          text-right
+          text-[15px]
+          font-medium
+          leading-[1.45]
+          text-white/90
+        "
+      >
+        From strategy to execution — we create websites, content,
+        and marketing systems designed to attract attention,
+        generate leads, and scale brands.
+      </p>
+
+    </div>
+
+  </div>
+
+  {/* ================= DESKTOP ================= */}
+  <div className="hidden md:block">
+
+    {/* RIGHT PARA */}
+    <div className="absolute right-12 top-[38%]">
+
+      <p
+        className="
+          max-w-[430px]
+          text-right
+          text-[20px]
+          font-medium
+          leading-[1.5]
+          text-white/90
+        "
+      >
+        From strategy to execution — we create websites, content,
+        and marketing systems designed to attract attention,
+        generate leads, and scale brands.
+      </p>
+
+    </div>
+
+    {/* BOTTOM LEFT HEADING */}
+    <h1
+      className="
+        absolute
+        bottom-10
+        left-12
+
+        max-w-[1000px]
+
+        text-[7.2vw]
+        font-black
+        uppercase
+        leading-[0.82]
+        tracking-[-0.07em]
+      "
+    >
+      SERVICE &
+      <br />
+      CAPABILITIES
+    </h1>
+
+    {/* SCROLL */}
+    <p
+      className="
+        absolute
+        bottom-12
+        right-12
+        text-[18px]
+        text-white/70
+      "
+    >
+      (Scroll down)
+    </p>
+
+  </div>
+
+</div>
       </section>
 
       <section className="relative bg-black px-5 py-16 md:px-10 md:py-20">
@@ -212,7 +310,7 @@ useEffect(() => {
           {item.title}
         </h2>
 
-        <div className="mt-6 flex flex-wrap gap-3 md:mt-8 md:max-w-[520px]">
+        <div className="mt-6 flex flex-wrap gap-3 md:mt-8 md:max-w-[450px]">
           {item.tags.map((tag) => (
             <span
               key={tag}
@@ -224,9 +322,9 @@ useEffect(() => {
         </div>
       </div>
 
-      <p className="mt-7 text-[16px] font-medium leading-tight md:mt-0 md:max-w-[420px] md:text-2xl">
-        {item.desc}
-      </p>
+      <p className="mt-7 whitespace-pre-line text-left text-[16px] font-normal leading-[1.55] md:mt-0 md:max-w-[420px] md:text-2xl md:leading-[1.45]">
+  {item.desc}
+</p>
 
       <LazyImage
         src={item.image}
@@ -280,7 +378,7 @@ useEffect(() => {
               </span>
             </div>
 
-            <div className="mt-8 flex h-[300px] flex-col justify-between md:mt-10 md:h-auto md:flex-row md:items-end">
+            <div className="mt-8 flex h-[300px] flex-col justify-between md:mt-10 md:h-auto md:flex-row md:items-start">
               <img
                 src={icon1}
                 alt="Step 1"
@@ -291,7 +389,7 @@ useEffect(() => {
                 <h2 className="text-2xl font-black md:text-6xl">
                   STRATEGY CALL WITH US
                 </h2>
-                <p className="mt-6 max-w-[300px] text-[22px] leading-[1.35] md:mt-4 md:max-w-[500px] md:text-[2rem] md:leading-[1.4]">
+                <p className="mt-6 max-w-[300px] text-base text-black/80 md:mt-4 md:max-w-[500px] md:text-xl">
                   Let’s build the next stage of your brand’s growth — together.
                 </p>
               </div>
@@ -299,7 +397,7 @@ useEffect(() => {
               <img
                 src={icon1}
                 alt="Step 1"
-                className="hidden w-[220px] object-contain md:block"
+                className="hidden w-[220px] object-contain md:mt-6 md:block"
               />
             </div>
           </div>
@@ -315,7 +413,7 @@ useEffect(() => {
               </span>
             </div>
 
-            <div className=" flex h-[300px] flex-col justify-between md:mt-10 md:h-auto md:flex-row md:items-end">
+            <div className=" flex h-[300px] flex-col justify-between md:mt-10 md:h-auto md:flex-row md:items-center">
               <img
                 src={icon2}
                 alt="Step 2"
@@ -326,7 +424,7 @@ useEffect(() => {
                 <h2 className="text-2xl font-black md:text-6xl">
                   PERSONALISED GROWTH PLAN
                 </h2>
-                <p className="mt-6 max-w-[300px] text-[22px] leading-[1.35] md:mt-4 md:max-w-[500px] md:text-[2rem] md:leading-[1.4]">
+                <p className="mt-6 max-w-[300px] text-base text-black/80 md:mt-4 md:max-w-[500px] md:text-xl">
                   We create data-driven strategies that align with your goals, engage your audience, and drive measurable results.
                 </p>
               </div>
@@ -334,7 +432,7 @@ useEffect(() => {
               <img
                 src={icon2}
                 alt="Step 2"
-                className="hidden w-[220px] object-contain md:block"
+                className="hidden w-[220px] object-contain md:mt-6 md:block"
               />
             </div>
           </div>
@@ -350,7 +448,7 @@ useEffect(() => {
               </span>
             </div>
 
-            <div className="mt-8 flex h-[300px] flex-col justify-between md:mt-10 md:h-auto md:flex-row md:items-end">
+            <div className="mt-8 flex h-[300px] flex-col justify-between md:mt-10 md:h-auto md:flex-row md:items-start">
               <img
                 src={icon3}
                 alt="Step 3"
@@ -361,7 +459,7 @@ useEffect(() => {
                 <h2 className="text-2xl font-black md:text-6xl">
                   Design & Execution
                 </h2>
-                <p className="mt-6 max-w-[300px] text-[22px] leading-[1.35] md:mt-4 md:max-w-[500px] md:text-[2rem] md:leading-[1.4]">
+                <p className="mt-6 max-w-[300px] text-base text-black/80 md:mt-4 md:max-w-[500px] md:text-xl">
                   We turn ideas into scalable digital experiences through clean design and seamless development.
                 </p>
               </div>
@@ -369,7 +467,7 @@ useEffect(() => {
               <img
                 src={icon3}
                 alt="Step 3"
-                className="hidden w-[220px] object-contain md:block"
+                className="hidden w-[220px] object-contain md:mt-6 md:block"
               />
             </div>
           </div>
@@ -385,7 +483,7 @@ useEffect(() => {
               </span>
             </div>
 
-            <div className="mt-8 flex h-[300px] flex-col justify-between md:mt-10 md:h-auto md:flex-row md:items-end">
+            <div className="mt-8 flex h-[300px] flex-col justify-between md:mt-10 md:h-auto md:flex-row md:items-start">
               <img
                 src={icon4}
                 alt="Step 4"
@@ -396,7 +494,7 @@ useEffect(() => {
                 <h2 className="text-2xl font-black md:text-6xl">
                   Launch & Scale
                 </h2>
-                <p className="mt-6 max-w-[300px] text-[22px] leading-[1.35] md:mt-4 md:max-w-[500px] md:text-[2rem] md:leading-[1.4]">
+                <p className="mt-6 max-w-[300px] text-base text-black/80 md:mt-4 md:max-w-[500px] md:text-xl">
                   From deployment to ongoing optimization, we help your brand grow, perform, and stay ahead digitally.
                 </p>
               </div>
@@ -404,7 +502,7 @@ useEffect(() => {
               <img
                 src={icon4}
                 alt="Step 4"
-                className="hidden w-[220px] object-contain md:block"
+                className="hidden w-[220px] object-contain md:mt-6 md:block"
               />
             </div>
           </div>

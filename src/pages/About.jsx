@@ -103,8 +103,6 @@
 // };
 
 // export default AboutUs;
-
-
 import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -113,26 +111,59 @@ import Navbar from "../components/Navbar";
 import AboutCarousel from "../components/AboutCarousel";
 import Journey from "../components/Journey";
 import Footer from "../components/Footer";
-import AboutTestimonial from "../components/AboutTestimonial";
 import TeamSection from "../components/TeamSection";
 import LocationSection from "../components/LocationSection";
 
 const AboutUs = () => {
-  const titleRef = useRef(null);
-  const textRef = useRef(null);
+
+  // MOBILE REFS
+  const mobileTitleRef = useRef(null);
+  const mobileTextRef = useRef(null);
+
+  // DESKTOP REFS
+  const desktopTitleRef = useRef(null);
+  const desktopTextRef = useRef(null);
   const scrollRef = useRef(null);
 
   useGSAP(() => {
-    const tl = gsap.timeline();
 
-    tl.to(titleRef.current, {
-      y: 0,
-      duration: 1.2,
-      ease: "power4.out",
-    })
+    // MOBILE ANIMATION
+    if (window.innerWidth < 768) {
+
+      const tl = gsap.timeline();
+
+      tl.to(mobileTitleRef.current, {
+        y: 0,
+        duration: 1.1,
+        ease: "power4.out",
+      })
 
       .to(
-        textRef.current,
+        mobileTextRef.current,
+        {
+          y: 0,
+          opacity: 1,
+          duration: 1,
+          ease: "power3.out",
+        },
+        "-=0.7"
+      );
+
+    }
+
+    // DESKTOP ANIMATION
+    else {
+
+      const tl = gsap.timeline();
+
+      tl.to(desktopTitleRef.current, {
+        y: 0,
+        duration: 1.2,
+        ease: "power4.out",
+      })
+
+      .to(
+        desktopTextRef.current,
         {
           y: 0,
           opacity: 1,
@@ -152,6 +183,9 @@ const AboutUs = () => {
         },
         "-=0.7"
       );
+
+    }
+
   });
 
   return (
@@ -159,7 +193,7 @@ const AboutUs = () => {
       <Navbar />
 
       {/* HERO */}
-      <section className="relative h-screen overflow-hidden bg-black text-white">
+      <section className="relative min-h-screen overflow-hidden bg-black text-white">
 
         {/* VIDEO */}
         <video
@@ -176,29 +210,99 @@ const AboutUs = () => {
         <div className="absolute inset-0 bg-black/45" />
 
         {/* CONTENT */}
-        <div className="relative z-10 flex h-full flex-col justify-between px-7 pb-10 pt-40 md:px-14">
+        <div className="relative z-10 min-h-screen px-6 py-8 md:px-12">
 
-          {/* TOP TEXT */}
-          <div className="flex justify-end overflow-hidden">
+          {/* ================= MOBILE ================= */}
+          <div className="flex min-h-screen flex-col md:hidden">
 
-            <p
-              ref={textRef}
-              className="max-w-[640px] translate-y-full text-right text-[18px] font-medium leading-[1.7] text-white/90 md:text-[20px]"
-            >
-              Discover Elev8Edge — a growth-driven digital agency passionate about building powerful brands, high-performing campaigns, and impactful digital experiences.
-            </p>
+            {/* TOP HEADING */}
+            <div className="pt-44 overflow-hidden">
+
+              <h1
+                ref={mobileTitleRef}
+                className="
+                  translate-y-full
+                  text-[11vw]
+                  font-black
+                  uppercase
+                  leading-[0.82]
+                  tracking-[-0.07em]
+                "
+              >
+                ABOUT
+                <br />
+                ELEV8EDGE
+              </h1>
+
+            </div>
+
+            {/* BOTTOM TEXT */}
+            <div className="mt-auto pb-50 overflow-hidden">
+
+              <p
+                ref={mobileTextRef}
+                className="
+                  ml-auto
+                  max-w-[300px]
+                  translate-y-full
+                  text-right
+                  text-[15px]
+                  font-medium
+                  leading-[1.45]
+                  text-white/90
+                  opacity-0
+                "
+              >
+                Discover Elev8Edge — a growth-driven digital agency
+                passionate about building powerful brands,
+                high-performing campaigns, and impactful digital
+                experiences.
+              </p>
+
+            </div>
 
           </div>
 
-          {/* BOTTOM */}
-          <div className="flex items-end justify-between">
+          {/* ================= DESKTOP ================= */}
+          <div className="hidden md:block">
 
-            {/* TITLE */}
-            <div className="overflow-hidden">
+            {/* RIGHT PARA */}
+            <div className="absolute right-12 top-[38%] overflow-hidden">
+
+              <p
+                ref={desktopTextRef}
+                className="
+                  max-w-[430px]
+                  translate-y-full
+                  text-right
+                  text-[20px]
+                  font-medium
+                  leading-[1.5]
+                  text-white/90
+                  opacity-0
+                "
+              >
+                Discover Elev8Edge — a growth-driven digital agency
+                passionate about building powerful brands,
+                high-performing campaigns, and impactful digital
+                experiences.
+              </p>
+
+            </div>
+
+            {/* BOTTOM LEFT HEADING */}
+            <div className="absolute bottom-10 left-12 overflow-hidden">
 
               <h1
-                ref={titleRef}
-                className="translate-y-full text-[16vw] font-black uppercase leading-[0.82] tracking-[-0.09em] md:text-[8vw]"
+                ref={desktopTitleRef}
+                className="
+                  translate-y-full
+                  text-[7.2vw]
+                  font-black
+                  uppercase
+                  leading-[0.82]
+                  tracking-[-0.07em]
+                "
               >
                 ABOUT
                 <br />
@@ -208,16 +312,21 @@ const AboutUs = () => {
             </div>
 
             {/* SCROLL */}
-            {/* <div className="overflow-hidden">
+            <div className="absolute bottom-12 right-12 overflow-hidden">
 
               <p
                 ref={scrollRef}
-                className="hidden translate-y-full text-lg text-white/70 md:block"
+                className="
+                  translate-y-full
+                  text-[18px]
+                  text-white/70
+                  opacity-0
+                "
               >
                 (Scroll down)
               </p>
 
-            </div> */}
+            </div>
 
           </div>
 
@@ -231,15 +340,13 @@ const AboutUs = () => {
       {/* JOURNEY */}
       <Journey />
 
-      <TeamSection/>
+      {/* TEAM */}
+      <TeamSection />
 
-      {/* TESTIMONIAL */}
-      {/* <div className="relative z-20 -mt-32">
-        <AboutTestimonial />
-      </div> */}
+      {/* LOCATION */}
+      <LocationSection />
 
-      <LocationSection/>
-
+      {/* FOOTER */}
       <Footer />
     </>
   );

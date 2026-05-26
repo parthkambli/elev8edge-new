@@ -340,7 +340,7 @@ const Navbar = () => {
           onClick={() => setMenuOpen(false)}
           className="
             absolute
-            top-8
+            top-20
             text-5xl
             font-light
             text-black
@@ -359,17 +359,17 @@ const Navbar = () => {
               to={item.path}
               onClick={() => setMenuOpen(false)}
               className={`
-                text-[14vw]
+                text-[11vw]
                 uppercase
-                leading-none
-                tracking-[-0.05em]
+                leading-[0.95]
+                tracking-[-0.03em]
                 transition-all
                 duration-300
 
                 ${
                   location.pathname === item.path
                     ? "font-black text-black"
-                    : "font-light text-black/80"
+                    : "font-normal text-black/45"
                 }
               `}
             >
