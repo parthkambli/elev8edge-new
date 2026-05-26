@@ -39,7 +39,7 @@ function Testimonial() {
           <div className="mb-6 text-center">
             <h4 className="text-[30px] font-bold leading-none">Pravin Zinjurde</h4>
             <p className="mt-3 text-[12px] uppercase tracking-[0.24em] text-white/50">
-              Founder & Director
+              DIRECTOR & CO FOUNDER
             </p>
           </div>
 
@@ -58,7 +58,7 @@ function Testimonial() {
           <div className="hidden md:block">
             <h4 className="text-[42px] font-bold">Pravin Zinjurde</h4>
             <p className="mb-4 text-[20px] uppercase tracking-[0.12em] text-white/45">
-              Founder & Director
+              DIRECTOR & CO FOUNDER
             </p>
           </div>
 
@@ -99,7 +99,7 @@ function Testimonial() {
           <div className="mb-6">
             <h4 className="text-[30px] font-bold leading-none">Somanshu Verma</h4>
             <p className="mt-3 text-[12px] uppercase tracking-[0.24em] text-white/50">
-              Founder & Director
+              DIRECTOR & CO FOUNDER
             </p>
           </div>
 
@@ -118,7 +118,7 @@ function Testimonial() {
           <div className="hidden md:block">
             <h4 className="text-[42px] font-bold">Somanshu Verma</h4>
             <p className="mb-4 text-[20px] uppercase tracking-[0.12em] text-white/45">
-              Founder & Director
+              DIRECTOR & CO FOUNDER
             </p>
           </div>
 
