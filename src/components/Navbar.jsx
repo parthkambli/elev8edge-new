@@ -247,65 +247,28 @@ const Navbar = () => {
 
           </Link>
 
-          {/* HAMBURGER */}
-          <button
-            onClick={() => setMenuOpen(!menuOpen)}
-            className="flex flex-col gap-1.5 md:hidden"
-            aria-label="Toggle menu"
-          >
-
-            <span
-              className={`
-                block
-                h-0.5
-                w-6
-                bg-white
-                transition-all
-                duration-300
-
-                ${
-                  menuOpen
-                    ? "translate-y-2 rotate-45"
-                    : ""
-                }
-              `}
-            />
-
-            <span
-              className={`
-                block
-                h-0.5
-                w-6
-                bg-white
-                transition-all
-                duration-300
-
-                ${
-                  menuOpen
-                    ? "opacity-0"
-                    : ""
-                }
-              `}
-            />
-
-            <span
-              className={`
-                block
-                h-0.5
-                w-6
-                bg-white
-                transition-all
-                duration-300
-
-                ${
-                  menuOpen
-                    ? "-translate-y-2 -rotate-45"
-                    : ""
-                }
-              `}
-            />
-
-          </button>
+{/* HAMBURGER */}
+<button
+  onClick={() => setMenuOpen(!menuOpen)}
+  className="flex flex-col items-center justify-center gap-1.5 md:hidden bg-white rounded-xl h-11 w-11"
+  aria-label="Toggle menu"
+>
+  <span
+    className={`block h-0.5 w-5 bg-black transition-all duration-300 ${
+      menuOpen ? "translate-y-2 rotate-45" : ""
+    }`}
+  />
+  <span
+    className={`block h-0.5 w-5 bg-black transition-all duration-300 ${
+      menuOpen ? "opacity-0" : ""
+    }`}
+  />
+  <span
+    className={`block h-0.5 w-5 bg-black transition-all duration-300 ${
+      menuOpen ? "-translate-y-2 -rotate-45" : ""
+    }`}
+  />
+</button>
 
         </div>
 
@@ -368,7 +331,7 @@ const Navbar = () => {
 
                 ${
                   location.pathname === item.path
-                    ? "font-black text-black"
+                    ? "font-bold text-black"
                     : "font-normal text-black/45"
                 }
               `}
