@@ -123,13 +123,19 @@ function TrustedClients() {
               md:object-cover
             "
               onMouseEnter={(e) => {
-                e.target.currentTime = 0;
-                e.target.muted = false;
-                e.target.play();
+                const video = e.target;
+
+                video.currentTime = 0;
+                video.muted = false;
+                video.play();
               }}
+
               onMouseLeave={(e) => {
-                e.target.pause();
-                e.target.currentTime = 0;
+                const video = e.target;
+
+                video.pause();
+                video.currentTime = 0;
+                video.load(); // restores poster image
               }}
             />
 

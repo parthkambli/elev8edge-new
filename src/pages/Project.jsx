@@ -231,8 +231,8 @@ const ProjectsHero = () => {
           <div className="flex items-end justify-between">
             {/* LEFT HEADING */}
             <h1
-              className="text-[9vw] uppercase leading-[0.82] tracking-[-0.08em] text-white"
-              style={{ fontFamily: "Anton" }}
+              className="absolute bottom-10 left-6 text-[13vw] font-black uppercase leading-[0.82] tracking-[-0.07em] md:left-12 md:text-[8vw]"
+              // style={{ fontFamily: "Anton" }}
             >
               Impactful   
               <br />
@@ -240,7 +240,7 @@ const ProjectsHero = () => {
             </h1>
 
             {/* RIGHT SCROLL */}
-            <p className="mb-3 text-xl font-medium">(Scroll down)</p>
+            {/* <p className="mb-3 text-xl font-medium">(Scroll down)</p> */}
           </div>
         </div>
       </section>

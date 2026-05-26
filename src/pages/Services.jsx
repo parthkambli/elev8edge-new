@@ -182,9 +182,9 @@ useEffect(() => {
             CAPABILITIES
           </h1>
 
-          <p className="absolute bottom-8 right-8 text-base font-semibold md:right-16">
+          {/* <p className="absolute bottom-8 right-8 text-base font-semibold md:right-16">
             (Scroll down)
-          </p>
+          </p> */}
         </div>
       </section>
 

@@ -208,7 +208,7 @@ const AboutUs = () => {
             </div>
 
             {/* SCROLL */}
-            <div className="overflow-hidden">
+            {/* <div className="overflow-hidden">
 
               <p
                 ref={scrollRef}
@@ -217,7 +217,7 @@ const AboutUs = () => {
                 (Scroll down)
               </p>
 
-            </div>
+            </div> */}
 
           </div>
 
