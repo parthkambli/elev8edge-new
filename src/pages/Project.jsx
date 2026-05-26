@@ -155,7 +155,7 @@
 
 
 
-import React from "react";
+import React, { useRef } from "react";
 import serviceVideo from "../../public/videos/projectHero.mp4";
 import LazyImage from "../components/ui/LazyImage";
 
@@ -166,6 +166,8 @@ import project4 from "../assets/Our Projects/4.jpg";
 import project5 from "../assets/Our Projects/5.jpg";
 import project6 from "../assets/Our Projects/6.jpg";
 import Footer from "../components/Footer";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 import ClientVdo from "../components/ClientVdo"
 
 const projects = [
@@ -202,7 +204,79 @@ const projects = [
 ];
 
 const ProjectsHero = () => {
+  const mobileTitleRef = useRef(null);
+const mobileTextRef = useRef(null);
+
+const desktopTitleRef = useRef(null);
+const desktopTextRef = useRef(null);
+const scrollRef = useRef(null);
+useGSAP(() => {
+
+  // MOBILE
+  if (window.innerWidth < 768) {
+
+    const tl = gsap.timeline();
+
+    tl.to(mobileTitleRef.current, {
+      y: 0,
+      duration: 1.1,
+      ease: "power4.out",
+    })
+
+    .to(
+      mobileTextRef.current,
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power3.out",
+      },
+      "-=0.7"
+    );
+
+  }
+
+  // DESKTOP
+  else {
+
+    const tl = gsap.timeline();
+
+    tl.to(desktopTitleRef.current, {
+      y: 0,
+      duration: 1.2,
+      ease: "power4.out",
+    })
+
+    .to(
+      desktopTextRef.current,
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power3.out",
+      },
+      "-=0.9"
+    )
+
+    .to(
+      scrollRef.current,
+      {
+        y: 0,
+        opacity: 1,
+        duration: 0.8,
+        ease: "power3.out",
+      },
+      "-=0.7"
+    );
+
+  }
+
+});
+
+
   return (
+    
+
     <main className="bg-black text-white overflow-hidden">
       <section className="relative min-h-screen overflow-hidden bg-black text-white">
         {/* VIDEO */}
@@ -227,10 +301,12 @@ const ProjectsHero = () => {
   <div className="flex min-h-screen flex-col md:hidden">
 
     {/* TOP HEADING */}
-    <div className="pt-44">
+    <div className="overflow-hidden pt-44">
 
       <h1
-        className="
+        ref={mobileTitleRef}
+      className="
+          translate-y-full
           text-[11vw]
           font-black
           uppercase
@@ -246,10 +322,12 @@ const ProjectsHero = () => {
     </div>
 
     {/* BOTTOM TEXT */}
-    <div className="mt-auto pb-50">
+    <div className="mt-auto overflow-hidden pb-50">
 
       <p
-        className="
+  ref={mobileTextRef}
+  className="
+    translate-y-full
           ml-auto
           max-w-[300px]
           text-right
@@ -257,6 +335,7 @@ const ProjectsHero = () => {
           font-medium
           leading-[1.45]
           text-white/90
+          opacity-0
         "
       >
         Showcasing our recent projects and collaborations focused on growth,
@@ -271,16 +350,19 @@ const ProjectsHero = () => {
   <div className="hidden md:block">
 
     {/* RIGHT PARA */}
-    <div className="absolute right-12 top-[38%]">
+    <div className="absolute right-12 top-[38%] overflow-hidden">
 
       <p
-        className="
+  ref={desktopTextRef}
+  className="
+    translate-y-full
           max-w-[430px]
           text-right
           text-[20px]
           font-medium
           leading-[1.5]
           text-white/90
+          opacity-0
         "
       >
         Showcasing our recent projects and collaborations focused on growth,
@@ -290,12 +372,11 @@ const ProjectsHero = () => {
     </div>
 
     {/* BOTTOM LEFT HEADING */}
+    <div className="absolute bottom-10 left-12 overflow-hidden">
     <h1
-      className="
-        absolute
-        bottom-10
-        left-12
-
+  ref={desktopTitleRef}
+  className="
+        translate-y-full
         max-w-[1000px]
 
         text-[7.2vw]
@@ -309,20 +390,26 @@ const ProjectsHero = () => {
       <br />
       COLLABORATIONS
     </h1>
+    </div>
 
     {/* SCROLL */}
+    <div className="absolute bottom-12 right-12 overflow-hidden">
     <p
-      className="
+  ref={scrollRef}
+  className="
+    translate-y-full
         absolute
         bottom-12
         right-12
         text-[18px]
         text-white/70
+        opacity-0
       "
     >
       (Scroll down)
     </p>
 
+  </div>
   </div>
 
 </div>

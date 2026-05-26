@@ -105,7 +105,7 @@ function Contact() {
         Email :
       </p>
 
-      <p className="mt-2 text-[22px] font-semibold tracking-[-0.02em]">
+      <p className="mt-2 text-[22px] font-semibold tracking-[-0.02em] mb-15">
         info@elev8edge.com
       </p>
 

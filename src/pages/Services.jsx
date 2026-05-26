@@ -14,14 +14,14 @@
 
 
 
-
 import React, { useState, useRef, useEffect } from "react";
-
 
 import serviceVideo from "../../public/videos/service.mp4";
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+
 import LazyImage from "../components/ui/LazyImage";
 
 import service1 from "../assets/Our Services/Content Creation.jpg";
@@ -29,6 +29,7 @@ import service2 from "../assets/Our Services/Social Media.jpg";
 import service3 from "../assets/Our Services/Website Development.jpg";
 import service4 from "../assets/Our Services/Brand Building.jpg";
 import service5 from "../assets/Our Services/Performance Marketing.jpg";
+
 import Footer from "../components/Footer";
 import AboutTestimonial from "../components/AboutTestimonial";
 
@@ -51,9 +52,9 @@ const services = [
     ],
     desc: `We create & shoot engaging, platform-driven content that captures attention and builds brand presence.
 
-           From reels and creatives to strategic storytelling, our content is designed to increase engagement, visibility, and conversions.
-`,
+From reels and creatives to strategic storytelling, our content is designed to increase engagement, visibility, and conversions.`,
   },
+
   {
     title: "Social Media Growth",
     image: service2,
@@ -67,19 +68,25 @@ const services = [
       "Brand Awareness",
     ],
     desc: `We help brands grow their online presence through strategic content, audience engagement, and performance-driven campaigns.
-           
-    From increasing reach to generating quality leads, we build social media strategies designed for consistent growth and real impact.
-`,
+
+From increasing reach to generating quality leads, we build social media strategies designed for consistent growth and real impact.`,
   },
+
   {
     title: "Website Development ",
     image: service3,
-    tags: ["Custom Website Development", "Landing Pages", "UI/UX Design", "Conversion-Focused Layouts", "Maintenance & Support"],
+    tags: [
+      "Custom Website Development",
+      "Landing Pages",
+      "UI/UX Design",
+      "Conversion-Focused Layouts",
+      "Maintenance & Support",
+    ],
     desc: `We build high-performing, user-friendly websites designed to elevate brand presence and drive conversions.
-          
-    From landing pages to full-scale business websites, we create fast, responsive, and growth-focused digital experiences.
-`,
+
+From landing pages to full-scale business websites, we create fast, responsive, and growth-focused digital experiences.`,
   },
+
   {
     title: "Brand Building",
     image: service4,
@@ -92,10 +99,10 @@ const services = [
       "Brand Consistency",
     ],
     desc: `We help brands create a strong digital identity that stands out, connects with the right audience, and builds long-term trust.
-           
-    From positioning and messaging to creative direction, we craft brands designed for recognition, impact, and growth.
-`,
+
+From positioning and messaging to creative direction, we craft brands designed for recognition, impact, and growth.`,
   },
+
   {
     title: "Performance Marketing ",
     image: service5,
@@ -107,9 +114,8 @@ const services = [
       "ROI-Focused Scaling",
     ],
     desc: `We create data-driven marketing campaigns focused on generating leads, increasing conversions, and maximizing ROI.
-           
-    From Meta and Google Ads to funnel optimization, we help brands scale through performance-focused strategies.
-`,
+
+From Meta and Google Ads to funnel optimization, we help brands scale through performance-focused strategies.`,
   },
 ];
 
@@ -124,47 +130,122 @@ const Services = () => {
   const sliderRef = useRef(null);
   const workflowRef = useRef(null);
 
-useEffect(() => {
-  const slider = sliderRef.current;
-  const workflow = workflowRef.current;
+  // HERO ANIMATION REFS
+  const mobileTitleRef = useRef(null);
+  const mobileTextRef = useRef(null);
 
-  if (!slider || !workflow) return;
+  const desktopTitleRef = useRef(null);
+  const desktopTextRef = useRef(null);
+  const scrollRef = useRef(null);
 
-  const ctx = gsap.context(() => {
-    ScrollTrigger.matchMedia({
-      "(min-width: 768px)": function () {
-        const totalMove = slider.scrollWidth - window.innerWidth + 40;
+  useEffect(() => {
+    const slider = sliderRef.current;
+    const workflow = workflowRef.current;
 
-        gsap.to(slider, {
-          x: -totalMove,
-          ease: "none",
-          scrollTrigger: {
-            trigger: workflow,
-            start: "top top",
-            end: () => `+=${totalMove}`,
-            scrub: 1,
-            pin: true,
-            anticipatePin: 1,
-            invalidateOnRefresh: true,
-          },
-        });
-      },
+    if (!slider || !workflow) return;
 
-      "(max-width: 767px)": function () {
-        gsap.set(slider, {
-          x: 0,
-          clearProps: "transform",
-        });
-      },
-    });
-  }, workflow);
+    const ctx = gsap.context(() => {
+      ScrollTrigger.matchMedia({
+        "(min-width: 768px)": function () {
+          const totalMove = slider.scrollWidth - window.innerWidth + 40;
 
-  return () => ctx.revert();
-}, []);
+          gsap.to(slider, {
+            x: -totalMove,
+            ease: "none",
+            scrollTrigger: {
+              trigger: workflow,
+              start: "top top",
+              end: () => `+=${totalMove}`,
+              scrub: 1,
+              pin: true,
+              anticipatePin: 1,
+              invalidateOnRefresh: true,
+            },
+          });
+        },
+
+        "(max-width: 767px)": function () {
+          gsap.set(slider, {
+            x: 0,
+            clearProps: "transform",
+          });
+        },
+      });
+    }, workflow);
+
+    return () => ctx.revert();
+  }, []);
+
+  // HERO ANIMATION
+  useGSAP(() => {
+
+    // MOBILE
+    if (window.innerWidth < 768) {
+
+      const tl = gsap.timeline();
+
+      tl.to(mobileTitleRef.current, {
+        y: 0,
+        duration: 1.1,
+        ease: "power4.out",
+      })
+
+      .to(
+        mobileTextRef.current,
+        {
+          y: 0,
+          opacity: 1,
+          duration: 1,
+          ease: "power3.out",
+        },
+        "-=0.7"
+      );
+
+    }
+
+    // DESKTOP
+    else {
+
+      const tl = gsap.timeline();
+
+      tl.to(desktopTitleRef.current, {
+        y: 0,
+        duration: 1.2,
+        ease: "power4.out",
+      })
+
+      .to(
+        desktopTextRef.current,
+        {
+          y: 0,
+          opacity: 1,
+          duration: 1,
+          ease: "power3.out",
+        },
+        "-=0.9"
+      )
+
+      .to(
+        scrollRef.current,
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.8,
+          ease: "power3.out",
+        },
+        "-=0.7"
+      );
+
+    }
+
+  });
 
   return (
-    <main className="bg-black text-white overflow-hidden">
+    <main className="overflow-hidden bg-black text-white">
+
+      {/* HERO */}
       <section className="relative min-h-screen overflow-hidden bg-black text-white">
+
         <video
           className="absolute inset-0 h-full w-full object-cover object-bottom"
           src={serviceVideo}
@@ -177,113 +258,127 @@ useEffect(() => {
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/20 to-black/60" />
 
         {/* CONTENT */}
-<div className="relative z-10 min-h-screen px-6 py-8 md:px-12">
+        <div className="relative z-10 min-h-screen px-6 py-8 md:px-12">
 
-  {/* ================= MOBILE ================= */}
-  <div className="flex min-h-screen flex-col md:hidden">
+          {/* ================= MOBILE ================= */}
+          <div className="flex min-h-screen flex-col md:hidden">
 
-    {/* TOP HEADING */}
-    <div className="pt-44">
+            {/* TOP HEADING */}
+            <div className="overflow-hidden pt-44">
 
-      <h1
-        className="
-          text-[11vw]
-          font-black
-          uppercase
-          leading-[0.82]
-          tracking-[-0.07em]
-        "
-      >
-        SERVICE &
-        <br />
-        CAPABILITIES
-      </h1>
+              <h1
+                ref={mobileTitleRef}
+                className="
+                  translate-y-full
+                  text-[11vw]
+                  font-black
+                  uppercase
+                  leading-[0.82]
+                  tracking-[-0.07em]
+                "
+              >
+                SERVICE &
+                <br />
+                CAPABILITIES
+              </h1>
 
-    </div>
+            </div>
 
-    {/* BOTTOM TEXT */}
-    <div className="mt-auto pb-50">
+            {/* BOTTOM TEXT */}
+            <div className="mt-auto overflow-hidden pb-50">
 
-      <p
-        className="
-          ml-auto
-          max-w-[300px]
-          text-right
-          text-[15px]
-          font-medium
-          leading-[1.45]
-          text-white/90
-        "
-      >
-        From strategy to execution — we create websites, content,
-        and marketing systems designed to attract attention,
-        generate leads, and scale brands.
-      </p>
+              <p
+                ref={mobileTextRef}
+                className="
+                  ml-auto
+                  max-w-[300px]
+                  translate-y-full
+                  text-right
+                  text-[15px]
+                  font-medium
+                  leading-[1.45]
+                  text-white/90
+                  opacity-0
+                "
+              >
+                From strategy to execution — we create websites,
+                content, and marketing systems designed to attract
+                attention, generate leads, and scale brands.
+              </p>
 
-    </div>
+            </div>
 
-  </div>
+          </div>
 
-  {/* ================= DESKTOP ================= */}
-  <div className="hidden md:block">
+          {/* ================= DESKTOP ================= */}
+          <div className="hidden md:block">
 
-    {/* RIGHT PARA */}
-    <div className="absolute right-12 top-[38%]">
+            {/* RIGHT PARA */}
+            <div className="absolute right-12 top-[38%] overflow-hidden">
 
-      <p
-        className="
-          max-w-[430px]
-          text-right
-          text-[20px]
-          font-medium
-          leading-[1.5]
-          text-white/90
-        "
-      >
-        From strategy to execution — we create websites, content,
-        and marketing systems designed to attract attention,
-        generate leads, and scale brands.
-      </p>
+              <p
+                ref={desktopTextRef}
+                className="
+                  max-w-[430px]
+                  translate-y-full
+                  text-right
+                  text-[20px]
+                  font-medium
+                  leading-[1.5]
+                  text-white/90
+                  opacity-0
+                "
+              >
+                From strategy to execution — we create websites,
+                content, and marketing systems designed to attract
+                attention, generate leads, and scale brands.
+              </p>
 
-    </div>
+            </div>
 
-    {/* BOTTOM LEFT HEADING */}
-    <h1
-      className="
-        absolute
-        bottom-10
-        left-12
+            {/* BOTTOM LEFT HEADING */}
+            <div className="absolute bottom-10 left-12 overflow-hidden">
 
-        max-w-[1000px]
+              <h1
+                ref={desktopTitleRef}
+                className="
+                  translate-y-full
+                  max-w-[1000px]
+                  text-[7.2vw]
+                  font-black
+                  uppercase
+                  leading-[0.82]
+                  tracking-[-0.07em]
+                "
+              >
+                SERVICE &
+                <br />
+                CAPABILITIES
+              </h1>
 
-        text-[7.2vw]
-        font-black
-        uppercase
-        leading-[0.82]
-        tracking-[-0.07em]
-      "
-    >
-      SERVICE &
-      <br />
-      CAPABILITIES
-    </h1>
+            </div>
 
-    {/* SCROLL */}
-    <p
-      className="
-        absolute
-        bottom-12
-        right-12
-        text-[18px]
-        text-white/70
-      "
-    >
-      (Scroll down)
-    </p>
+            {/* SCROLL */}
+            <div className="absolute bottom-12 right-12 overflow-hidden">
 
-  </div>
+              <p
+                ref={scrollRef}
+                className="
+                  translate-y-full
+                  text-[18px]
+                  text-white/70
+                  opacity-0
+                "
+              >
+                (Scroll down)
+              </p>
 
-</div>
+            </div>
+
+          </div>
+
+        </div>
+
       </section>
 
       <section className="relative bg-black px-5 py-16 md:px-10 md:py-20">
