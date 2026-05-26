@@ -280,10 +280,10 @@ function Achievement() {
       <div className="relative z-20 px-5 py-20 md:px-16 md:py-24">
 
         {/* TOP LABEL */}
-        <div className="mb-6 flex items-center gap-3">
-          <span className="h-3 w-3 rounded-full bg-[#d9fbff] shadow-[0_0_0_6px_rgba(217,251,255,0.25)] md:h-4 md:w-4" />
+        {/* <div className="mb-6 flex items-center gap-3"> */}
+          {/* <span className="h-3 w-3 rounded-full bg-[#d9fbff] shadow-[0_0_0_6px_rgba(217,251,255,0.25)] md:h-4 md:w-4" /> */}
           {/* <p className="text-base font-bold uppercase md:text-xl">Achievement</p> */}
-        </div>
+        {/* </div> */}
 
         {/* MAIN TITLE */}
         <div className="achievement-title">
