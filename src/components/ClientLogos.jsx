@@ -24,9 +24,7 @@
 // }
 
 // export default ClientLogos;
-
-
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import LazyImage from "./ui/LazyImage";
@@ -42,7 +40,20 @@ gsap.registerPlugin(ScrollTrigger);
 function ClientLogos() {
   const logos = [logo, logo1, logo2, logo3, logo5];
 
+  const [isMobile, setIsMobile] = useState(false);
+
   useEffect(() => {
+
+    /* RESPONSIVE CHECK */
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    /* GSAP */
     gsap.fromTo(
       ".client-logo-card",
       {
@@ -61,18 +72,24 @@ function ClientLogos() {
         },
       }
     );
-    
 
     return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+      ScrollTrigger.getAll().forEach((trigger) =>
+        trigger.kill()
+      );
+
+      window.removeEventListener(
+        "resize",
+        handleResize
+      );
     };
   }, []);
 
   return (
-   <section className="client-logo-section overflow-hidden bg-black px-4 pt-12 pb-2 md:px-10 md:py-24">
+    <section className="client-logo-section overflow-hidden bg-black px-4 pt-12 pb-2 md:px-10 md:py-24">
 
       {/* HEADING */}
-      <div className="mb-10 md:mb-14">
+      <div className="mb-8 md:mb-14">
 
         <div className="mb-4 flex items-center gap-3 md:mb-5">
 
@@ -84,8 +101,23 @@ function ClientLogos() {
 
         </div>
 
-        <h2 className="text-[14vw] font-black uppercase leading-[0.86] tracking-[-0.08em] text-white md:text-[6vw]">
+        <h2
+          className="
+            max-w-[95%]
 
+            text-[17vw]
+            font-[900]
+            uppercase
+            leading-[0.82]
+            tracking-[-0.09em]
+            text-white
+
+            sm:text-[15vw]
+
+            md:max-w-none
+            md:text-[6vw]
+          "
+        >
           Brands We
           <br />
 
@@ -97,27 +129,28 @@ function ClientLogos() {
 
       </div>
 
-      {/* MOBILE AUTO SCROLL / DESKTOP GRID */}
+      {/* LOGOS */}
       <div className="relative overflow-hidden">
 
         <div
-          className="
+          className={`
             client-marquee
             flex
             w-max
             gap-4
 
-            md:grid
-            md:w-full
-            md:grid-cols-5
-            md:gap-6
-          "
+            ${
+              !isMobile
+                ? "md:grid md:w-full md:grid-cols-5 md:gap-6"
+                : ""
+            }
+          `}
         >
 
-          {(window.innerWidth < 768
-  ? [...logos, ...logos]
-  : logos
-).map((item, index) => (
+          {(isMobile
+            ? [...logos, ...logos]
+            : logos
+          ).map((item, index) => (
 
             <div
               key={index}
@@ -183,6 +216,25 @@ function ClientLogos() {
         </div>
 
       </div>
+
+      {/* MARQUEE ANIMATION */}
+      <style jsx>{`
+        @media (max-width: 767px) {
+          .client-marquee {
+            animation: marquee 32s linear infinite;
+          }
+
+          @keyframes marquee {
+            0% {
+              transform: translateX(0%);
+            }
+
+            100% {
+              transform: translateX(-50%);
+            }
+          }
+        }
+      `}</style>
 
     </section>
   );
