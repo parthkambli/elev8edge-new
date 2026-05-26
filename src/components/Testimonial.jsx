@@ -17,11 +17,20 @@ function Testimonial() {
 
         {/* IMAGE */}
         <picture>
-          <source media="(max-width: 767px)" srcSet="/images/team1.jpg" />
+          <source media="(max-width: 767px)" srcSet="/images/founderPravin.jpg" />
           <LazyImage
             src="/images/person1.jpg"
             alt="Pravin Zinjurde"
-            className="h-[520px] w-full object-cover object-center md:h-[620px]"
+            className="
+  h-[320px]
+  w-full
+  object-cover
+  object-center
+
+  sm:h-[420px]
+
+  md:h-[620px]
+"
           />
         </picture>
 
@@ -68,11 +77,20 @@ function Testimonial() {
 
         {/* IMAGE */}
         <picture>
-          <source media="(max-width: 767px)" srcSet="/images/team2.jpg" />
+          <source media="(max-width: 767px)" srcSet="/images/foundersomanshu.jpg" />
           <LazyImage
             src="/images/person2.jpg"
             alt="Somanshu Verma"
-            className="h-[520px] w-full object-cover object-center md:h-[620px]"
+            className="
+  h-[320px]
+  w-full
+  object-cover
+  object-center
+
+  sm:h-[420px]
+
+  md:h-[620px]
+"
           />
         </picture>
 
