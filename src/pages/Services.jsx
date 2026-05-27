@@ -406,10 +406,18 @@ const Services = () => {
         </h2>
 
         <div className="mt-6 flex flex-wrap gap-3 md:mt-8 md:max-w-[450px]">
-          {item.tags.map((tag) => (
+          {/* {item.tags.map((tag) => (
             <span
               key={tag}
               className="rounded-full border border-black px-4 py-1 text-sm md:px-5 md:text-lg"
+            >
+              {tag}
+            </span>
+          ))} */}
+          {item.tags.map((tag) => (
+            <span
+              key={tag}
+              className="rounded-full border border-black px-3 py-0.5 text-xs md:px-5 md:text-lg"
             >
               {tag}
             </span>
@@ -463,7 +471,7 @@ const Services = () => {
           className="flex flex-col gap-6 px-5 md:w-max md:flex-row md:items-start md:gap-16 md:pl-10 md:pr-[45vw]"
         >
           {/* CARD 1 - Original (Reference) */}
-          <div className="min-h-[420px] rounded-[28px] bg-[#efefef] p-6 text-black md:h-[470px] md:w-[950px] md:shrink-0 md:rounded-[32px] md:p-8">
+          {/* <div className="min-h-[420px] rounded-[28px] bg-[#efefef] p-6 text-black md:h-[470px] md:w-[950px] md:shrink-0 md:rounded-[32px] md:p-8">
             <div className="flex items-center gap-2">
               <span className="rounded-full bg-black px-5 py-3 text-base font-bold text-white md:px-7 md:text-3xl">
                 STEP
@@ -495,10 +503,10 @@ const Services = () => {
                 className="hidden w-[220px] object-contain md:mt-6 md:block"
               />
             </div>
-          </div>
+          </div> */}
 
           {/* CARD 2 - Now Consistent with Card 1 */}
-          <div className="min-h-[420px] rounded-[28px] bg-[#efefef] p-6 text-black md:h-[470px] md:w-[950px] md:shrink-0 md:rounded-[32px] md:p-8">
+          {/* <div className="min-h-[420px] rounded-[28px] bg-[#efefef] p-6 text-black md:h-[470px] md:w-[950px] md:shrink-0 md:rounded-[32px] md:p-8">
             <div className="flex items-center gap-2">
               <span className="rounded-full bg-black px-5 py-3 text-base font-bold text-white md:px-7 md:text-3xl">
                 STEP
@@ -530,10 +538,10 @@ const Services = () => {
                 className="hidden w-[220px] object-contain md:mt-6 md:block"
               />
             </div>
-          </div>
+          </div> */}
 
           {/* CARD 3 - Now Consistent with Card 1 */}
-          <div className="min-h-[420px] rounded-[28px] bg-[#efefef] p-6 text-black md:h-[470px] md:w-[950px] md:shrink-0 md:rounded-[32px] md:p-8">
+          {/* <div className="min-h-[420px] rounded-[28px] bg-[#efefef] p-6 text-black md:h-[470px] md:w-[950px] md:shrink-0 md:rounded-[32px] md:p-8">
             <div className="flex items-center gap-2">
               <span className="rounded-full bg-black px-5 py-3 text-base font-bold text-white md:px-7 md:text-3xl">
                 STEP
@@ -565,10 +573,10 @@ const Services = () => {
                 className="hidden w-[220px] object-contain md:mt-6 md:block"
               />
             </div>
-          </div>
+          </div> */}
 
           {/* CARD 4 - Now Consistent with Card 1 */}
-          <div className="min-h-[420px] rounded-[28px] bg-[#efefef] p-6 text-black md:h-[470px] md:w-[950px] md:shrink-0 md:rounded-[32px] md:p-8">
+          {/* <div className="min-h-[420px] rounded-[28px] bg-[#efefef] p-6 text-black md:h-[470px] md:w-[950px] md:shrink-0 md:rounded-[32px] md:p-8">
             <div className="flex items-center gap-2">
               <span className="rounded-full bg-black px-5 py-3 text-base font-bold text-white md:px-7 md:text-3xl">
                 STEP
@@ -600,7 +608,92 @@ const Services = () => {
                 className="hidden w-[220px] object-contain md:mt-6 md:block"
               />
             </div>
-          </div>
+          </div> */}
+
+          <div
+  ref={sliderRef}
+  className="flex flex-col gap-6 px-5 md:w-max md:flex-row md:items-start md:gap-16 md:pl-10 md:pr-[45vw]"
+>
+  {/* CARD 1 */}
+  <div className="min-h-[420px] rounded-[28px] bg-[#efefef] p-6 text-black md:h-[470px] md:w-[950px] md:shrink-0 md:rounded-[32px] md:p-8">
+    <div className="flex items-start justify-between md:block">
+      <div className="flex items-center gap-2">
+        <span className="rounded-full bg-black px-5 py-3 text-base font-bold text-white md:px-7 md:text-3xl">STEP</span>
+        <span className="grid h-[48px] w-[48px] place-items-center rounded-full bg-black text-base font-bold text-white md:h-[60px] md:w-[60px] md:text-3xl">01</span>
+      </div>
+      <img src={icon1} alt="Step 1" className="w-[80px] object-contain md:hidden" />
+    </div>
+    <div className="mt-8 flex flex-col md:mt-10 md:flex-row md:items-start md:justify-between">
+      <div>
+        <h2 className="text-2xl font-black md:text-6xl">STRATEGY CALL WITH US</h2>
+        <p className="mt-4 max-w-[300px] text-base text-black/80 md:mt-4 md:max-w-[500px] md:text-xl">
+          Let's build the next stage of your brand's growth — together.
+        </p>
+      </div>
+      <img src={icon1} alt="Step 1" className="hidden w-[220px] object-contain md:mt-6 md:block" />
+    </div>
+  </div>
+
+  {/* CARD 2 */}
+  <div className="min-h-[420px] rounded-[28px] bg-[#efefef] p-6 text-black md:h-[470px] md:w-[950px] md:shrink-0 md:rounded-[32px] md:p-8">
+    <div className="flex items-start justify-between md:block">
+      <div className="flex items-center gap-2">
+        <span className="rounded-full bg-black px-5 py-3 text-base font-bold text-white md:px-7 md:text-3xl">STEP</span>
+        <span className="grid h-[48px] w-[48px] place-items-center rounded-full bg-black text-base font-bold text-white md:h-[60px] md:w-[60px] md:text-3xl">02</span>
+      </div>
+      <img src={icon2} alt="Step 2" className="w-[80px] object-contain md:hidden" />
+    </div>
+    <div className="mt-8 flex flex-col md:mt-10 md:flex-row md:items-center md:justify-between">
+      <div>
+        <h2 className="text-2xl font-black md:text-6xl">PERSONALISED GROWTH PLAN</h2>
+        <p className="mt-4 max-w-[300px] text-base text-black/80 md:mt-4 md:max-w-[500px] md:text-xl">
+          We create data-driven strategies that align with your goals, engage your audience, and drive measurable results.
+        </p>
+      </div>
+      <img src={icon2} alt="Step 2" className="hidden w-[220px] object-contain md:mt-6 md:block" />
+    </div>
+  </div>
+
+  {/* CARD 3 */}
+  <div className="min-h-[420px] rounded-[28px] bg-[#efefef] p-6 text-black md:h-[470px] md:w-[950px] md:shrink-0 md:rounded-[32px] md:p-8">
+    <div className="flex items-start justify-between md:block">
+      <div className="flex items-center gap-2">
+        <span className="rounded-full bg-black px-5 py-3 text-base font-bold text-white md:px-7 md:text-3xl">STEP</span>
+        <span className="grid h-[48px] w-[48px] place-items-center rounded-full bg-black text-base font-bold text-white md:h-[60px] md:w-[60px] md:text-3xl">03</span>
+      </div>
+      <img src={icon3} alt="Step 3" className="w-[80px] object-contain md:hidden" />
+    </div>
+    <div className="mt-8 flex flex-col md:mt-10 md:flex-row md:items-start md:justify-between">
+      <div>
+        <h2 className="text-2xl font-black md:text-6xl">Design & Execution</h2>
+        <p className="mt-4 max-w-[300px] text-base text-black/80 md:mt-4 md:max-w-[500px] md:text-xl">
+          We turn ideas into scalable digital experiences through clean design and seamless development.
+        </p>
+      </div>
+      <img src={icon3} alt="Step 3" className="hidden w-[220px] object-contain md:mt-6 md:block" />
+    </div>
+  </div>
+
+  {/* CARD 4 */}
+  <div className="min-h-[420px] rounded-[28px] bg-[#efefef] p-6 text-black md:h-[470px] md:w-[950px] md:shrink-0 md:rounded-[32px] md:p-8">
+    <div className="flex items-start justify-between md:block">
+      <div className="flex items-center gap-2">
+        <span className="rounded-full bg-black px-5 py-3 text-base font-bold text-white md:px-7 md:text-3xl">STEP</span>
+        <span className="grid h-[48px] w-[48px] place-items-center rounded-full bg-black text-base font-bold text-white md:h-[60px] md:w-[60px] md:text-3xl">04</span>
+      </div>
+      <img src={icon4} alt="Step 4" className="w-[80px] object-contain md:hidden" />
+    </div>
+    <div className="mt-8 flex flex-col md:mt-10 md:flex-row md:items-start md:justify-between">
+      <div>
+        <h2 className="text-2xl font-black md:text-6xl">Launch & Scale</h2>
+        <p className="mt-4 max-w-[300px] text-base text-black/80 md:mt-4 md:max-w-[500px] md:text-xl">
+          From deployment to ongoing optimization, we help your brand grow, perform, and stay ahead digitally.
+        </p>
+      </div>
+      <img src={icon4} alt="Step 4" className="hidden w-[220px] object-contain md:mt-6 md:block" />
+    </div>
+  </div>
+</div>
         </div>
 </section>
 
