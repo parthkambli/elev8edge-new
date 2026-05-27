@@ -1,9 +1,108 @@
 import { useRef, useState } from "react";
+
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 import { Link } from "react-router-dom";
 
 function Hero() {
   const videoRef = useRef(null);
   const [playing, setPlaying] = useState(true);
+  // HERO ANIMATION REFS
+const mobileTitleRef = useRef(null);
+const mobileTextRef = useRef(null);
+
+const desktopTitleRef = useRef(null);
+const desktopTextRef = useRef(null);
+
+const labelRef = useRef(null);
+const buttonRef = useRef(null);
+
+useGSAP(() => {
+
+  const tl = gsap.timeline();
+
+  tl.to(labelRef.current, {
+    y: 0,
+    opacity: 1,
+    duration: 0.8,
+    ease: "power3.out",
+  })
+
+  // MOBILE
+  if (window.innerWidth < 768) {
+
+    tl.to(
+      mobileTitleRef.current,
+      {
+        y: 0,
+        duration: 1.1,
+        ease: "power4.out",
+      },
+      "-=0.3"
+    )
+
+    .to(
+      mobileTextRef.current,
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power3.out",
+      },
+      "-=0.7"
+    )
+
+    .to(
+      buttonRef.current,
+      {
+        y: 0,
+        opacity: 1,
+        duration: 0.8,
+        ease: "power3.out",
+      },
+      "-=0.7"
+    );
+
+  }
+
+  // DESKTOP
+  else {
+
+    tl.to(
+      desktopTitleRef.current,
+      {
+        y: 0,
+        duration: 1.2,
+        ease: "power4.out",
+      },
+      "-=0.3"
+    )
+
+    .to(
+      desktopTextRef.current,
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power3.out",
+      },
+      "-=0.9"
+    )
+
+    .to(
+      buttonRef.current,
+      {
+        y: 0,
+        opacity: 1,
+        duration: 0.8,
+        ease: "power3.out",
+      },
+      "-=0.7"
+    );
+
+  }
+
+});
 
   const toggleVideo = () => {
     if (!videoRef.current) return;
@@ -61,11 +160,12 @@ function Hero() {
       <div className="relative z-10 flex min-h-screen flex-col px-5 pb-10 pt-32 sm:px-8 md:px-16 md:pb-14 lg:px-24">
 
         {/* TOP LABEL */}
-        <div>
+        <div className="overflow-hidden">
           {/* <p className="inline-block px-2 py-1 text-[11px] font-bold tracking-wide text-white sm:text-xs md:bg-transparent md:px-0 md:py-0 md:text-sm">
             POWERED BY CREATIVITY
           </p> */}
           <p
+  ref={labelRef}
             className="
               inline-block rounded-full
               px-3 py-1.5
@@ -73,6 +173,7 @@ function Hero() {
               sm:text-xs md:text-sm
               backdrop-blur-sm
               border border-white/20
+              translate-y-full opacity-0
             "
             style={{ background: "rgba(255,255,255,0.10)" }}
           >
@@ -83,8 +184,9 @@ function Hero() {
 
 
         {/* MAIN TITLE */}
-      <div className="flex flex-1 mt-10">
+      <div className="mt-10 flex flex-1 overflow-hidden">
         <h1
+  ref={window.innerWidth < 768 ? mobileTitleRef : desktopTitleRef}
             className="
               font-[Anton]
               uppercase
@@ -97,6 +199,7 @@ function Hero() {
               lg:text-[10vw]
               xl:text-[9vw]
               select-none
+              translate-y-full
             "
             style={{
               background:
@@ -113,8 +216,10 @@ function Hero() {
         </div>
 
         {/* DESCRIPTION */}
-        <div className="relative z-40 flex flex-col items-end mb-24 md:mb-0 ">
-          <p className="max-w-[320px] text-right text-sm font-bold leading-[1.3] text-white sm:text-base md:max-w-[380px] md:text-lg pb-4">
+        <div className="relative z-40 mb-24 flex flex-col items-end overflow-hidden md:mb-0">
+          <p
+  ref={window.innerWidth < 768 ? mobileTextRef : desktopTextRef}
+  className="max-w-[320px] text-right text-sm font-bold leading-[1.3] text-white sm:text-base md:max-w-[380px] md:text-lg pb-4 translate-y-full opacity-0">
             We transform ideas into scalable digital experiences — from content and design to performance marketing — built to grow your brand.
           </p>
 

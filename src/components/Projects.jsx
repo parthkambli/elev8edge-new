@@ -312,17 +312,17 @@ function Projects() {
   }, []);
 
   return (
-    <section id="projects" className="bg-black px-5 py-24 text-white">
+    <section id="projects" className="bg-black px-5  text-white">
 
       {/* HEADING */}
-      <div className="mb-20 text-center">
+      <div className="mb-8 text-center">
 
         <div className="mb-6 flex items-center justify-center gap-3">
           <span className="h-4 w-4 rounded-full bg-[#d9fbff] shadow-[0_0_0_6px_rgba(217,251,255,0.2)]" />
           <p className="text-xl font-medium uppercase">OUR WORK</p>
         </div>
 
-        <h2 className="text-[12vw] font-black uppercase leading-[0.82] tracking-[-0.06em]">
+        <h2 className="text-[14vw] font-black uppercase leading-[0.82] tracking-[-0.06em] md:text-[10vw]">
           <span className="text-[#d9fbff]">Growth</span>
           <br />
           spotlight

@@ -43,10 +43,12 @@ import Project from "./pages/Project";
 
 import TermsConditions from "./pages/TermsConditions";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <BrowserRouter>
+    <ScrollToTop />
     <Navbar/>
       <Routes>
         <Route path="/" element={<Home />} />
