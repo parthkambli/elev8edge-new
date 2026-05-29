@@ -377,7 +377,7 @@ function Projects() {
                       className="
                         max-w-full
                         text-[13vw]
-                        font-black
+                        font-bold
                         uppercase
                         leading-[0.9]
                         tracking-[-0.08em]
