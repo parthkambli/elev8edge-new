@@ -239,6 +239,8 @@ gsap.registerPlugin(ScrollTrigger);
 function Services() {
   const [current, setCurrent] = useState(0);
   const sliderRef = useRef(null);
+  const touchStartX = useRef(0);
+  const touchEndX = useRef(0);
 
   // ── Desktop: scroll-triggered fade-up animation ──────────────────────
   useEffect(() => {
@@ -286,6 +288,31 @@ function Services() {
     }
   };
 
+  const handleTouchStart = (e) => {
+  touchStartX.current = e.targetTouches[0].clientX;
+};
+
+const handleTouchMove = (e) => {
+  touchEndX.current = e.targetTouches[0].clientX;
+};
+
+const handleTouchEnd = () => {
+  const distance = touchStartX.current - touchEndX.current;
+
+  // minimum swipe distance
+  const threshold = 50;
+
+  if (distance > threshold) {
+    // swipe left → next slide
+    goTo(current + 1);
+  }
+
+  if (distance < -threshold) {
+    // swipe right → previous slide
+    goTo(current - 1);
+  }
+};
+
   return (
     <section className="relative overflow-hidden bg-black px-4 py-16 text-white md:px-8 md:py-24">
 
@@ -321,7 +348,11 @@ function Services() {
       <div className="md:hidden">
 
         {/* Overflow window — clips all but the active card */}
-        <div className="overflow-hidden">
+        <div className="overflow-hidden"
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
+        >
           <div
             ref={sliderRef}
             className="flex"
@@ -341,7 +372,7 @@ function Services() {
                     <span className="pt-1 text-[22px] font-black text-[#ff5c39]">
                       {service.number}
                     </span>
-                    <h3 className="text-[12vw] font-[900] leading-[0.9] tracking-[-0.07em]">
+                    <h3 className="text-[10vw] md:text-[12vw] font-[900] leading-[0.9] tracking-[-0.07em]">
                       {service.title}
                     </h3>
                   </div>

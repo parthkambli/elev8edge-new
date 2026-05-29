@@ -9,6 +9,10 @@ body {
   background: black;
 }
 
+h1, h2 {
+  letter-spacing: 0.001em;
+}
+
 @theme {
   --animate-float: float 4.5s ease-in-out infinite;
 

@@ -90,7 +90,7 @@ function Footer() {
               text-[20vw]
               sm:text-[18vw]
               md:text-[120px]
-              lg:text-[220px]
+              lg:text-[250px]
               break-words
               font-['Inter']
               transition-transform
