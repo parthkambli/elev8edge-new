@@ -157,8 +157,8 @@ function ClientLogos() {
               className="
                 client-logo-card
                 flex
-                h-[110px]
-                min-w-[220px]
+                h-[100px] md:h-[130px]
+                min-w-[180px] md:min-w-0
                 items-center
                 justify-center
                 rounded-[16px]
@@ -186,26 +186,23 @@ function ClientLogos() {
                   justify-center
                   rounded-[15px]
                   bg-white
-                  px-4
+                  px-2 md:px-4
 
                   md:rounded-[17px]
                 "
               >
 
-                <LazyImage
-                  src={item}
-                  alt=""
-                  className="
-                    h-[62px]
-                    w-auto
-                    object-contain
-                    opacity-95
-
-                    sm:h-[72px]
-
-                    md:h-[110px]
-                  "
-                />
+                <img
+  src={item}
+  alt=""
+  className="
+    h-[100px]
+    w-auto
+    object-contain
+    opacity-95
+    md:h-[110px]
+  "
+/>
 
               </div>
 
