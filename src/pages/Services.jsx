@@ -31,7 +31,7 @@ import service4 from "../assets/Our Services/Brand Building.jpg";
 import service5 from "../assets/Our Services/Performance Marketing.jpg";
 
 import Footer from "../components/Footer";
-import AboutTestimonial from "../components/AboutTestimonial";
+// import AboutTestimonial from "../components/AboutTestimonial";
 
 import icon1 from "../assets/icons/1.png";
 import icon2 from "../assets/icons/2.png";

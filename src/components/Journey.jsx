@@ -445,7 +445,7 @@ function Journey() {
         </div>
 
         {/* RIGHT */}
-        <div className="flex flex-col gap-20 md:gap-52 items-end">
+        <div className="flex flex-col gap-20 items-start md:items-end md:gap-52">
           {stats.map((item, index) => (
             <div key={index} ref={(el) => (cardsRef.current[index] = el)}>
               <h3 className="text-[16vw] font-black leading-none tracking-[-0.07em] md:text-[9vw]">

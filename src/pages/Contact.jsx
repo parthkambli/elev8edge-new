@@ -3,7 +3,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
 import Navbar from "../components/Navbar";
-import AboutTestimonial from "../components/AboutTestimonial";
+// import AboutTestimonial from "../components/AboutTestimonial";
 import Footer from "../components/Footer";
 
 function Contact() {
