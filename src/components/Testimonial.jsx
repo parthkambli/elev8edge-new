@@ -79,7 +79,7 @@ function Testimonial() {
         <picture>
           <source media="(max-width: 767px)" srcSet="/images/foundersomanshu.jpg" />
           <LazyImage
-            src="/images/person2.jpg"
+            src="/images/person2.png"
             alt="Somanshu Verma"
             className="
   h-[320px]

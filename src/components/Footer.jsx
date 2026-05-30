@@ -19,7 +19,7 @@ import { Link } from "react-router-dom";
 
 function Footer() {
   return (
-    <footer className="bg-black px-3 pb-3 pt-24 md:min-h-screen">
+    <footer className="bg-black px-3 pb-3 pt-24 md:min-h-screen mt-16 mb-8 border-t border-white/10">
   <div className="flex min-h-[calc(100vh-108px)] flex-col rounded-[18px] bg-[#f3f3f3] px-6 py-6 text-black md:px-10 md:py-8">
 
 
@@ -85,7 +85,7 @@ function Footer() {
               text-center
               uppercase
               font-semibold
-              leading-[0.82]
+              leading-[1.2]
               tracking-[-0.08em]
               text-[20vw]
               sm:text-[18vw]

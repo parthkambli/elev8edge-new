@@ -403,7 +403,7 @@ function Journey() {
   return (
     <section
       ref={sectionRef}
-      className="relative overflow-hidden bg-black text-white"
+      className="relative overflow-hidden bg-black text-white mt-16 mb-8 border-b border-white/10"
     >
       {/* BG */}
       {/* BG VIDEO */}
@@ -424,7 +424,7 @@ function Journey() {
       <div className="relative z-10 px-5 py-20 md:grid md:min-h-[320vh] md:grid-cols-[0.9fr_1.1fr] md:gap-20 md:px-14 md:py-24">
 
         {/* LEFT — stacked on mobile, pinned on desktop */}
-        <div ref={leftRef} className="mb-16 md:mb-0 md:flex md:h-screen md:flex-col md:justify-start md:pt-24">
+        <div ref={leftRef} className="mb-16 md:mb-0 md:flex md:h-screen md:flex-col md:justify-start md:pt-0">
           <div className="mb-8 flex items-center gap-4">
             <div className="h-3 w-3 rounded-full bg-[#d9fbff]" />
             <p className="text-sm uppercase tracking-wide text-white/90 md:text-[18px]">WHAT WE HAVE DONE</p>
@@ -433,7 +433,7 @@ function Journey() {
           <div className="overflow-hidden">
             <h2
               ref={titleRef}
-              className="translate-y-40 text-[20vw] font-black uppercase leading-[0.84] tracking-[-0.08em] opacity-0 md:text-[7vw]"
+              className="translate-y-40 text-[16vw] font-black uppercase leading-[0.84] tracking-[-0.08em] opacity-0 md:text-[7vw]"
             >
               OUR
               <br />
@@ -445,10 +445,10 @@ function Journey() {
         </div>
 
         {/* RIGHT */}
-        <div className="flex flex-col gap-20 md:gap-52 md:pt-24">
+        <div className="flex flex-col gap-20 md:gap-52 items-end">
           {stats.map((item, index) => (
             <div key={index} ref={(el) => (cardsRef.current[index] = el)}>
-              <h3 className="text-[22vw] font-black leading-none tracking-[-0.07em] md:text-[9vw]">
+              <h3 className="text-[16vw] font-black leading-none tracking-[-0.07em] md:text-[9vw]">
                 {item.number}
               </h3>
               <p className="mt-4 max-w-[480px] text-[18px] leading-[1.5] text-white/90 md:mt-5 md:text-[34px]">

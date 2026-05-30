@@ -7,12 +7,12 @@ const TermsConditions = () => {
       {/* HERO */}
       <section className="relative border-b border-white/10 px-6 pb-16 pt-40 md:px-12">
         <div className="max-w-[1400px]">
-          <p className="mb-6 text-lg font-medium text-white/60">
+          {/* <p className="mb-6 text-lg font-medium text-white/60">
             Legal
-          </p>
+          </p> */}
 
           <h1
-            className="text-[16vw] uppercase leading-[0.82] tracking-[-0.08em] md:text-[9vw]"
+            className="text-[12vw] uppercase leading-[0.82] tracking-[-0.08em] md:text-[9vw]"
             style={{ fontFamily: "Anton" }}
           >
             Terms &

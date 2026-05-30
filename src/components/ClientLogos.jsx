@@ -122,7 +122,7 @@ function ClientLogos() {
           <br />
 
           <span className="text-[#d9fbff]">
-            Worked With
+            Work With
           </span>
 
         </h2>

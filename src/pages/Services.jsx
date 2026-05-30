@@ -381,7 +381,7 @@ const Services = () => {
 
       </section>
 
-      <section className="relative bg-black px-5 py-16 md:px-10 md:py-20">
+      <section className="relative bg-black px-5 py-16 md:px-10 md:py-20 mt-16 mb-8 border-b border-white/10">
   <div className="mb-10 flex items-center gap-3 text-base md:text-xl">
     <span className="h-4 w-4 rounded-full border-4 border-gray-500 bg-[#d9fbff] md:h-5 md:w-5" />
     <span>SERVICE</span>
@@ -401,7 +401,7 @@ const Services = () => {
       className="relative mb-6 flex cursor-pointer flex-col overflow-hidden rounded-[10px] bg-white px-4 py-6 text-black md:mb-8 md:min-h-[270px] md:flex-row md:items-center md:justify-between md:overflow-visible md:rounded-xl md:px-10 md:py-10"
     >
       <div>
-        <h2 className="text-[11vw] font-black leading-none tracking-[-0.06em] md:text-[5vw]">
+        <h2 className="text-[10vw] font-black leading-none uppercase tracking-[-0.06em] md:text-[5vw]">
           {item.title}
         </h2>
 
@@ -452,7 +452,7 @@ const Services = () => {
 
 
 
-<section ref={workflowRef} className="overflow-hidden bg-black py-16 md:py-0">
+<section ref={workflowRef} className="overflow-hidden bg-black py-16 md:py-0 ">
   <div className="mb-10 px-5 md:px-10">
     <div className="mb-5 flex items-center gap-3">
       <span className="h-4 w-4 rounded-full border-4 border-gray-500 bg-[#d9fbff]" />
@@ -495,7 +495,8 @@ const Services = () => {
       <img src={icon1} alt="Step 1" className="hidden w-[220px] object-contain md:mt-6 md:block" />
     </div>
   </div> */}
-  <div className="flex min-h-[420px] flex-col rounded-[28px] bg-[#efefef] p-6 text-black md:h-[470px] md:w-[950px] md:shrink-0 md:rounded-[32px] md:p-8">
+  {/* <div className="flex min-h-[420px] flex-col rounded-[28px] bg-[#efefef] p-6 text-black md:h-[470px] md:w-[950px] md:shrink-0 md:rounded-[32px] md:p-8"> */}
+  <div className="flex flex-col rounded-[28px] bg-[#efefef] p-6 text-black md:h-[470px] md:w-[950px] md:shrink-0 md:rounded-[32px] md:p-8">
 
   {/* TOP */}
   <div className="flex items-start justify-between">
@@ -517,7 +518,7 @@ const Services = () => {
   </div>
 
   {/* BOTTOM */}
-  <div className="mt-auto flex flex-col md:flex-row md:items-end md:justify-between">
+  <div className="mt-6 flex flex-col md:mt-auto md:flex-row md:items-end md:justify-between">
 
     <div>
       <h2 className="text-2xl font-black md:text-5xl">
@@ -554,7 +555,8 @@ const Services = () => {
     </div>
   </div> */}
   {/* CARD 2 */}
-<div className="flex min-h-[420px] flex-col rounded-[28px] bg-[#efefef] p-6 text-black md:h-[470px] md:w-[950px] md:shrink-0 md:rounded-[32px] md:p-8">
+{/* <div className="flex min-h-[420px] flex-col rounded-[28px] bg-[#efefef] p-6 text-black md:h-[470px] md:w-[950px] md:shrink-0 md:rounded-[32px] md:p-8"> */}
+<div className="flex flex-col rounded-[28px] bg-[#efefef] p-6 text-black md:h-[470px] md:w-[950px] md:shrink-0 md:rounded-[32px] md:p-8">
 
   {/* TOP */}
   <div className="flex items-start justify-between">
@@ -576,7 +578,7 @@ const Services = () => {
   </div>
 
   {/* BOTTOM */}
-  <div className="mt-auto flex flex-col md:flex-row md:items-end md:justify-between">
+  <div className="mt-6 flex flex-col md:mt-auto md:flex-row md:items-end md:justify-between">
 
     <div>
       <h2 className="text-2xl font-black md:text-5xl">
@@ -613,7 +615,7 @@ const Services = () => {
     </div>
   </div> */}
   {/* CARD 3 */}
-<div className="flex min-h-[420px] flex-col rounded-[28px] bg-[#efefef] p-6 text-black md:h-[470px] md:w-[950px] md:shrink-0 md:rounded-[32px] md:p-8">
+<div className="flex flex-col rounded-[28px] bg-[#efefef] p-6 text-black md:h-[470px] md:w-[950px] md:shrink-0 md:rounded-[32px] md:p-8">
 
   {/* TOP */}
   <div className="flex items-start justify-between">
@@ -635,7 +637,7 @@ const Services = () => {
   </div>
 
   {/* BOTTOM */}
-  <div className="mt-auto flex flex-col md:flex-row md:items-end md:justify-between">
+  <div className="mt-6 flex flex-col md:mt-auto md:flex-row md:items-end md:justify-between">
 
     <div>
       <h2 className="text-2xl font-black md:text-5xl">
@@ -672,7 +674,8 @@ const Services = () => {
     </div>
   </div> */}
   {/* CARD 4 */}
-<div className="flex min-h-[420px] flex-col rounded-[28px] bg-[#efefef] p-6 text-black md:h-[470px] md:w-[950px] md:shrink-0 md:rounded-[32px] md:p-8">
+{/* <div className="flex min-h-[420px] flex-col rounded-[28px] bg-[#efefef] p-6 text-black md:h-[470px] md:w-[950px] md:shrink-0 md:rounded-[32px] md:p-8"> */}
+<div className="flex flex-col rounded-[28px] bg-[#efefef] p-6 text-black md:h-[470px] md:w-[950px] md:shrink-0 md:rounded-[32px] md:p-8">
 
   {/* TOP */}
   <div className="flex items-start justify-between">
@@ -694,7 +697,7 @@ const Services = () => {
   </div>
 
   {/* BOTTOM */}
-  <div className="mt-auto flex flex-col md:flex-row md:items-end md:justify-between">
+  <div className="mt-6 flex flex-col md:mt-auto md:flex-row md:items-end md:justify-between">
 
     <div>
       <h2 className="text-2xl font-black md:text-5xl">

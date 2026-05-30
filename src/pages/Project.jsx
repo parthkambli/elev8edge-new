@@ -159,47 +159,58 @@ import React, { useRef } from "react";
 import serviceVideo from "../../public/videos/projectHero.mp4";
 import LazyImage from "../components/ui/LazyImage";
 
-import project1 from "../assets/Our Projects/1.jpg";
-import project2 from "../assets/Our Projects/2.jpg";
-import project3 from "../assets/Our Projects/3.jpg";
-import project4 from "../assets/Our Projects/4.jpg";
-import project5 from "../assets/Our Projects/5.jpg";
-import project6 from "../assets/Our Projects/6.jpg";
+import Commercial1 from "../assets/Portfolio/Commercial/Commercial1.jpg";
+import Commercial2 from "../assets/Portfolio/Commercial/Commercial2.jpg";
+import Education1 from "../assets/Portfolio/Education/Design 1.jpg";
+import Education2 from "../assets/Portfolio/Education/Design 2.jpg";
+import Fashion1 from "../assets/Portfolio/Fashion/Fashion1.jpg";
+import Fashion2 from "../assets/Portfolio/Fashion/Fashion2.jpg";
+import Fashion3 from "../assets/Portfolio/Fashion/Fashion3.jpg";
+import Fashion4 from "../assets/Portfolio/Fashion/Fashion4.jpg";
+import FMCG1 from "../assets/Portfolio/FMCG/1.jpg";
+import FMCG2 from "../assets/Portfolio/FMCG/2.jpg";
+import FMCG3 from "../assets/Portfolio/FMCG/3.jpg";
+import RE1 from "../assets/Portfolio/Real estate/8.jpg";
+import RE2 from "../assets/Portfolio/Real estate/9.jpg";
+import RE3 from "../assets/Portfolio/Real estate/10.jpg";
+import RE4 from "../assets/Portfolio/Real estate/11.jpg";
+import Restaurant from "../assets/Portfolio/Restaurant/16.jpg";
 import Footer from "../components/Footer";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import ClientVdo from "../components/ClientVdo"
 
+import ProjectSlider from "../components/ProjectSlider";
+
 const projects = [
   {
-    title: "THE MASTER ACADEMY",
-    // category: "Branding",
-    image: project1,
+    title: "COMMERCIAL",
+    images: [Commercial1, Commercial2],
   },
   {
-    title: "MAA KALI VASTU JYOTISH",
+    title: "EDUCATION",
     // category: "Branding",
-    image: project4,
+    images: [Education1, Education2],
   },
   {
-    title: "SAI REALTOR",
+    title: "Fashion",
     // category: "UI/UX",
-    image: project2,
+    images: [Fashion1, Fashion2, Fashion3, Fashion4],
   },
   {
-    title: "GIFTCOIN",
+    title: "FMCG",
     // category: "Website",
-    image: project3,
+    images: [FMCG1, FMCG2, FMCG3],
   },
   {
-    title: "FEVERISH FASHION",
+    title: "REAL ESTATE",
     // category: "Website",
-    image: project5,
+    images: [RE1, RE2, RE3, RE4],
   },
   {
-    title: "ULWE’S KITCHEN",
+    title: "RESTAURANT",
     // category: "Website",
-    image: project6,
+    images: [Restaurant],
   },
 ];
 
@@ -307,7 +318,7 @@ useGSAP(() => {
         ref={mobileTitleRef}
       className="
           translate-y-full
-          text-[11vw]
+          text-[9vw]
           font-black
           uppercase
           leading-[0.82]
@@ -378,8 +389,7 @@ useGSAP(() => {
   className="
         translate-y-full
         max-w-[1000px]
-
-        text-[7.2vw]
+        md:text-[7.2vw]
         font-black
         uppercase
         leading-[0.82]
@@ -419,7 +429,7 @@ useGSAP(() => {
         <div className="grid grid-cols-1 gap-15 md:grid-cols-2">
           {projects.map((item, index) => (
             <div key={index} className="group cursor-pointer">
-              <div
+              {/* <div
   className="
     h-[260px]
     w-full
@@ -436,9 +446,10 @@ useGSAP(() => {
                   alt={item.title}
                   className="h-full w-full object-auto transition-transform duration-700 ease-out group-hover:scale-[1.08]"
                 />
-              </div>
+              </div> */}
+              <ProjectSlider images={item.images} />
 
-              <h2 className="mt-3 text-xl font-bold text-center">
+              <h2 className="mt-3 text-xl font-bold text-center [word-spacing:0.25em]">
                 {item.title}
               </h2>
 

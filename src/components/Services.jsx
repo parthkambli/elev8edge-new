@@ -314,22 +314,24 @@ const handleTouchEnd = () => {
 };
 
   return (
-    <section className="relative overflow-hidden bg-black px-4 py-16 text-white md:px-8 md:py-24">
+    <section className="relative overflow-hidden bg-black px-4 py-16 text-white md:px-8 md:py-24 mt-16 mb-8 border-b border-white/10">
 
       {/* TOP HEADING */}
       <div className="mb-14 md:mb-20">
 
-        <div className="mb-5 flex items-center gap-3 md:mb-6 md:gap-4">
-          <div className="h-3 w-3 rounded-full bg-[#d9fbff]" />
+        <div className="mb-5 flex flex-col items-center justify-center gap-3 md:mb-6 md:gap-4">
+          <div className="flex flex-row items-center">
+            
+          <div className="h-3 w-3 rounded-full bg-[#d9fbff] mr-2" />
           <p className="text-[11px] font-medium uppercase tracking-[0.22em] text-white/70 md:text-sm">
             SERVICE
           </p>
-        </div>
-
-        <h2 className="
+          </div>
+                  <h2 className="
           max-w-[1200px]
-          text-[10vw]
+          text-[11vw]
           font-[900]
+          text-center
           uppercase
           leading-[0.86]
           tracking-[-0.09em]
@@ -341,6 +343,9 @@ const handleTouchEnd = () => {
           <br />
           MARKETING AGENCY
         </h2>
+        </div>
+
+
 
       </div>
 

@@ -63,7 +63,7 @@ function TrustedClients() {
   }, []);
 
   return (
-    <section className="trusted-section overflow-hidden bg-black px-5 py-24 text-white md:px-10">
+    <section className="trusted-section overflow-hidden bg-black px-5 py-24 text-white md:px-10 mt-16 mb-8 border-t border-white/10">
 
       {/* TOP */}
       <div className="mb-16">
@@ -151,7 +151,7 @@ function TrustedClients() {
   tracking-[-0.05em]
 
   sm:text-[26px]
-
+  [word-spacing:0.25em]
   md:text-[2vw]
 ">
                 {item.project}

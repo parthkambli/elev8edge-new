@@ -210,10 +210,10 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import LazyImage from "./ui/LazyImage";
 
-import project1 from "../assets/images/service-6.png";
-import project2 from "../assets/images/service-7.png";
-import project3 from "../assets/images/service-8.png";
-import project4 from "../assets/images/service-9.png";
+import project1 from "../assets/images/service-6.jpg";
+import project2 from "../assets/images/service-7.jpg";
+import project3 from "../assets/images/service-8.jpg";
+import project4 from "../assets/images/service-9.jpg";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -237,7 +237,7 @@ const projects = [
     desc: "From a high-performing website to multi-platform marketing — we built a digital ecosystem that drives engagement and brand growth.",
   },
   {
-    title: "GIFTCOIN",
+    title: "GIFT COIN",
     image: project4,
     tags: ["Conversion-Focused Layouts", "Website"],
     desc: "Built a customized, high-engagement website and executed multi-platform marketing strategies across social media, YouTube, and Telegram to drive brand growth and engagement.",
@@ -362,7 +362,7 @@ function Projects() {
                         </span>
                       ))}
                     </div> */}
-                    <div className="mb-4 flex flex-wrap gap-2 md:gap-3">
+                    <div className="mb-6 flex flex-wrap gap-2 md:gap-3">
                       {project.tags.map((tag) => (
                         <span
                           key={tag}

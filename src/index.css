@@ -10,7 +10,7 @@ body {
 }
 
 h1, h2 {
-  letter-spacing: 0.001em;
+  letter-spacing: 0.0001em;
 }
 
 @theme {

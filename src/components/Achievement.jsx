@@ -267,7 +267,7 @@ function Achievement() {
   return (
     <section
       ref={sectionRef}
-      className="relative overflow-hidden bg-black text-white"
+      className="relative overflow-hidden bg-black text-white "
       style={{ minHeight: "120vh" }}
     >
       {/* BACKGROUND IMAGE */}
@@ -297,7 +297,7 @@ function Achievement() {
 
         {/* SECOND TITLE */}
         <div className="impact-title mt-16 md:mt-40">
-          <h3 className="text-right text-[11vw] font-black uppercase leading-[0.82] tracking-[-0.07em] md:text-[8vw]">
+          <h3 className="text-right text-[13vw] font-black uppercase leading-[0.82] tracking-[-0.07em] md:text-[9vw]">
             AND GROWTH
           </h3>
           <p className="ml-auto mt-4 max-w-2xl text-right text-base font-semibold leading-tight md:mt-6 md:text-[1.35rem]">

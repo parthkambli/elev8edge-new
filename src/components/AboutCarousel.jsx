@@ -74,7 +74,7 @@ function AboutCarousel() {
   ];
 
   return (
-    <section className="relative overflow-hidden bg-black py-10 md:py-28">
+    <section className="relative overflow-hidden bg-black py-10 md:py-28 mt-16 mb-8 border-b border-t border-white/10">
 
       {/* LEFT FADE */}
       <div

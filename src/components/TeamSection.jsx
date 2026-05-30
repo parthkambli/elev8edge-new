@@ -53,14 +53,14 @@ function TeamSection() {
   });
 
   return (
-    <section className="relative overflow-hidden bg-black px-7 pb-28 pt-8 text-white md:px-14">
+    <section className="relative overflow-hidden bg-black px-7 pb-28 pt-8 text-white md:px-14 mt-16 mb-8 border-b border-white/10">
 
       {/* HEADING */}
       <div className="mb-24 overflow-hidden text-center">
 
         <h2
           ref={titleRef}
-          className="translate-y-40 text-[15vw] font-black uppercase leading-[0.82] tracking-[-0.09em] opacity-0 md:text-[8vw]"
+          className="translate-y-40 text-[12vw] font-black uppercase leading-[0.82] tracking-[-0.09em] opacity-0 md:text-[8vw]"
         >
           <span className="text-[#d9fbff]">
             PEOPLE

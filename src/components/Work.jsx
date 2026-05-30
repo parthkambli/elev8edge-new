@@ -218,7 +218,7 @@ function Work() {
           } else if (self.progress < 0.66) {
             setWorkWord("WEBSITE");
           } else {
-            setWorkWord("PERFORMANCE");
+            setWorkWord("GROWTH");
           }
         },
       },
@@ -233,7 +233,7 @@ function Work() {
     <section
       id="work"
       ref={workSectionRef}
-      className="relative h-screen overflow-hidden bg-black"
+      className="relative h-screen overflow-hidden bg-black mt-16 mb-8 border-b border-white/10"
     >
       <img
         src={service1}
@@ -249,7 +249,7 @@ function Work() {
           </p>
         </div>
 
-        <h2 className="text-[13vw] font-black uppercase leading-[0.85] tracking-[-0.07em] text-white md:text-[6.8vw]">
+        <h2 className="text-[11vw] font-black uppercase leading-[0.85] tracking-[-0.07em] text-white md:text-[6.8vw]">
           <span className="text-white">DELIVERING</span>{" "}
 
           <span
@@ -261,7 +261,6 @@ function Work() {
 
           <br />
           WITH PASSIONATE IDEAS & 
-          <br />
           HIGH PERFORMANCE.
         </h2>
       </div>
@@ -270,18 +269,18 @@ function Work() {
         ref={workImagesRef}
         className="pointer-events-none absolute left-0 top-[100vh] z-[100] h-[760vh] w-full"
       >
-        <img src={work1}  alt="" className="absolute left-[2%]   top-[0vh]   h-[155px]  w-[155px]  border-[4px] border-white object-cover md:h-[240px] md:w-[240px] md:border-[6px]" />
-        <img src={work2}  alt="" className="absolute right-[4%]  top-[55vh]  h-[155px]  w-[155px]  border-[4px] border-white object-cover md:h-[240px] md:w-[240px] md:border-[6px]" />
-        <img src={work3}  alt="" className="absolute left-[15%]  top-[110vh] h-[155px]  w-[155px]  border-[4px] border-white object-cover md:h-[240px] md:w-[240px] md:border-[6px]" />
-        <img src={work4}  alt="" className="absolute right-[12%] top-[165vh] h-[155px]  w-[155px]  border-[4px] border-white object-cover md:h-[240px] md:w-[240px] md:border-[6px]" />
-        <img src={work5}  alt="" className="absolute left-[6%]   top-[220vh] h-[155px]  w-[155px]  border-[4px] border-white object-cover md:h-[240px] md:w-[240px] md:border-[6px]" />
-        <img src={work6}  alt="" className="absolute right-[18%] top-[275vh] h-[155px]  w-[155px]  border-[4px] border-white object-cover md:h-[240px] md:w-[240px] md:border-[6px]" />
-        <img src={work7}  alt="" className="absolute left-[20%]  top-[330vh] h-[155px]  w-[155px]  border-[4px] border-white object-cover md:h-[240px] md:w-[240px] md:border-[6px]" />
-        <img src={work8}  alt="" className="absolute right-[8%]  top-[385vh] h-[155px]  w-[155px]  border-[4px] border-white object-cover md:h-[240px] md:w-[240px] md:border-[6px]" />
-        <img src={work9}  alt="" className="absolute left-[10%]  top-[440vh] h-[155px]  w-[155px]  border-[4px] border-white object-cover md:h-[240px] md:w-[240px] md:border-[6px]" />
-        <img src={work10} alt="" className="absolute right-[5%]  top-[495vh] h-[155px]  w-[155px]  border-[4px] border-white object-cover md:h-[240px] md:w-[240px] md:border-[6px]" />
-        <img src={work11} alt="" className="absolute left-[18%]  top-[550vh] h-[155px]  w-[155px]  border-[4px] border-white object-cover md:h-[240px] md:w-[240px] md:border-[6px]" />
-        <img src={work12} alt="" className="absolute right-[15%] top-[605vh] h-[155px]  w-[155px]  border-[4px] border-white object-cover md:h-[240px] md:w-[240px] md:border-[6px]" />
+        <img src={work1}  alt="" className="absolute left-[2%]   top-[0vh]   h-[155px]  w-[155px]  border-y-[4px]  border-white object-cover md:h-[240px] md:w-[240px] md:border-y-[6px]" />
+        <img src={work2}  alt="" className="absolute right-[4%]  top-[55vh]  h-[155px]  w-[155px]  border-y-[4px]  border-white object-cover md:h-[240px] md:w-[240px] md:border-y-[6px]" />
+        <img src={work3}  alt="" className="absolute left-[15%]  top-[110vh] h-[155px]  w-[155px]  border-y-[4px]  border-white object-cover md:h-[240px] md:w-[240px] md:border-y-[6px]" />
+        <img src={work4}  alt="" className="absolute right-[12%] top-[165vh] h-[155px]  w-[155px]  border-y-[4px]  border-white object-cover md:h-[240px] md:w-[240px] md:border-y-[6px]" />
+        <img src={work5}  alt="" className="absolute left-[6%]   top-[220vh] h-[155px]  w-[155px]  border-y-[4px]  border-white object-cover md:h-[240px] md:w-[240px] md:border-y-[6px]" />
+        <img src={work6}  alt="" className="absolute right-[18%] top-[275vh] h-[155px]  w-[155px]  border-y-[4px]  border-white object-cover md:h-[240px] md:w-[240px] md:border-y-[6px]" />
+        <img src={work7}  alt="" className="absolute left-[20%]  top-[330vh] h-[155px]  w-[155px]  border-y-[4px]  border-white object-cover md:h-[240px] md:w-[240px] md:border-y-[6px]" />
+        <img src={work8}  alt="" className="absolute right-[8%]  top-[385vh] h-[155px]  w-[155px]  border-y-[4px]  border-white object-cover md:h-[240px] md:w-[240px] md:border-y-[6px]" />
+        <img src={work9}  alt="" className="absolute left-[10%]  top-[440vh] h-[155px]  w-[155px]  border-y-[4px]  border-white object-cover md:h-[240px] md:w-[240px] md:border-y-[6px]" />
+        <img src={work10} alt="" className="absolute right-[5%]  top-[495vh] h-[155px]  w-[155px]  border-y-[4px]  border-white object-cover md:h-[240px] md:w-[240px] md:border-y-[6px]" />
+        <img src={work11} alt="" className="absolute left-[18%]  top-[550vh] h-[155px]  w-[155px]  border-y-[4px]  border-white object-cover md:h-[240px] md:w-[240px] md:border-y-[6px]" />
+        <img src={work12} alt="" className="absolute right-[15%] top-[605vh] h-[155px]  w-[155px]  border-y-[4px]  border-white object-cover md:h-[240px] md:w-[240px] md:border-y-[6px]" />
       </div>
     </section>
   );
